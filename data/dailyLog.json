@@ -110,5 +110,33 @@
         "icon": "heart-handshake"
       }
     ]
+  },
+  {
+    "date": "2026-05-12",
+    "dayNumber": 2,
+    "label": "Day 3 — Portfolios & Border Drive",
+    "events": [
+      {
+        "time": "10:00 AM",
+        "title": "Cabinet Portfolios Finalised",
+        "description": "West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",
+        "category": "Governance",
+        "icon": "landmark"
+      },
+      {
+        "time": "12:00 PM",
+        "title": "No Deputy CM; Home & Finance Retained",
+        "description": "The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",
+        "category": "Governance",
+        "icon": "shield"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "BSF Land Transfer Process Begins",
+        "description": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
+        "category": "Security",
+        "icon": "shield-check"
+      }
+    ]
   }
 ]

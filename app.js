@@ -67,6 +67,11 @@ const dailyLog=[
     {time:"12:30 PM",title:"Census Exercise Initiated",desc:"State Census commencement approved — pending since 2021."},
     {time:"2:00 PM",title:"Writers' Buildings Restoration",desc:"Secretariat to shift back to historic Writers' Buildings in central Kolkata."},
     {time:"3:00 PM",title:"All Welfare Schemes to Continue",desc:"CM assures no existing schemes discontinued. All beneficiaries protected."}
+  ]},
+  {date:"2026-05-12",day:3,label:"Day 3 — Portfolios & Border Drive",events:[
+    {time:"10:00 AM",title:"Cabinet Portfolios Finalised",desc:"West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios."},
+    {time:"12:00 PM",title:"No Deputy CM; Home & Finance Retained",desc:"The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister."},
+    {time:"3:00 PM",title:"BSF Land Transfer Process Begins",desc:"The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target."}
   ]}
 ];
 
