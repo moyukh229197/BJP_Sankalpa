@@ -85,6 +85,33 @@ const moments=[
   {title:"Writers' Building Restoration Announced",desc:"Historic secretariat to be restored and reoccupied by new government.",date:"May 11, 2026",badge:"HERITAGE",thumb:"https://i.ytimg.com/vi/KORtre6IVLk/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=KORtre6IVLk"}
 ];
 
+const lawOrderFeed=[
+  {
+    title:"400+ arrested, 200 FIRs filed in post-poll violence",
+    desc:"Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
+    date:"May 7, 2026",
+    badge:"ARRESTS",
+    thumb:"https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg",
+    source:"https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/"
+  },
+  {
+    title:"Kolkata police clamps down on rallies with earthmovers",
+    desc:"Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
+    date:"May 6, 2026",
+    badge:"POLICE",
+    thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg",
+    source:"https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html"
+  },
+  {
+    title:"Police deployment increased after aide's killing",
+    desc:"Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
+    date:"May 7, 2026",
+    badge:"CLASHES",
+    thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg",
+    source:"https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html"
+  }
+];
+
 // ── BACKLOG ──
 const backlog=[
   {id:1,p:"Ghatal Master Plan (Flood Control)",v:800,s:2012,y:14,d:"Water Resources",st:"Review Started",r:5},
@@ -133,7 +160,7 @@ function actionDept(text){
   const t=(text||'').toLowerCase();
   if(/cabinet|minister|secretariat|secretary|dgp|governor|cm/.test(t)) return 'Governance';
   if(/ayushman|health|hospital|medical/.test(t)) return 'Health';
-  if(/border|bsf|security|law|bns|cbi|ssc/.test(t)) return 'Law & Order';
+  if(/border|bsf|security|law|bns|cbi|ssc|arrest|police|violence|crime|clash|murder|riot|fir|unrest/.test(t)) return 'Law & Order';
   if(/census|job|employment|vacanc|youth/.test(t)) return 'Employment';
   if(/welfare|women|arrea|da|pay commission/.test(t)) return 'Finance';
   if(/writers|heritage|industrial|industrial park|ghatal|singur|infrastructure|fencing/.test(t)) return 'Infrastructure';
@@ -150,6 +177,7 @@ function actionStatus(text){
 function actionType(text){
   const t=(text||'').toLowerCase();
   if(/cabinet|secretariat|portfolio|minister/.test(t)) return 'cabinet';
+  if(/arrest|police|violence|crime|clash|murder|riot|fir|unrest|detain|raid|attack/.test(t)) return 'law-order';
   if(/sworn in|oath|named|announces|released|approved|adopted|implemented/.test(t)) return 'announcement';
   if(/meeting|briefing|discussion|meets|holds/.test(t)) return 'meeting';
   if(/arrives|visit|travels|goes/.test(t)) return 'movement';
@@ -174,13 +202,14 @@ function actionMeta(day, e){
     type: actionType(text),
     important: actionImportance(text),
     bucket: actionBucket(e.time),
-    source: sourceSearch(`${e.title} ${day.date} West Bengal government`),
+    source: e.source || sourceSearch(`${e.title} ${day.date} West Bengal government`),
   };
 }
 
 function dayTypeForEvents(events){
   const types=events.map(e=>actionType(`${e.title} ${e.desc}`));
   if(types.includes('cabinet')) return 'cabinet';
+  if(types.includes('law-order')) return 'law-order';
   if(types.includes('result')) return 'result';
   if(types.includes('meeting')) return 'meeting';
   if(types.includes('movement')) return 'movement';
@@ -234,6 +263,29 @@ function renderMoments(){
       <div class="moment-body"><h4>${m.title}</h4><p>${m.desc}</p><div class="moment-date">📅 ${m.date}</div></div>
     </div>`).join('');
   $$('.moment-card').forEach(card=>{
+    const open=()=>window.open(card.dataset.open,'_blank','noopener,noreferrer');
+    card.onclick=e=>{if(e.target.closest('.source-link')) return; open();};
+    card.onkeydown=e=>{if(e.key==='Enter' || e.key===' '){e.preventDefault(); open();}};
+  });
+}
+
+function renderLawOrderFeed(){
+  const c=$('safetyFeed');
+  if(!c) return;
+  c.innerHTML=lawOrderFeed.map(item=>`
+    <article class="safety-card reveal-scale" role="link" tabindex="0" data-open="${item.source}">
+      <div class="safety-thumb">
+        <img src="${item.thumb}" alt="${item.title}" onerror="this.src='https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=900&q=60'">
+        <div class="safety-badge">${item.badge}</div>
+        ${sourceIcon(item.source,'Open source')}
+      </div>
+      <div class="safety-body">
+        <div class="safety-date">📅 ${item.date}</div>
+        <h4>${item.title}</h4>
+        <p>${item.desc}</p>
+      </div>
+    </article>`).join('');
+  $$('.safety-card').forEach(card=>{
     const open=()=>window.open(card.dataset.open,'_blank','noopener,noreferrer');
     card.onclick=e=>{if(e.target.closest('.source-link')) return; open();};
     card.onkeydown=e=>{if(e.key==='Enter' || e.key===' '){e.preventDefault(); open();}};
@@ -343,6 +395,7 @@ function renderTimelineVertical(){
   const filterData=[
     {key:'all',label:'All days'},
     {key:'cabinet',label:'Cabinet'},
+    {key:'law-order',label:'Law & Order'},
     {key:'announcement',label:'Announcements'},
     {key:'meeting',label:'Meetings'},
     {key:'result',label:'Results'},
@@ -526,6 +579,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   // Sections
   renderMoments();
+  renderLawOrderFeed();
   renderFilters();
   renderPromises();
   renderTimelineCompact();
