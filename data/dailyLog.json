@@ -42,6 +42,75 @@
     ]
   },
   {
+    "date": "2026-05-06",
+    "dayNumber": -4,
+    "label": "Transition Planning",
+    "events": [
+      {
+        "time": "11:00 AM",
+        "title": "Suvendu Meets Governor at Raj Bhavan",
+        "description": "CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government.",
+        "category": "Governance",
+        "icon": "building"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Cabinet Formation Discussions",
+        "description": "BJP central leadership meets to finalize the Council of Ministers.",
+        "category": "Governance",
+        "icon": "users"
+      },
+      {
+        "time": "5:00 PM",
+        "title": "Kolkata Police Clamps Down on Rallies with Earthmovers",
+        "description": "Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html",
+        "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-07",
+    "dayNumber": -3,
+    "label": "Cabinet Finalized",
+    "events": [
+      {
+        "time": "10:00 AM",
+        "title": "42-Member Ministry List Released",
+        "description": "Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry.",
+        "category": "Governance",
+        "icon": "landmark"
+      },
+      {
+        "time": "2:15 PM",
+        "title": "400+ Arrested, 200 FIRs Filed in Post-Poll Violence",
+        "description": "Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
+        "category": "Law & Order",
+        "icon": "alert-triangle",
+        "source": "https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/",
+        "thumb": "https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Police Deployment Increased After Aide's Killing",
+        "description": "Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
+        "category": "Law & Order",
+        "icon": "shield-check",
+        "source": "https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html",
+        "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg"
+      },
+      {
+        "time": "5:00 PM",
+        "title": "Oath Ceremony Date Announced",
+        "description": "Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata.",
+        "category": "Governance",
+        "icon": "building"
+      }
+    ]
+  },
+  {
     "date": "2026-05-11",
     "dayNumber": 1,
     "label": "Day 1 — First Cabinet",
@@ -108,58 +177,49 @@
         "description": "CM Adhikari assures that no existing social welfare schemes will be discontinued. All beneficiaries will continue to receive benefits.",
         "category": "Women",
         "icon": "heart-handshake"
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Cabinet Portfolios Finalised",
+        "description": "West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.moneycontrol.com/news/india/west-bengal-cabinet-portfolios-announced-full-list-of-ministers-and-their-departments-13915507.html",
+        "thumb": "https://images.moneycontrol.com/static-mcnews/2026/05/20260509175021_West-Bengal-chief-minister-Suvendu-Adhikari.png"
+      },
+      {
+        "time": "4:30 PM",
+        "title": "No Deputy CM; Home & Finance Retained",
+        "description": "The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",
+        "category": "Governance",
+        "icon": "shield",
+        "source": "https://newsarenaindia.com/states/no-deputy-cm-in-bengal-adhikari-allocates-portfolios/76980",
+        "thumb": "https://images.newsarenaindia.com/suvendu-4jpg_1778508352131.jpg"
+      },
+      {
+        "time": "5:00 PM",
+        "title": "BSF Land Transfer Process Begins",
+        "description": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
+        "category": "Security",
+        "icon": "shield-check",
+        "source": "https://www.moneycontrol.com/news/india/suvendu-adhikari-s-first-cabinet-meeting-clears-45-day-deadline-for-bsf-land-transfer-in-bengal-unveils-key-decisions-13915009.html",
+        "thumb": "https://images.moneycontrol.com/static-mcnews/2026/05/20260509061100_Suvendu-Adhikari-CM-1.jpg"
       }
     ]
   },
   {
     "date": "2026-05-12",
     "dayNumber": 2,
-    "label": "Day 3 — Portfolios & Border Drive",
+    "label": "Day 3 — CBI Probe",
     "events": [
       {
         "time": "10:00 AM",
-        "title": "Cabinet Portfolios Finalised",
-        "description": "West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",
-        "category": "Governance",
-        "icon": "landmark"
-      },
-      {
-        "time": "12:00 PM",
-        "title": "No Deputy CM; Home & Finance Retained",
-        "description": "The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",
-        "category": "Governance",
-        "icon": "shield"
-      },
-      {
-        "time": "2:15 PM",
-        "title": "400+ Arrested, 200 FIRs Filed in Post-Poll Violence",
-        "description": "Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
-        "category": "Law & Order",
-        "icon": "alert-triangle",
-        "source": "https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/"
-      },
-      {
-        "time": "2:45 PM",
-        "title": "Kolkata Police Clamps Down on Rallies with Earthmovers",
-        "description": "Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
+        "title": "CBI Takes Over Probe Into Suvendu Aide Murder",
+        "description": "The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",
         "category": "Law & Order",
         "icon": "shield-alert",
-        "source": "https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html"
-      },
-      {
-        "time": "3:00 PM",
-        "title": "Police Deployment Increased After Aide's Killing",
-        "description": "Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
-        "category": "Law & Order",
-        "icon": "shield-check",
-        "source": "https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html"
-      },
-      {
-        "time": "4:00 PM",
-        "title": "BSF Land Transfer Process Begins",
-        "description": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
-        "category": "Security",
-        "icon": "shield-check"
+        "source": "https://www.tribuneindia.com/news/india/suvendu-adhikari-aide-murder-cbi-takes-over-probe-after-sit-arrests-3-suspects/amp",
+        "thumb": "https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWIwMDM5NmUwLTRkZTktMTFmMS05NWQzLWFiMTg3NjE5Y2M0NS5qcGc="
       }
     ]
   }

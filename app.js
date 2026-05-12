@@ -37,10 +37,13 @@ const dailyLog=[
   ]},
   {date:"2026-05-06",day:-3,label:"Transition Planning",events:[
     {time:"11:00 AM",title:"Suvendu Meets Governor at Raj Bhavan",desc:"CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government."},
-    {time:"3:00 PM",title:"Cabinet Formation Discussions",desc:"BJP central leadership meets to finalize the Council of Ministers."}
+    {time:"3:00 PM",title:"Cabinet Formation Discussions",desc:"BJP central leadership meets to finalize the Council of Ministers."},
+    {time:"5:00 PM",title:"Kolkata Police Clamps Down on Rallies with Earthmovers",desc:"Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",source:"https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html",thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg"}
   ]},
   {date:"2026-05-07",day:-2,label:"Cabinet Finalized",events:[
     {time:"10:00 AM",title:"42-Member Ministry List Released",desc:"Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry."},
+    {time:"2:15 PM",title:"400+ Arrested, 200 FIRs Filed in Post-Poll Violence",desc:"Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",source:"https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/",thumb:"https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg"},
+    {time:"3:00 PM",title:"Police Deployment Increased After Aide's Killing",desc:"Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",source:"https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html",thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg"},
     {time:"5:00 PM",title:"Oath Ceremony Date Announced",desc:"Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata."}
   ]},
   {date:"2026-05-08",day:-1,label:"Eve of Government",events:[
@@ -66,15 +69,13 @@ const dailyLog=[
     {time:"12:00 PM",title:"Job Age Limit Extended +5 Years",desc:"Relief for lakhs of youth affected by SSC recruitment delays."},
     {time:"12:30 PM",title:"Census Exercise Initiated",desc:"State Census commencement approved — pending since 2021."},
     {time:"2:00 PM",title:"Writers' Buildings Restoration",desc:"Secretariat to shift back to historic Writers' Buildings in central Kolkata."},
-    {time:"3:00 PM",title:"All Welfare Schemes to Continue",desc:"CM assures no existing schemes discontinued. All beneficiaries protected."}
+    {time:"3:00 PM",title:"All Welfare Schemes to Continue",desc:"CM assures no existing schemes discontinued. All beneficiaries protected."},
+    {time:"4:00 PM",title:"Cabinet Portfolios Finalised",desc:"West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",source:"https://www.moneycontrol.com/news/india/west-bengal-cabinet-portfolios-announced-full-list-of-ministers-and-their-departments-13915507.html",thumb:"https://images.moneycontrol.com/static-mcnews/2026/05/20260509175021_West-Bengal-chief-minister-Suvendu-Adhikari.png"},
+    {time:"4:30 PM",title:"No Deputy CM; Home & Finance Retained",desc:"The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",source:"https://newsarenaindia.com/states/no-deputy-cm-in-bengal-adhikari-allocates-portfolios/76980",thumb:"https://images.newsarenaindia.com/suvendu-4jpg_1778508352131.jpg"},
+    {time:"5:00 PM",title:"BSF Land Transfer Process Begins",desc:"The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",source:"https://www.moneycontrol.com/news/india/suvendu-adhikari-s-first-cabinet-meeting-clears-45-day-deadline-for-bsf-land-transfer-in-bengal-unveils-key-decisions-13915009.html",thumb:"https://images.moneycontrol.com/static-mcnews/2026/05/20260509061100_Suvendu-Adhikari-CM-1.jpg"}
   ]},
-  {date:"2026-05-12",day:3,label:"Day 3 — Portfolios & Border Drive",events:[
-    {time:"10:00 AM",title:"Cabinet Portfolios Finalised",desc:"West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios."},
-    {time:"12:00 PM",title:"No Deputy CM; Home & Finance Retained",desc:"The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister."},
-    {time:"2:15 PM",title:"400+ Arrested, 200 FIRs Filed in Post-Poll Violence",desc:"Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",source:"https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/"},
-    {time:"2:45 PM",title:"Kolkata Police Clamps Down on Rallies with Earthmovers",desc:"Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",source:"https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html"},
-    {time:"3:00 PM",title:"Police Deployment Increased After Aide's Killing",desc:"Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",source:"https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html"},
-    {time:"4:00 PM",title:"BSF Land Transfer Process Begins",desc:"The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target."}
+  {date:"2026-05-12",day:3,label:"Day 3 — CBI Probe",events:[
+    {time:"10:00 AM",title:"CBI Takes Over Probe Into Suvendu Aide Murder",desc:"The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",source:"https://www.tribuneindia.com/news/india/suvendu-adhikari-aide-murder-cbi-takes-over-probe-after-sit-arrests-3-suspects/amp",thumb:"https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWIwMDM5NmUwLTRkZTktMTFmMS05NWQzLWFiMTg3NjE5Y2M0NS5qcGc="}
   ]}
 ];
 
@@ -114,6 +115,10 @@ function stCls(s){return s==='Completed'?'completed':s==='In Progress'?'progress
 function stBadge(s){return s==='Completed'?'badge-completed':s==='In Progress'?'badge-progress':'badge-pending'}
 const catEmoji={Finance:'💰',Women:'👩','Law & Order':'⚖️',Healthcare:'🏥',Security:'🛡️',Employment:'💼',Infrastructure:'🏗️',Industry:'🏭',Youth:'🎓',Governance:'🏛️'};
 function sourceSearch(q){return `https://www.google.com/search?q=${encodeURIComponent(q)}`;}
+function youtubeThumb(url){
+  const m=String(url||'').match(/(?:v=|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+  return m ? `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg` : '';
+}
 function sourceIcon(link,label='Open source'){
   return `
     <button type="button" class="source-link" aria-label="${label}" title="${label}" onclick="event.stopPropagation();window.open('${link}','_blank','noopener,noreferrer')">
@@ -145,15 +150,16 @@ function actionDept(text){
 
 function actionStatus(text){
   const t=(text||'').toLowerCase();
-  if(/approved|adopted|implemented|sworn in|announces|crosses|concedes|released|initiated|finalized/.test(t)) return 'Done';
+  if(/approved|adopted|implemented|sworn in|announces|crosses|concedes|released|initiated|finalized|retained|takes over/.test(t)) return 'Done';
   if(/review|discuss|meeting|planning|preparations|meeting|holds|arrives/.test(t)) return 'In Progress';
   return 'Pending';
 }
 
 function actionType(text){
   const t=(text||'').toLowerCase();
-  if(/cabinet|secretariat|portfolio|minister/.test(t)) return 'cabinet';
-  if(/arrest|police|violence|crime|clash|murder|riot|fir|unrest|detain|raid|attack/.test(t)) return 'law-order';
+  if(/cabinet|secretariat|portfolio|minister|deputy cm/.test(t)) return 'cabinet';
+  if(/land transfer|fencing/.test(t)) return 'announcement';
+  if(/arrest|police|violence|crime|clash|murder|riot|fir|unrest|detain|raid|attack|probe|cbi/.test(t)) return 'law-order';
   if(/sworn in|oath|named|announces|released|approved|adopted|implemented/.test(t)) return 'announcement';
   if(/meeting|briefing|discussion|meets|holds/.test(t)) return 'meeting';
   if(/arrives|visit|travels|goes/.test(t)) return 'movement';
@@ -163,7 +169,7 @@ function actionType(text){
 
 function actionImportance(text){
   const t=(text||'').toLowerCase();
-  return /sworn in|approved|adopted|implemented|crosses|concedes|released|cabinet|named/.test(t);
+  return /sworn in|approved|adopted|implemented|crosses|concedes|released|cabinet|named|probe|arrest|violence|murder/.test(t);
 }
 
 function bucketLabel(bucket){
@@ -178,7 +184,7 @@ function actionMeta(day, e){
     type: actionType(text),
     important: actionImportance(text),
     bucket: actionBucket(e.time),
-    source: e.source || sourceSearch(`${e.title} ${day.date} West Bengal government`),
+    source: e.source || '',
   };
 }
 
@@ -335,13 +341,13 @@ function renderTimelineVertical(){
   const stats=$('timelineStats');
   if(stats){
     const totalEvents=ordered.reduce((sum,d)=>sum+d.events.length,0);
-    const sourced=totalEvents;
+    const sourced=ordered.reduce((sum,d)=>sum+d.events.filter(e=>e.source).length,0);
     const major=ordered.reduce((sum,d)=>sum+d.events.filter(e=>actionImportance(`${e.title} ${e.desc}`)).length,0);
     stats.innerHTML=[
       {k:'Days covered',v:`${ordered.length}`,s:'Latest day first'},
       {k:'Total actions',v:`${totalEvents}`,s:'Across all logged days'},
       {k:'Major decisions',v:`${major}`,s:'High-impact items'},
-      {k:'Source-linked',v:`${sourced}`,s:'Every item has a source search'},
+      {k:'Source-linked',v:`${sourced}`,s:'Only items with real source pages'},
     ].map(i=>`<div class="timeline-summary-card visible"><span>${i.k}</span><strong>${i.v}</strong><small>${i.s}</small></div>`).join('');
   }
 
@@ -373,6 +379,7 @@ function renderTimelineVertical(){
     };
     const topEvent=dayEvents[0];
     const dayType=dayTypeForEvents(d.events);
+    const daySource=d.events.find(e=>e.source)?.source || '';
     return `
     <article class="v-item visible ${i%2===0?'':'is-right'}" data-i="${i}" data-day-label="${d.label.toLowerCase()}" data-day-type="${dayType}">
       <div class="v-dot"></div>
@@ -383,7 +390,7 @@ function renderTimelineVertical(){
               <div class="v-date-tag">${fmtDate(d.date)}</div>
               <div class="v-day-label">${d.label}</div>
             </div>
-            ${sourceIcon(sourceSearch(`${d.label} ${d.date} West Bengal government`),'Open source for the day')}
+            ${daySource ? sourceIcon(daySource,'Open source for the day') : ''}
           </div>
           <div class="v-day-summary">
             <div class="v-summary-pill"><span>Actions</span><strong>${d.events.length}</strong></div>
@@ -401,7 +408,9 @@ function renderTimelineVertical(){
               <section class="v-event-group">
                 <div class="v-group-label">${bucketLabel(group.bucket)}</div>
                 <div class="v-event-list">
-                  ${group.events.map(({e,dept,status,type,important,source})=>`
+                  ${group.events.map(({e,dept,status,type,important,source})=>{
+                    const mediaSrc=e.thumb || youtubeThumb(source);
+                    return `
                     <div class="v-ev ${type} ${important?'is-major':''}">
                       <div class="v-ev-top">
                         <div class="v-ev-time">${e.time}</div>
@@ -410,15 +419,16 @@ function renderTimelineVertical(){
                           <span class="v-chip ${status==='Done'?'done':status==='In Progress'?'progress':'pending'}">${status}</span>
                         </div>
                       </div>
+                      ${mediaSrc?`<div class="v-ev-media"><img src="${mediaSrc}" alt="${e.title}" loading="lazy" onerror="this.remove()"></div>`:''}
                       <div class="v-ev-title">${e.title}</div>
                       <div class="v-ev-desc">${e.desc}</div>
                       <div class="v-ev-footer">
                         <span class="v-dept">${dept}</span>
-                        ${sourceIcon(source,'Open source for action')}
+                        ${source?sourceIcon(source,'Open source for action'):''}
                       </div>
                       ${important ? '<div class="v-pin">High impact</div>' : ''}
                     </div>
-                  `).join('')}
+                  `}).join('')}
                 </div>
               </section>
             `).join('')}
