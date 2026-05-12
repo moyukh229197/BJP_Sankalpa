@@ -9,11 +9,11 @@
 </head>
 <body class="admin-page">
   <main class="admin-shell">
-    <header class="admin-hero">
+    <header class="admin-topbar">
       <div>
         <div class="admin-kicker">Private content backend</div>
         <h1>Site Content Editor</h1>
-        <p>Edit the website data that powers news, timeline items, thumbnails, links, and section content.</p>
+        <p>Edit news, daily log entries, media links, thumbnails, and section content through normal forms instead of raw JSON.</p>
       </div>
       <div class="admin-hero-actions">
         <button class="admin-btn" id="adminReload" type="button">Reload</button>
@@ -24,20 +24,27 @@
 
     <section class="admin-login-panel" id="loginPanel">
       <h2>Sign in</h2>
-      <p>Use the site admin password to open the editor.</p>
+      <p>Use the admin password to unlock the editor.</p>
       <form id="loginForm" class="admin-login-form">
         <input id="adminPassword" type="password" placeholder="Admin password" autocomplete="current-password">
         <button class="admin-btn primary" type="submit">Login</button>
       </form>
-      <div class="admin-hint">This page is hidden from the main navigation on purpose.</div>
+      <div class="admin-hint">This route is intentionally hidden from the main site nav.</div>
     </section>
 
     <section class="admin-dashboard hidden" id="editorPanel">
       <div class="admin-summary" id="summaryBar"></div>
+
+      <div class="admin-toolbar">
+        <div class="admin-toolbar-note">Jump to a section or edit content inline.</div>
+        <div class="admin-nav" id="sectionNav"></div>
+      </div>
+
       <div class="admin-section-grid" id="sectionGrid"></div>
+
       <div class="admin-save-row">
         <div id="saveStatus" class="admin-status">Ready.</div>
-        <button class="admin-btn primary" id="saveAll" type="button">Save all sections</button>
+        <button class="admin-btn primary" id="saveAll" type="button">Save all changes</button>
       </div>
     </section>
   </main>
