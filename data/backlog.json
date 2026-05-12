@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "project": "Ghatal Master Plan (Flood Control)",
+    "value": 800,
+    "stuckSince": 2012,
+    "yearsStuck": 14,
+    "department": "Water Resources",
+    "status": "Review Started",
+    "resolution": 5,
+    "description": "Comprehensive flood management plan for Ghatal, Daspur, and Chandrakona. Includes dam spillway widening, river dredging, and embankment reinforcement."
+  },
+  {
+    "id": 2,
+    "project": "Singur Industrial Land Restoration",
+    "value": 450,
+    "stuckSince": 2011,
+    "yearsStuck": 15,
+    "department": "Industry",
+    "status": "Land Survey Initiated",
+    "resolution": 10,
+    "description": "Restoration and development of the Singur land (formerly Tata Nano site) as a modern industrial park to attract investment."
+  },
+  {
+    "id": 3,
+    "project": "SSC Recruitment Scam Redressal",
+    "value": null,
+    "stuckSince": 2016,
+    "yearsStuck": 10,
+    "department": "Education",
+    "status": "SIT Constituted",
+    "resolution": 25,
+    "description": "₹40 crore+ SSC/TET teacher recruitment scam. Over 25,000 illegal appointments flagged. SIT formed to investigate and restore merit-based hiring."
+  },
+  {
+    "id": 4,
+    "project": "Narada Sting CBI Cases",
+    "value": null,
+    "stuckSince": 2016,
+    "yearsStuck": 10,
+    "department": "Law & Justice",
+    "status": "In Court",
+    "resolution": 40,
+    "description": "CBI investigation into the Narada sting operation implicating former TMC ministers in cash-for-favor corruption."
+  },
+  {
+    "id": 5,
+    "project": "MGNREGA Wage Diversion Audit",
+    "value": 3000,
+    "stuckSince": 2015,
+    "yearsStuck": 11,
+    "department": "Rural Development",
+    "status": "CAG Audit Ordered",
+    "resolution": 15,
+    "description": "Alleged diversion of ₹3,000 crore in MGNREGA wages through ghost beneficiaries and forged job cards in multiple districts."
+  },
+  {
+    "id": 6,
+    "project": "Kolkata Port Road Connectivity",
+    "value": 620,
+    "stuckSince": 2018,
+    "yearsStuck": 8,
+    "department": "Transport",
+    "status": "DPR Under Review",
+    "resolution": 8,
+    "description": "Multi-modal connectivity project linking Kolkata Port to NH-16 and the Eastern Freight Corridor. Stuck due to land acquisition delays."
+  },
+  {
+    "id": 7,
+    "project": "Bengal Safari Expansion, Siliguri",
+    "value": 110,
+    "stuckSince": 2019,
+    "yearsStuck": 7,
+    "department": "Forest & Wildlife",
+    "status": "Pending",
+    "resolution": 0,
+    "description": "Phase 2 expansion of Bengal Safari Park including new animal enclosures, visitor facilities, and eco-tourism infrastructure."
+  },
+  {
+    "id": 8,
+    "project": "Raiganj Medical College",
+    "value": 340,
+    "stuckSince": 2017,
+    "yearsStuck": 9,
+    "department": "Health",
+    "status": "Construction Stalled",
+    "resolution": 30,
+    "description": "Construction of a 500-bed medical college and hospital in Raiganj. 30% physical progress before work halted due to fund mismanagement."
+  },
+  {
+    "id": 9,
+    "project": "Smart City Mission (4 Cities)",
+    "value": 2100,
+    "stuckSince": 2017,
+    "yearsStuck": 9,
+    "department": "Urban Development",
+    "status": "30% Complete",
+    "resolution": 30,
+    "description": "Smart City projects across Kolkata, New Town, Durgapur, and Haldia. Severe delays due to non-cooperation with central agencies."
+  },
+  {
+    "id": 10,
+    "project": "Deucha Pachami Coal Block",
+    "value": 1000,
+    "stuckSince": 2021,
+    "yearsStuck": 5,
+    "department": "Mining",
+    "status": "Environmental Review",
+    "resolution": 12,
+    "description": "Development of the world's second-largest coal block in Birbhum. Stalled due to environmental clearance issues and local opposition management."
+  }
+]

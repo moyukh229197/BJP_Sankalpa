@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="West Bengal Assembly Election Result May 2026 map and party-wise results from ECI.">
+  <title>Election Result | Sonar Bangla Sankalp Tracker</title>
+  <link rel="icon" type="image/webp" href="Logo_of_the_Bharatiya_Janata_Party.svg.webp">
+  <link rel="shortcut icon" type="image/webp" href="Logo_of_the_Bharatiya_Janata_Party.svg.webp">
+  <link rel="stylesheet" href="eci-assets/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="election-page">
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="nav-logo">
+        <div>
+          <div class="nav-title">সোনার বাংলা সংকল্প ট্র্যাকার</div>
+          <div class="nav-subtitle">Sonar Bangla Sankalp Tracker</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="election-result.html" class="active">Election Result</a>
+        <a href="timeline.html">Daily Action Log</a>
+      </div>
+      <div class="nav-day-badge" id="dayBadge">Day 1 of 365</div>
+    </div>
+  </nav>
+
+  <main class="election-shell">
+    <section class="election-hero">
+      <div>
+        <div class="election-kicker">General Election to Assembly Constituencies</div>
+        <h1>West Bengal Election Result 2026</h1>
+        <p>Party-wise result and constituency map built from the Election Commission result page.</p>
+      </div>
+      <a class="eci-source" href="https://results.eci.gov.in/ResultAcGenMay2026/partywiseresult-S25.htm" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
+        ECI Source
+      </a>
+    </section>
+
+    <section class="winner-strip">
+      <div class="winner-mark">BJP</div>
+      <div>
+        <span>Single-party majority</span>
+        <strong>207 seats · 59 seats above majority</strong>
+      </div>
+      <div class="winner-meter" aria-label="BJP majority meter"><span></span></div>
+    </section>
+
+    <section class="election-stat-grid" id="electionStats"></section>
+
+    <section class="election-layout">
+      <div class="election-panel party-panel">
+        <div class="election-panel-head">
+          <div>
+            <h2>Party Wise Results</h2>
+            <p>Seat totals and share of the assembly.</p>
+          </div>
+        </div>
+        <div class="party-card-list" id="partyCardList"></div>
+      </div>
+
+      <div class="election-panel map-panel">
+        <div class="election-panel-head">
+          <div>
+            <h2>Constituency Wise Results</h2>
+            <p>Search, filter, or hover a constituency to inspect the winner.</p>
+          </div>
+          <div class="map-head-controls">
+            <label class="map-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.77 10.66l4.78 4.78 1.41-1.41-4.78-4.78A6 6 0 0 0 10 4Zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/></svg>
+              <input id="seatSearch" type="search" placeholder="Search constituency" autocomplete="off">
+            </label>
+            <select id="constituencySelect" class="election-select">
+              <option value="">Select Constituency</option>
+            </select>
+            <button id="mapThemeToggle" class="map-theme-btn" type="button" aria-pressed="false">
+              <span class="theme-icon">◐</span>
+              <span>Light map</span>
+            </button>
+          </div>
+        </div>
+        <div class="map-summary" id="mapSummary"></div>
+        <div class="map-filter-row" id="mapFilters"></div>
+        <div class="map-lens-row" id="mapLens"></div>
+        <div id="electionMap" class="election-map"></div>
+        <div class="election-map-note">Not to scale</div>
+      </div>
+    </section>
+
+    <section class="election-panel constituency-panel">
+      <div class="election-panel-head">
+        <div>
+          <h2>Party Legend</h2>
+          <p>Seat distribution and party colors used on the map.</p>
+        </div>
+      </div>
+      <div class="legend-grid" id="partyLegend"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="ft-tri"></div>
+    <img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="footer-logo">
+    <p>Source: Election Commission of India results page. Last updated by ECI: 04:18 PM On 05/05/2026</p>
+  </footer>
+
+  <script src="eci-assets/leaflet.js"></script>
+  <script src="eci-assets/S25.js"></script>
+  <script src="eci-assets/election-data.js"></script>
+  <script src="eci-assets/constituency-details.js"></script>
+  <script src="eci-assets/candidate-portraits.js"></script>
+  <script src="election-result.js"></script>
+</body>
+</html>

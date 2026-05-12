@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sonar Bangla Sankalp Tracker — Daily Action Log in a vertical timeline view.">
+  <title>Daily Action Log | Sonar Bangla Sankalp Tracker</title>
+  <link rel="icon" type="image/webp" href="Logo_of_the_Bharatiya_Janata_Party.svg.webp">
+  <link rel="shortcut icon" type="image/webp" href="Logo_of_the_Bharatiya_Janata_Party.svg.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="nav-logo">
+        <div>
+          <div class="nav-title">সোনার বাংলা সংকল্প ট্র্যাকার</div>
+          <div class="nav-subtitle">Sonar Bangla Sankalp Tracker</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="election-result.html">Election Result</a>
+        <a href="#timelinePage" class="active">Daily Action Log</a>
+      </div>
+      <div class="nav-day-badge" id="dayBadge">Day 1 of 365</div>
+    </div>
+  </nav>
+
+  <section class="v-timeline-section" id="timelinePage">
+    <div class="timeline-hero reveal">
+      <div>
+        <div class="election-kicker">Daily Ledger</div>
+        <h1>Daily Action Log</h1>
+        <p class="timeline-lead">
+          A newsroom-style chronology of the government's actions, grouped by time of day and annotated with source links, status, and department tags.
+        </p>
+      </div>
+      <div class="timeline-hero-note">
+        <strong>How to read it</strong>
+        <span>Each day is a single card, with morning, afternoon, and evening actions stacked inside a center-spine layout.</span>
+      </div>
+    </div>
+    <div class="timeline-summary-grid reveal" id="timelineStats"></div>
+    <div class="timeline-filter-row reveal" id="timelineFilters"></div>
+    <div class="v-timeline-track">
+      <div class="v-timeline-spine"></div>
+      <div id="timelineList"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="ft-tri"></div>
+    <img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="footer-logo">
+    <p>সোনার বাংলা সংকল্প ট্র্যাকার — Daily Action Log</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sonar Bangla Sankalp Tracker — Track BJP West Bengal government progress against Sankalp Patra manifesto promises from Day 1.">
+  <title>সোনার বাংলা সংকল্প ট্র্যাকার | Sonar Bangla Sankalp Tracker</title>
+  <link rel="icon" type="image/webp" href="Logo_of_the_Bharatiya_Janata_Party.svg.webp">
+  <link rel="shortcut icon" type="image/webp" href="Logo_of_the_Bharatiya_Janata_Party.svg.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar"><div class="nav-inner">
+    <a href="#" class="nav-brand"><img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="nav-logo"><div><div class="nav-title">সোনার বাংলা সংকল্প ট্র্যাকার</div><div class="nav-subtitle">Sonar Bangla Sankalp Tracker</div></div></a>
+    <div class="nav-links"><a href="#moments" class="active">Key Moments</a><a href="election-result.html">Election Result</a><a href="#promises">Promises</a><a href="timeline.html">Daily Action Log</a><a href="#backlog">Backlog</a><a href="#infrastructure">Infrastructure</a></div>
+    <div class="nav-day-badge" id="dayBadge">Day 1 of 365</div>
+  </div></nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg"><img src="ChatGPT Image May 11, 2026, 10_22_49 PM.png" alt="Sankalp Patra Progress"><div></div></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="reveal"><span class="saffron">Sankalp</span> Patra<br><span class="green">Progress</span> Tracker</h1>
+        <p class="tagline reveal">Tracking every promise, every action, every day. A real-time accountability dashboard for the newly elected BJP government in West Bengal — starting from Election Day.</p>
+        <div class="hero-stats">
+          <div class="hero-stat reveal"><div class="number" id="statTotal">15</div><div class="label">Total Promises</div></div>
+          <div class="hero-stat reveal"><div class="number" id="statDone">1</div><div class="label">Completed</div></div>
+          <div class="hero-stat reveal"><div class="number" id="statWIP">7</div><div class="label">In Progress</div></div>
+          <div class="hero-stat reveal"><div class="number" id="statPend">7</div><div class="label">Pending</div></div>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-spotlight reveal-left">
+          <img src="ChatGPT Image May 11, 2026, 10_22_49 PM.png" alt="Sankalp Patra Progress">
+          <div class="hero-spotlight-overlay"></div>
+          <div class="hero-spotlight-copy">
+            <div>
+              <div class="hero-spotlight-kicker">Election Day to Day 365</div>
+              <div class="hero-spotlight-title">Visible progress. Measurable promises.</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-countdowns">
+          <div class="cd-card reveal-left"><h3>🔥 7th Pay Commission & DA Arrears</h3><div class="dl">Deadline: June 23, 2026 (45 days from oath)</div>
+            <div class="cd-digits"><div class="d-box"><div class="val" id="cd45d">--</div><div class="unit">Days</div></div><div class="d-box"><div class="val" id="cd45h">--</div><div class="unit">Hrs</div></div><div class="d-box"><div class="val" id="cd45m">--</div><div class="unit">Min</div></div><div class="d-box"><div class="val" id="cd45s">--</div><div class="unit">Sec</div></div></div>
+          </div>
+          <div class="cd-card green-accent reveal-left"><h3>⚖️ Uniform Civil Code (UCC)</h3><div class="dl">Deadline: November 9, 2026 (6 months)</div>
+            <div class="cd-digits"><div class="d-box"><div class="val" id="cd180d">--</div><div class="unit">Days</div></div><div class="d-box"><div class="val" id="cd180h">--</div><div class="unit">Hrs</div></div><div class="d-box"><div class="val" id="cd180m">--</div><div class="unit">Min</div></div><div class="d-box"><div class="val" id="cd180s">--</div><div class="unit">Sec</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY MOMENTS -->
+  <section class="moments-section" id="moments">
+    <div class="moments-inner">
+      <div class="section-header"><h2 class="reveal"><span class="icon">🎬</span> Key Moments</h2></div>
+      <div class="moments-scroll" id="momentsScroll"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <section class="section" style="padding-top:20px;padding-bottom:40px">
+    <div class="ticker-strip reveal-scale">
+      <div class="ticker-item"><div class="ticker-label">Annapurna Scheme (Women)</div><div class="ticker-value saffron">₹<span id="tickW">0</span></div><div class="ticker-sub">Estimated total disbursement</div></div>
+      <div class="ticker-item"><div class="ticker-label">Youth Employment Grant</div><div class="ticker-value green">₹<span id="tickY">0</span></div><div class="ticker-sub">Estimated total disbursement</div></div>
+      <div class="ticker-item"><div class="ticker-label">Central Schemes Unlocked</div><div class="ticker-value white"><span id="tickS">3</span></div><div class="ticker-sub">Ayushman + Vishwakarma + Ujjwala</div></div>
+    </div>
+  </section>
+
+  <!-- PROMISES -->
+  <section class="section" id="promises">
+    <div class="section-header"><h2 class="reveal"><span class="icon">📋</span> Sankalp Patra Promises</h2>
+      <div class="filter-pills" id="filterPills"></div>
+    </div>
+    <div class="promises-grid" id="promisesGrid"></div>
+  </section>
+
+  <!-- BACKLOG -->
+  <section class="section" id="backlog">
+    <div class="section-header"><h2 class="reveal"><span class="icon">📑</span> TMC-Era Backlog Clearance</h2></div>
+    <div class="backlog-wrap reveal">
+      <table class="backlog-table"><thead><tr><th>#</th><th>Project</th><th>Value (₹ Cr)</th><th>Stuck Since</th><th>Years</th><th>Status</th><th>Resolution</th><th>Source</th></tr></thead>
+      <tbody id="backlogBody"></tbody></table>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURE -->
+  <section class="section" id="infrastructure">
+    <div class="section-header"><h2 class="reveal"><span class="icon">🏗️</span> Infrastructure Mission</h2></div>
+    <div class="infra-grid" id="infraGrid"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="ft-tri"></div>
+    <img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="footer-logo">
+    <p>সোনার বাংলা সংকল্প ট্র্যাকার — An open accountability initiative</p>
+    <p style="margin-top:6px;font-size:10px">Data sourced from official government notifications & verified news. Last updated: <span id="lastUp"></span></p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

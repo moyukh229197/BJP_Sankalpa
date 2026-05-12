@@ -1,0 +1,114 @@
+[
+  {
+    "date": "2026-05-09",
+    "dayNumber": -1,
+    "label": "Oath Ceremony",
+    "events": [
+      {
+        "time": "11:00 AM",
+        "title": "CM Suvendu Adhikari Sworn In",
+        "description": "Suvendu Adhikari takes oath as the Chief Minister of West Bengal at Brigade Parade Ground, Kolkata. PM Modi, NDA leaders, and over 2 lakh supporters attend the historic ceremony.",
+        "category": "Governance",
+        "icon": "flag"
+      },
+      {
+        "time": "12:30 PM",
+        "title": "Council of Ministers Takes Oath",
+        "description": "Full 42-member council of ministers sworn in, including key portfolios: Home, Finance, Health, Education, and Industry.",
+        "category": "Governance",
+        "icon": "users"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-10",
+    "dayNumber": 0,
+    "label": "Day Zero",
+    "events": [
+      {
+        "time": "10:00 AM",
+        "title": "CM Visits Nabanna Secretariat",
+        "description": "CM Adhikari arrives at Nabanna (State Secretariat) for the first time. Reviews pending files and administrative backlog.",
+        "category": "Governance",
+        "icon": "building"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Meeting with Chief Secretary & DGP",
+        "description": "High-priority meeting with the Chief Secretary and DGP to assess law & order situation and pending administrative matters.",
+        "category": "Law & Order",
+        "icon": "shield"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "dayNumber": 1,
+    "label": "Day 1 — First Cabinet",
+    "events": [
+      {
+        "time": "10:00 AM",
+        "title": "First Cabinet Meeting at Nabanna",
+        "description": "CM Adhikari chairs the historic first Cabinet meeting. Multiple landmark decisions taken on Day 1 itself.",
+        "category": "Governance",
+        "icon": "landmark"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "BSF Border Fencing — Land Transfer Approved",
+        "description": "Cabinet approves transfer of land to BSF for construction of fencing along the Bangladesh border. 45-day target set for completion.",
+        "category": "Security",
+        "icon": "shield-check"
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Ayushman Bharat Adopted in West Bengal",
+        "description": "State formally adopts the Ayushman Bharat PM-JAY health insurance scheme, previously blocked by the TMC government for over 5 years.",
+        "category": "Healthcare",
+        "icon": "heart-pulse"
+      },
+      {
+        "time": "11:15 AM",
+        "title": "PM Vishwakarma & Ujjwala 3.0 Greenlit",
+        "description": "Cabinet approves immediate implementation of PM Vishwakarma Yojana for artisans and PM Shri Ujjwala Yojana 3.0 for free LPG connections.",
+        "category": "Industry",
+        "icon": "flame"
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Bharatiya Nyaya Sanhita Implemented",
+        "description": "BNS, BNSS, and BSA criminal law codes officially implemented statewide, replacing the holdover IPC/CrPC regime.",
+        "category": "Law & Order",
+        "icon": "scale"
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Job Age Limit Extended by 5 Years",
+        "description": "Upper age limit for state government job applicants extended by 5 years — providing relief to lakhs of aspirants affected by SSC delays.",
+        "category": "Employment",
+        "icon": "user-plus"
+      },
+      {
+        "time": "12:30 PM",
+        "title": "State Census Exercise Initiated",
+        "description": "Cabinet approves immediate commencement of the Census exercise in West Bengal, pending since 2021.",
+        "category": "Governance",
+        "icon": "bar-chart"
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Writers' Buildings Restoration Announced",
+        "description": "Government announces plan to shift the state secretariat back to the historic Writers' Buildings in central Kolkata.",
+        "category": "Governance",
+        "icon": "building-2"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Existing Welfare Schemes to Continue",
+        "description": "CM Adhikari assures that no existing social welfare schemes will be discontinued. All beneficiaries will continue to receive benefits.",
+        "category": "Women",
+        "icon": "heart-handshake"
+      }
+    ]
+  }
+]
