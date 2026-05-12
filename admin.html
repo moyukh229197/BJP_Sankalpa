@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Editor | Sonar Bangla Sankalp Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="admin.js"></script>
+</head>
+<body class="admin-page">
+  <main class="admin-shell">
+    <header class="admin-hero">
+      <div>
+        <div class="admin-kicker">Private content backend</div>
+        <h1>Site Content Editor</h1>
+        <p>Edit the website data that powers news, timeline items, thumbnails, links, and section content.</p>
+      </div>
+      <div class="admin-hero-actions">
+        <button class="admin-btn" id="adminReload" type="button">Reload</button>
+        <button class="admin-btn" id="adminExport" type="button">Export</button>
+        <button class="admin-btn danger" id="adminLogout" type="button">Logout</button>
+      </div>
+    </header>
+
+    <section class="admin-login-panel" id="loginPanel">
+      <h2>Sign in</h2>
+      <p>Use the site admin password to open the editor.</p>
+      <form id="loginForm" class="admin-login-form">
+        <input id="adminPassword" type="password" placeholder="Admin password" autocomplete="current-password">
+        <button class="admin-btn primary" type="submit">Login</button>
+      </form>
+      <div class="admin-hint">This page is hidden from the main navigation on purpose.</div>
+    </section>
+
+    <section class="admin-dashboard hidden" id="editorPanel">
+      <div class="admin-summary" id="summaryBar"></div>
+      <div class="admin-section-grid" id="sectionGrid"></div>
+      <div class="admin-save-row">
+        <div id="saveStatus" class="admin-status">Ready.</div>
+        <button class="admin-btn primary" id="saveAll" type="button">Save all sections</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

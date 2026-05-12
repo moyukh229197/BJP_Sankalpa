@@ -89,8 +89,6 @@ const moments=[
   {title:"Writers' Building Restoration Announced",desc:"Historic secretariat to be restored and reoccupied by new government.",date:"May 11, 2026",badge:"HERITAGE",thumb:"https://i.ytimg.com/vi/KORtre6IVLk/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=KORtre6IVLk"}
 ];
 
-const ADMIN_STORAGE_KEY='sbst-admin-content-v1';
-const ADMIN_SESSION_KEY='sbst-admin-auth';
 const cloneData=v=>JSON.parse(JSON.stringify(v));
 function defaultSiteData(){
   return cloneData({manifesto,dailyLog,moments,backlog});
@@ -117,14 +115,20 @@ function applySiteData(data){
 function currentSiteData(){
   return cloneData({manifesto,dailyLog,moments,backlog});
 }
-function loadPersistedSiteData(){
-  try{
-    const raw=localStorage.getItem(ADMIN_STORAGE_KEY);
-    if(!raw) return applySiteData(defaultSiteData());
-    return applySiteData(JSON.parse(raw));
-  }catch(err){
-    return applySiteData(defaultSiteData());
+async function loadSiteData(){
+  const sources = location.protocol === 'file:'
+    ? ['data/site-content.json']
+    : ['/api/content', 'data/site-content.json'];
+  for(const url of sources){
+    try{
+      const res = await fetch(url, {cache:'no-store'});
+      if(!res.ok) continue;
+      return applySiteData(await res.json());
+    }catch(err){
+      // Try the next source.
+    }
   }
+  return applySiteData(defaultSiteData());
 }
 
 // ── BACKLOG ──
@@ -163,105 +167,6 @@ function sourceIcon(link,label='Open source'){
     </button>`;
 }
 
-const ADMIN_PASSWORD='BJP365';
-let adminPanelOpen=false;
-
-function ensureAdminPanel(){
-  if($('adminOverlay')) return;
-  const shell=document.createElement('div');
-  shell.id='adminOverlay';
-  shell.className='admin-overlay';
-  shell.innerHTML=`
-    <div class="admin-backdrop"></div>
-    <aside class="admin-drawer" role="dialog" aria-modal="true" aria-label="Hidden admin editor">
-      <div class="admin-head">
-        <div>
-          <div class="admin-kicker">Hidden Admin</div>
-          <h3>Content Editor</h3>
-        </div>
-        <button class="admin-close" type="button" data-admin-close aria-label="Close editor">×</button>
-      </div>
-      <div class="admin-note">Edit the JSON bundle for moments, daily log, promises, and backlog. Images, video thumbnails, and source links are all editable here.</div>
-      <div class="admin-stats" id="adminStats"></div>
-      <textarea id="adminJson" spellcheck="false"></textarea>
-      <div class="admin-actions">
-        <button type="button" class="admin-btn" data-admin-reset>Reset defaults</button>
-        <button type="button" class="admin-btn" data-admin-export>Export JSON</button>
-        <button type="button" class="admin-btn primary" data-admin-save>Save & refresh</button>
-      </div>
-    </aside>`;
-  document.body.appendChild(shell);
-  shell.querySelector('[data-admin-close]').onclick=closeAdminPanel;
-  shell.querySelector('.admin-backdrop').onclick=closeAdminPanel;
-  shell.querySelector('[data-admin-save]').onclick=saveAdminPanel;
-  shell.querySelector('[data-admin-reset]').onclick=resetAdminPanel;
-  shell.querySelector('[data-admin-export]').onclick=exportAdminPanel;
-}
-
-function updateAdminStats(){
-  const el=$('adminStats');
-  if(!el) return;
-  const data=currentSiteData();
-  const sources=[...data.moments.map(m=>m.yt),...data.dailyLog.flatMap(d=>d.events.map(e=>e.source).filter(Boolean))].filter(Boolean).length;
-  el.innerHTML=[
-    ['Moments',data.moments.length],
-    ['Days',data.dailyLog.length],
-    ['Promises',data.manifesto.length],
-    ['Backlog',data.backlog.length],
-    ['Links',sources],
-  ].map(([k,v])=>`<span><b>${v}</b>${k}</span>`).join('');
-}
-
-function openAdminPanel(){
-  ensureAdminPanel();
-  const box=$('adminJson');
-  if(box) box.value=JSON.stringify(currentSiteData(),null,2);
-  updateAdminStats();
-  $('adminOverlay').classList.add('open');
-  adminPanelOpen=true;
-}
-
-function closeAdminPanel(){
-  const overlay=$('adminOverlay');
-  if(overlay) overlay.classList.remove('open');
-  adminPanelOpen=false;
-}
-
-function saveAdminPanel(){
-  const box=$('adminJson');
-  if(!box) return;
-  try{
-    const parsed=JSON.parse(box.value);
-    const clean=applySiteData(parsed);
-    localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(clean));
-    refreshSite();
-    updateAdminStats();
-    alert('Saved. The page has been refreshed from the edited content bundle.');
-  }catch(err){
-    alert('That JSON could not be saved. Please check the structure and try again.');
-  }
-}
-
-function resetAdminPanel(){
-  if(!confirm('Reset the site content back to the default version?')) return;
-  localStorage.removeItem(ADMIN_STORAGE_KEY);
-  const clean=applySiteData(defaultSiteData());
-  const box=$('adminJson');
-  if(box) box.value=JSON.stringify(clean,null,2);
-  refreshSite();
-  updateAdminStats();
-}
-
-function exportAdminPanel(){
-  const blob=new Blob([JSON.stringify(currentSiteData(),null,2)],{type:'application/json'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-  a.href=url;
-  a.download='sonar-bangla-site-content.json';
-  a.click();
-  setTimeout(()=>URL.revokeObjectURL(url),1000);
-}
-
 function refreshSite(){
   activeTLDay=Math.max(0,dailyLog.length-1);
   renderMoments();
@@ -273,27 +178,6 @@ function refreshSite(){
   renderBacklog();
   renderInfra();
   initReveal();
-}
-
-function initAdminShortcut(){
-  document.addEventListener('keydown',e=>{
-    if(e.ctrlKey && e.altKey && e.key.toLowerCase()==='a'){
-      e.preventDefault();
-      if(sessionStorage.getItem(ADMIN_SESSION_KEY)==='1'){
-        openAdminPanel();
-        return;
-      }
-      const pass=prompt('Admin password');
-      if(pass===null) return;
-      if(pass===ADMIN_PASSWORD){
-        sessionStorage.setItem(ADMIN_SESSION_KEY,'1');
-        openAdminPanel();
-      }else{
-        alert('Wrong password.');
-      }
-    }
-    if(e.key==='Escape' && adminPanelOpen) closeAdminPanel();
-  });
 }
 
 function actionBucket(time){
@@ -700,34 +584,35 @@ function setupNav(){
 //  INIT
 // ═══════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded',()=>{
-  loadPersistedSiteData();
-  initAdminShortcut();
+  (async()=>{
+    await loadSiteData();
 
-  // Day badge
-  const dayBadge=$('dayBadge');
-  if(dayBadge) dayBadge.textContent=`Day ${dayNum()} of 365`;
+    // Day badge
+    const dayBadge=$('dayBadge');
+    if(dayBadge) dayBadge.textContent=`Day ${dayNum()} of 365`;
 
-  // Countdowns
-  updateCD(); setInterval(updateCD,1000);
+    // Countdowns
+    updateCD(); setInterval(updateCD,1000);
 
-  // Particles
-  initParticles();
+    // Particles
+    initParticles();
 
-  // Sections
-  refreshSite();
+    // Sections
+    refreshSite();
 
-  // Tickers
-  const tW=$('tickW'),tY=$('tickY');
-  if(tW) tW.textContent='0 — Registration Phase';
-  if(tY) tY.textContent='0 — Registration Phase';
+    // Tickers
+    const tW=$('tickW'),tY=$('tickY');
+    if(tW) tW.textContent='0 — Registration Phase';
+    if(tY) tY.textContent='0 — Registration Phase';
 
-  // Nav
-  setupNav();
+    // Nav
+    setupNav();
 
-  // Reveal
-  initReveal();
+    // Reveal
+    initReveal();
 
-  // Last updated
-  const lu=$('lastUp');
-  if(lu)lu.textContent=new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'});
+    // Last updated
+    const lu=$('lastUp');
+    if(lu)lu.textContent=new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'});
+  })();
 });
