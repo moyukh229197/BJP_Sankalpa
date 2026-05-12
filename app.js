@@ -91,10 +91,12 @@ const moments=[
 
 const ADMIN_STORAGE_KEY='sbst-admin-content-v1';
 const ADMIN_SESSION_KEY='sbst-admin-auth';
-const DEFAULT_SITE_DATA=JSON.parse(JSON.stringify({manifesto,dailyLog,moments,backlog}));
 const cloneData=v=>JSON.parse(JSON.stringify(v));
+function defaultSiteData(){
+  return cloneData({manifesto,dailyLog,moments,backlog});
+}
 function normalizeSiteData(raw){
-  const base=cloneData(DEFAULT_SITE_DATA);
+  const base=defaultSiteData();
   if(!raw || typeof raw!=='object') return base;
   ['manifesto','dailyLog','moments','backlog'].forEach(key=>{
     if(Array.isArray(raw[key])) base[key]=raw[key];
@@ -118,10 +120,10 @@ function currentSiteData(){
 function loadPersistedSiteData(){
   try{
     const raw=localStorage.getItem(ADMIN_STORAGE_KEY);
-    if(!raw) return applySiteData(DEFAULT_SITE_DATA);
+    if(!raw) return applySiteData(defaultSiteData());
     return applySiteData(JSON.parse(raw));
   }catch(err){
-    return applySiteData(DEFAULT_SITE_DATA);
+    return applySiteData(defaultSiteData());
   }
 }
 
@@ -243,7 +245,7 @@ function saveAdminPanel(){
 function resetAdminPanel(){
   if(!confirm('Reset the site content back to the default version?')) return;
   localStorage.removeItem(ADMIN_STORAGE_KEY);
-  const clean=applySiteData(DEFAULT_SITE_DATA);
+  const clean=applySiteData(defaultSiteData());
   const box=$('adminJson');
   if(box) box.value=JSON.stringify(clean,null,2);
   refreshSite();
