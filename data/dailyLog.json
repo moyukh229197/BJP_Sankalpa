@@ -131,7 +131,31 @@
         "icon": "shield"
       },
       {
+        "time": "2:15 PM",
+        "title": "400+ Arrested, 200 FIRs Filed in Post-Poll Violence",
+        "description": "Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
+        "category": "Law & Order",
+        "icon": "alert-triangle",
+        "source": "https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/"
+      },
+      {
+        "time": "2:45 PM",
+        "title": "Kolkata Police Clamps Down on Rallies with Earthmovers",
+        "description": "Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html"
+      },
+      {
         "time": "3:00 PM",
+        "title": "Police Deployment Increased After Aide's Killing",
+        "description": "Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
+        "category": "Law & Order",
+        "icon": "shield-check",
+        "source": "https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html"
+      },
+      {
+        "time": "4:00 PM",
         "title": "BSF Land Transfer Process Begins",
         "description": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
         "category": "Security",

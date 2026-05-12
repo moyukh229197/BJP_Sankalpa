@@ -71,7 +71,10 @@ const dailyLog=[
   {date:"2026-05-12",day:3,label:"Day 3 — Portfolios & Border Drive",events:[
     {time:"10:00 AM",title:"Cabinet Portfolios Finalised",desc:"West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios."},
     {time:"12:00 PM",title:"No Deputy CM; Home & Finance Retained",desc:"The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister."},
-    {time:"3:00 PM",title:"BSF Land Transfer Process Begins",desc:"The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target."}
+    {time:"2:15 PM",title:"400+ Arrested, 200 FIRs Filed in Post-Poll Violence",desc:"Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",source:"https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/"},
+    {time:"2:45 PM",title:"Kolkata Police Clamps Down on Rallies with Earthmovers",desc:"Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",source:"https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html"},
+    {time:"3:00 PM",title:"Police Deployment Increased After Aide's Killing",desc:"Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",source:"https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html"},
+    {time:"4:00 PM",title:"BSF Land Transfer Process Begins",desc:"The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target."}
   ]}
 ];
 
@@ -83,33 +86,6 @@ const moments=[
   {title:"PM Modi's 'Sonar Bangla' Address",desc:"PM congratulates Bengal, calls it 'a new dawn for Sonar Bangla'.",date:"May 5, 2026",badge:"NATIONAL",thumb:"https://i.ytimg.com/vi/mvF4KRNYmnQ/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=mvF4KRNYmnQ"},
   {title:"Ayushman Bharat — Finally in Bengal!",desc:"State adopts PM-JAY after 5 years of TMC blockade.",date:"May 11, 2026",badge:"HEALTHCARE",thumb:"https://i.ytimg.com/vi/It3VkaK6BcQ/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=It3VkaK6BcQ"},
   {title:"Writers' Building Restoration Announced",desc:"Historic secretariat to be restored and reoccupied by new government.",date:"May 11, 2026",badge:"HERITAGE",thumb:"https://i.ytimg.com/vi/KORtre6IVLk/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=KORtre6IVLk"}
-];
-
-const lawOrderFeed=[
-  {
-    title:"400+ arrested, 200 FIRs filed in post-poll violence",
-    desc:"Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
-    date:"May 7, 2026",
-    badge:"ARRESTS",
-    thumb:"https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg",
-    source:"https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/"
-  },
-  {
-    title:"Kolkata police clamps down on rallies with earthmovers",
-    desc:"Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
-    date:"May 6, 2026",
-    badge:"POLICE",
-    thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg",
-    source:"https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html"
-  },
-  {
-    title:"Police deployment increased after aide's killing",
-    desc:"Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
-    date:"May 7, 2026",
-    badge:"CLASHES",
-    thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg",
-    source:"https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html"
-  }
 ];
 
 // ── BACKLOG ──
@@ -263,29 +239,6 @@ function renderMoments(){
       <div class="moment-body"><h4>${m.title}</h4><p>${m.desc}</p><div class="moment-date">📅 ${m.date}</div></div>
     </div>`).join('');
   $$('.moment-card').forEach(card=>{
-    const open=()=>window.open(card.dataset.open,'_blank','noopener,noreferrer');
-    card.onclick=e=>{if(e.target.closest('.source-link')) return; open();};
-    card.onkeydown=e=>{if(e.key==='Enter' || e.key===' '){e.preventDefault(); open();}};
-  });
-}
-
-function renderLawOrderFeed(){
-  const c=$('safetyFeed');
-  if(!c) return;
-  c.innerHTML=lawOrderFeed.map(item=>`
-    <article class="safety-card reveal-scale" role="link" tabindex="0" data-open="${item.source}">
-      <div class="safety-thumb">
-        <img src="${item.thumb}" alt="${item.title}" onerror="this.src='https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=900&q=60'">
-        <div class="safety-badge">${item.badge}</div>
-        ${sourceIcon(item.source,'Open source')}
-      </div>
-      <div class="safety-body">
-        <div class="safety-date">📅 ${item.date}</div>
-        <h4>${item.title}</h4>
-        <p>${item.desc}</p>
-      </div>
-    </article>`).join('');
-  $$('.safety-card').forEach(card=>{
     const open=()=>window.open(card.dataset.open,'_blank','noopener,noreferrer');
     card.onclick=e=>{if(e.target.closest('.source-link')) return; open();};
     card.onkeydown=e=>{if(e.key==='Enter' || e.key===' '){e.preventDefault(); open();}};
@@ -579,7 +532,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   // Sections
   renderMoments();
-  renderLawOrderFeed();
   renderFilters();
   renderPromises();
   renderTimelineCompact();
