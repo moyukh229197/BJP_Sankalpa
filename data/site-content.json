@@ -1,532 +1,764 @@
 {
   "manifesto": [
     {
-      "id": 1,
+      "undefined": "",
       "title": "7th Pay Commission & DA Arrears",
-      "desc": "Implement 7th Pay Commission for state employees and clear all pending DA arrears.",
       "cat": "Finance",
       "dl": "2026-06-23",
       "status": "In Progress",
       "prog": 15,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Implement 7th Pay Commission for state employees and clear all pending DA arrears."
     },
     {
-      "id": 2,
+      "undefined": "",
       "title": "Annapurna Scheme — ₹3,000/month for Women",
-      "desc": "Monthly ₹3,000 financial assistance to all eligible women under Annapurna Scheme.",
       "cat": "Women",
       "dl": "2026-08-09",
       "status": "Pending",
       "prog": 5,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Monthly ₹3,000 financial assistance to all eligible women under Annapurna Scheme."
     },
     {
-      "id": 3,
+      "undefined": "",
       "title": "Uniform Civil Code (UCC)",
-      "desc": "Draft and pass Uniform Civil Code legislation in WB State Assembly.",
       "cat": "Law & Order",
       "dl": "2026-11-09",
       "status": "Pending",
       "prog": 0,
-      "pri": "medium"
+      "pri": "medium",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Draft and pass Uniform Civil Code legislation in WB State Assembly."
     },
     {
-      "id": 4,
+      "undefined": "",
       "title": "Ayushman Bharat Rollout",
-      "desc": "Full statewide implementation of Ayushman Bharat PM-JAY health insurance.",
       "cat": "Healthcare",
       "dl": "2026-06-10",
       "status": "In Progress",
       "prog": 40,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Full statewide implementation of Ayushman Bharat PM-JAY health insurance."
     },
     {
-      "id": 5,
+      "undefined": "",
       "title": "BSF Border Fencing",
-      "desc": "Transfer land to BSF and complete Bangladesh border fencing.",
       "cat": "Security",
       "dl": "2026-06-25",
       "status": "In Progress",
       "prog": 20,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Transfer land to BSF and complete Bangladesh border fencing."
     },
     {
-      "id": 6,
+      "undefined": "",
       "title": "Fill All State Dept Vacancies",
-      "desc": "Transparent recruitment to fill 2 lakh+ vacant posts across departments.",
       "cat": "Employment",
       "dl": "2026-12-31",
       "status": "Pending",
       "prog": 5,
-      "pri": "medium"
+      "pri": "medium",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Transparent recruitment to fill 2 lakh+ vacant posts across departments."
     },
     {
-      "id": 7,
+      "undefined": "",
       "title": "CBI Investigation — TMC Corruption",
-      "desc": "Refer all pending TMC-era corruption cases to CBI.",
       "cat": "Law & Order",
       "dl": "2026-08-09",
       "status": "In Progress",
       "prog": 10,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Refer all pending TMC-era corruption cases to CBI."
     },
     {
-      "id": 8,
+      "undefined": "",
       "title": "Ghatal Master Plan",
-      "desc": "Execute the Ghatal Master Plan for permanent flood control.",
       "cat": "Infrastructure",
       "dl": "2026-12-31",
       "status": "Pending",
       "prog": 0,
-      "pri": "medium"
+      "pri": "medium",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Execute the Ghatal Master Plan for permanent flood control."
     },
     {
-      "id": 9,
+      "undefined": "",
       "title": "Singur Industrial Park",
-      "desc": "Restore Singur land as a modern industrial park.",
       "cat": "Industry",
       "dl": "2026-11-09",
       "status": "Pending",
       "prog": 0,
-      "pri": "medium"
+      "pri": "medium",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Restore Singur land as a modern industrial park."
     },
     {
-      "id": 10,
+      "undefined": "",
       "title": "Youth Grant — ₹2,000/month",
-      "desc": "Monthly ₹2,000 stipend for unemployed educated youth.",
       "cat": "Youth",
       "dl": "2026-07-25",
       "status": "Pending",
       "prog": 0,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Monthly ₹2,000 stipend for unemployed educated youth."
     },
     {
-      "id": 11,
+      "undefined": "",
       "title": "BNS Criminal Code",
-      "desc": "Implement BNS, BNSS, BSA criminal codes statewide.",
       "cat": "Law & Order",
       "dl": "2026-06-25",
       "status": "Completed",
       "prog": 100,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Implement BNS, BNSS, BSA criminal codes statewide."
     },
     {
-      "id": 12,
+      "undefined": "",
       "title": "White Paper Audit",
-      "desc": "Publish White Paper on 15 years of TMC misgovernance.",
       "cat": "Governance",
       "dl": "2026-06-10",
       "status": "In Progress",
       "prog": 35,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Publish White Paper on 15 years of TMC misgovernance."
     },
     {
-      "id": 13,
+      "undefined": "",
       "title": "SIT for SSC Scam",
-      "desc": "Constitute SIT to probe SSC/TET recruitment scam.",
       "cat": "Law & Order",
       "dl": "2026-06-25",
       "status": "In Progress",
       "prog": 25,
-      "pri": "high"
+      "pri": "high",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Constitute SIT to probe SSC/TET recruitment scam."
     },
     {
-      "id": 14,
+      "undefined": "",
       "title": "PM Vishwakarma Yojana",
-      "desc": "Implement PM Vishwakarma for artisans with credit & skill training.",
       "cat": "Industry",
       "dl": "2026-07-10",
       "status": "In Progress",
       "prog": 30,
-      "pri": "medium"
+      "pri": "medium",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Implement PM Vishwakarma for artisans with credit & skill training."
     },
     {
-      "id": 15,
+      "undefined": "",
       "title": "State Census Exercise",
-      "desc": "Complete Census pending since 2021.",
       "cat": "Governance",
       "dl": "2026-10-31",
       "status": "In Progress",
       "prog": 10,
-      "pri": "medium"
+      "pri": "medium",
+      "source": "",
+      "thumb": "",
+      "yt": "",
+      "link": "",
+      "desc": "Complete Census pending since 2021."
     }
   ],
   "dailyLog": [
     {
+      "undefined": "",
       "date": "2026-05-09",
       "dayNumber": -1,
       "label": "Oath Ceremony",
       "events": [
         {
+          "undefined": "",
           "time": "11:00 AM",
           "title": "CM Suvendu Adhikari Sworn In",
-          "description": "Suvendu Adhikari takes oath as the Chief Minister of West Bengal at Brigade Parade Ground, Kolkata. PM Modi, NDA leaders, and over 2 lakh supporters attend the historic ceremony.",
+          "desc": "Suvendu Adhikari takes oath as the Chief Minister of West Bengal at Brigade Parade Ground, Kolkata. PM Modi, NDA leaders, and over 2 lakh supporters attend the historic ceremony.",
           "category": "Governance",
-          "icon": "flag"
+          "icon": "flag",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "12:30 PM",
           "title": "Council of Ministers Takes Oath",
-          "description": "Full 42-member council of ministers sworn in, including key portfolios: Home, Finance, Health, Education, and Industry.",
+          "desc": "Full 42-member council of ministers sworn in, including key portfolios: Home, Finance, Health, Education, and Industry.",
           "category": "Governance",
-          "icon": "users"
+          "icon": "users",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         }
       ]
     },
     {
+      "undefined": "",
       "date": "2026-05-10",
       "dayNumber": 0,
       "label": "Day Zero",
       "events": [
         {
+          "undefined": "",
           "time": "10:00 AM",
           "title": "CM Visits Nabanna Secretariat",
-          "description": "CM Adhikari arrives at Nabanna (State Secretariat) for the first time. Reviews pending files and administrative backlog.",
+          "desc": "CM Adhikari arrives at Nabanna (State Secretariat) for the first time. Reviews pending files and administrative backlog.",
           "category": "Governance",
-          "icon": "building"
+          "icon": "building",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "3:00 PM",
           "title": "Meeting with Chief Secretary & DGP",
-          "description": "High-priority meeting with the Chief Secretary and DGP to assess law & order situation and pending administrative matters.",
+          "desc": "High-priority meeting with the Chief Secretary and DGP to assess law & order situation and pending administrative matters.",
           "category": "Law & Order",
-          "icon": "shield"
+          "icon": "shield",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         }
       ]
     },
     {
+      "undefined": "",
       "date": "2026-05-06",
       "dayNumber": -4,
       "label": "Transition Planning",
       "events": [
         {
+          "undefined": "",
           "time": "11:00 AM",
           "title": "Suvendu Meets Governor at Raj Bhavan",
-          "description": "CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government.",
+          "desc": "CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government.",
           "category": "Governance",
-          "icon": "building"
+          "icon": "building",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "3:00 PM",
           "title": "Cabinet Formation Discussions",
-          "description": "BJP central leadership meets to finalize the Council of Ministers.",
+          "desc": "BJP central leadership meets to finalize the Council of Ministers.",
           "category": "Governance",
-          "icon": "users"
+          "icon": "users",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "5:00 PM",
           "title": "Kolkata Police Clamps Down on Rallies with Earthmovers",
-          "description": "Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
+          "desc": "Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
           "category": "Law & Order",
           "icon": "shield-alert",
           "source": "https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html",
-          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg"
+          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg",
+          "yt": "",
+          "link": ""
         }
       ]
     },
     {
+      "undefined": "",
       "date": "2026-05-07",
       "dayNumber": -3,
       "label": "Cabinet Finalized",
       "events": [
         {
+          "undefined": "",
           "time": "10:00 AM",
           "title": "42-Member Ministry List Released",
-          "description": "Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry.",
+          "desc": "Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry.",
           "category": "Governance",
-          "icon": "landmark"
+          "icon": "landmark",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "2:15 PM",
           "title": "400+ Arrested, 200 FIRs Filed in Post-Poll Violence",
-          "description": "Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
+          "desc": "Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
           "category": "Law & Order",
           "icon": "alert-triangle",
           "source": "https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/",
-          "thumb": "https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg"
+          "thumb": "https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "3:00 PM",
           "title": "Police Deployment Increased After Aide's Killing",
-          "description": "Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
+          "desc": "Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
           "category": "Law & Order",
           "icon": "shield-check",
           "source": "https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html",
-          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg"
+          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "5:00 PM",
           "title": "Oath Ceremony Date Announced",
-          "description": "Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata.",
+          "desc": "Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata.",
           "category": "Governance",
-          "icon": "building"
+          "icon": "building",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         }
       ]
     },
     {
+      "undefined": "",
       "date": "2026-05-11",
       "dayNumber": 1,
       "label": "Day 1 — First Cabinet",
       "events": [
         {
+          "undefined": "",
           "time": "10:00 AM",
           "title": "First Cabinet Meeting at Nabanna",
-          "description": "CM Adhikari chairs the historic first Cabinet meeting. Multiple landmark decisions taken on Day 1 itself.",
+          "desc": "CM Adhikari chairs the historic first Cabinet meeting. Multiple landmark decisions taken on Day 1 itself.",
           "category": "Governance",
-          "icon": "landmark"
+          "icon": "landmark",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "10:30 AM",
           "title": "BSF Border Fencing — Land Transfer Approved",
-          "description": "Cabinet approves transfer of land to BSF for construction of fencing along the Bangladesh border. 45-day target set for completion.",
+          "desc": "Cabinet approves transfer of land to BSF for construction of fencing along the Bangladesh border. 45-day target set for completion.",
           "category": "Security",
-          "icon": "shield-check"
+          "icon": "shield-check",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "11:00 AM",
           "title": "Ayushman Bharat Adopted in West Bengal",
-          "description": "State formally adopts the Ayushman Bharat PM-JAY health insurance scheme, previously blocked by the TMC government for over 5 years.",
+          "desc": "State formally adopts the Ayushman Bharat PM-JAY health insurance scheme, previously blocked by the TMC government for over 5 years.",
           "category": "Healthcare",
-          "icon": "heart-pulse"
+          "icon": "heart-pulse",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "11:15 AM",
           "title": "PM Vishwakarma & Ujjwala 3.0 Greenlit",
-          "description": "Cabinet approves immediate implementation of PM Vishwakarma Yojana for artisans and PM Shri Ujjwala Yojana 3.0 for free LPG connections.",
+          "desc": "Cabinet approves immediate implementation of PM Vishwakarma Yojana for artisans and PM Shri Ujjwala Yojana 3.0 for free LPG connections.",
           "category": "Industry",
-          "icon": "flame"
+          "icon": "flame",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "11:30 AM",
           "title": "Bharatiya Nyaya Sanhita Implemented",
-          "description": "BNS, BNSS, and BSA criminal law codes officially implemented statewide, replacing the holdover IPC/CrPC regime.",
+          "desc": "BNS, BNSS, and BSA criminal law codes officially implemented statewide, replacing the holdover IPC/CrPC regime.",
           "category": "Law & Order",
-          "icon": "scale"
+          "icon": "scale",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "12:00 PM",
           "title": "Job Age Limit Extended by 5 Years",
-          "description": "Upper age limit for state government job applicants extended by 5 years — providing relief to lakhs of aspirants affected by SSC delays.",
+          "desc": "Upper age limit for state government job applicants extended by 5 years — providing relief to lakhs of aspirants affected by SSC delays.",
           "category": "Employment",
-          "icon": "user-plus"
+          "icon": "user-plus",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "12:30 PM",
           "title": "State Census Exercise Initiated",
-          "description": "Cabinet approves immediate commencement of the Census exercise in West Bengal, pending since 2021.",
+          "desc": "Cabinet approves immediate commencement of the Census exercise in West Bengal, pending since 2021.",
           "category": "Governance",
-          "icon": "bar-chart"
+          "icon": "bar-chart",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "2:00 PM",
           "title": "Writers' Buildings Restoration Announced",
-          "description": "Government announces plan to shift the state secretariat back to the historic Writers' Buildings in central Kolkata.",
+          "desc": "Government announces plan to shift the state secretariat back to the historic Writers' Buildings in central Kolkata.",
           "category": "Governance",
-          "icon": "building-2"
+          "icon": "building-2",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "3:00 PM",
           "title": "Existing Welfare Schemes to Continue",
-          "description": "CM Adhikari assures that no existing social welfare schemes will be discontinued. All beneficiaries will continue to receive benefits.",
+          "desc": "CM Adhikari assures that no existing social welfare schemes will be discontinued. All beneficiaries will continue to receive benefits.",
           "category": "Women",
-          "icon": "heart-handshake"
+          "icon": "heart-handshake",
+          "source": "",
+          "thumb": "",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "4:00 PM",
           "title": "Cabinet Portfolios Finalised",
-          "description": "West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",
+          "desc": "West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",
           "category": "Governance",
           "icon": "landmark",
           "source": "https://www.moneycontrol.com/news/india/west-bengal-cabinet-portfolios-announced-full-list-of-ministers-and-their-departments-13915507.html",
-          "thumb": "https://images.moneycontrol.com/static-mcnews/2026/05/20260509175021_West-Bengal-chief-minister-Suvendu-Adhikari.png"
+          "thumb": "https://images.moneycontrol.com/static-mcnews/2026/05/20260509175021_West-Bengal-chief-minister-Suvendu-Adhikari.png",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "4:30 PM",
           "title": "No Deputy CM; Home & Finance Retained",
-          "description": "The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",
+          "desc": "The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",
           "category": "Governance",
           "icon": "shield",
           "source": "https://newsarenaindia.com/states/no-deputy-cm-in-bengal-adhikari-allocates-portfolios/76980",
-          "thumb": "https://images.newsarenaindia.com/suvendu-4jpg_1778508352131.jpg"
+          "thumb": "https://images.newsarenaindia.com/suvendu-4jpg_1778508352131.jpg",
+          "yt": "",
+          "link": ""
         },
         {
+          "undefined": "",
           "time": "5:00 PM",
           "title": "BSF Land Transfer Process Begins",
-          "description": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
+          "desc": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
           "category": "Security",
           "icon": "shield-check",
           "source": "https://www.moneycontrol.com/news/india/suvendu-adhikari-s-first-cabinet-meeting-clears-45-day-deadline-for-bsf-land-transfer-in-bengal-unveils-key-decisions-13915009.html",
-          "thumb": "https://images.moneycontrol.com/static-mcnews/2026/05/20260509061100_Suvendu-Adhikari-CM-1.jpg"
+          "thumb": "https://images.moneycontrol.com/static-mcnews/2026/05/20260509061100_Suvendu-Adhikari-CM-1.jpg",
+          "yt": "",
+          "link": ""
         }
       ]
     },
     {
+      "undefined": "",
       "date": "2026-05-12",
       "dayNumber": 2,
       "label": "Day 3 — CBI Probe",
       "events": [
         {
+          "undefined": "",
           "time": "10:00 AM",
           "title": "CBI Takes Over Probe Into Suvendu Aide Murder",
-          "description": "The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",
+          "desc": "The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",
           "category": "Law & Order",
           "icon": "shield-alert",
           "source": "https://www.tribuneindia.com/news/india/suvendu-adhikari-aide-murder-cbi-takes-over-probe-after-sit-arrests-3-suspects/amp",
-          "thumb": "https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWIwMDM5NmUwLTRkZTktMTFmMS05NWQzLWFiMTg3NjE5Y2M0NS5qcGc="
+          "thumb": "https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWIwMDM5NmUwLTRkZTktMTFmMS05NWQzLWFiMTg3NjE5Y2M0NS5qcGc=",
+          "yt": "",
+          "link": ""
+        },
+        {
+          "undefined": "",
+          "time": "12:00 PM",
+          "title": "Former TMC Minister Sujit Bose Arrested By ED In Municipality Recruitment ‘Scam’",
+          "desc": "As of April-May 2026, the Enforcement Directorate (ED) is conducting widespread, ongoing raids in West Bengal targeting alleged money laundering in the Public Distribution System (PDS) ration scam and illegal mining. Searches at multiple premises in Kolkata, Burdwan, and Habra have yielded cash and incriminating documents.",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://timesofindia.indiatimes.com/india/ed-arrests-ex-bengal-minister-sujit-bose-in-municipality-recruitment-scam/articleshow/131019058.cms",
+          "thumb": "https://www.facebook.com/photo/?fbid=1352634203726944&set=a.308778158112559&__cft__[0]=AZa0MHyLT_uzDjTvgwlOyTskVXOw0Tf329EFYT2axe7O8HV8aIdEGk2DfMbbAHHEcBxwNmfZ6RVvBmKlXBUJav0Wgka27IcG0Pfqm1dH5RnLUY0lmudOxcL4Sbz0mz6PyNwyRi7dlOTR5LzWSVta3N3g8blKAi5YJSuyXgsda4E8EQ&__tn__=EH-R",
+          "yt": "https://www.youtube.com/watch?v=Fhf5XmXVNLU",
+          "link": ""
         }
       ]
     }
   ],
   "moments": [
     {
+      "undefined": "",
       "title": "BJP Wins Bengal — Historic Victory",
-      "desc": "BJP crosses 200+ seats, ending 15 years of TMC rule in West Bengal.",
-      "date": "May 4, 2026",
       "badge": "RESULT DAY",
+      "date": "May 4, 2026",
+      "yt": "https://www.youtube.com/watch?v=RHuQIN8Eb5c",
       "thumb": "https://i.ytimg.com/vi/RHuQIN8Eb5c/hqdefault.jpg",
-      "yt": "https://www.youtube.com/watch?v=RHuQIN8Eb5c"
+      "source": "",
+      "link": "",
+      "desc": "BJP crosses 200+ seats, ending 15 years of TMC rule in West Bengal."
     },
     {
+      "undefined": "",
       "title": "Suvendu Adhikari Sworn In as CM",
-      "desc": "Historic oath ceremony at Brigade Parade Ground with PM Modi present.",
-      "date": "May 9, 2026",
       "badge": "OATH",
+      "date": "May 9, 2026",
+      "yt": "https://www.youtube.com/watch?v=HM1zLB3BKzU",
       "thumb": "https://i.ytimg.com/vi/HM1zLB3BKzU/hqdefault.jpg",
-      "yt": "https://www.youtube.com/watch?v=HM1zLB3BKzU"
+      "source": "",
+      "link": "",
+      "desc": "Historic oath ceremony at Brigade Parade Ground with PM Modi present."
     },
     {
+      "undefined": "",
       "title": "First Cabinet — 9 Landmark Decisions",
-      "desc": "Ayushman Bharat, BSF fencing, BNS implementation, Census approved on Day 1.",
-      "date": "May 11, 2026",
       "badge": "DAY 2",
+      "date": "May 11, 2026",
+      "yt": "https://www.youtube.com/watch?v=2TsXcYSWss4",
       "thumb": "https://i.ytimg.com/vi/2TsXcYSWss4/hqdefault.jpg",
-      "yt": "https://www.youtube.com/watch?v=2TsXcYSWss4"
+      "source": "",
+      "link": "",
+      "desc": "Ayushman Bharat, BSF fencing, BNS implementation, Census approved on Day 1."
     },
     {
+      "undefined": "",
       "title": "PM Modi's 'Sonar Bangla' Address",
-      "desc": "PM congratulates Bengal, calls it 'a new dawn for Sonar Bangla'.",
-      "date": "May 5, 2026",
       "badge": "NATIONAL",
+      "date": "May 5, 2026",
+      "yt": "https://www.youtube.com/watch?v=mvF4KRNYmnQ",
       "thumb": "https://i.ytimg.com/vi/mvF4KRNYmnQ/hqdefault.jpg",
-      "yt": "https://www.youtube.com/watch?v=mvF4KRNYmnQ"
+      "source": "",
+      "link": "",
+      "desc": "PM congratulates Bengal, calls it 'a new dawn for Sonar Bangla'."
     },
     {
+      "undefined": "",
       "title": "Ayushman Bharat — Finally in Bengal!",
-      "desc": "State adopts PM-JAY after 5 years of TMC blockade.",
-      "date": "May 11, 2026",
       "badge": "HEALTHCARE",
+      "date": "May 11, 2026",
+      "yt": "https://www.youtube.com/watch?v=It3VkaK6BcQ",
       "thumb": "https://i.ytimg.com/vi/It3VkaK6BcQ/hqdefault.jpg",
-      "yt": "https://www.youtube.com/watch?v=It3VkaK6BcQ"
+      "source": "",
+      "link": "",
+      "desc": "State adopts PM-JAY after 5 years of TMC blockade."
     },
     {
+      "undefined": "",
       "title": "Writers' Building Restoration Announced",
-      "desc": "Historic secretariat to be restored and reoccupied by new government.",
-      "date": "May 11, 2026",
       "badge": "HERITAGE",
+      "date": "May 11, 2026",
+      "yt": "https://www.youtube.com/watch?v=KORtre6IVLk",
       "thumb": "https://i.ytimg.com/vi/KORtre6IVLk/hqdefault.jpg",
-      "yt": "https://www.youtube.com/watch?v=KORtre6IVLk"
+      "source": "",
+      "link": "",
+      "desc": "Historic secretariat to be restored and reoccupied by new government."
     }
   ],
   "backlog": [
     {
-      "id": 1,
+      "undefined": "",
       "p": "Ghatal Master Plan (Flood Control)",
       "v": 800,
       "s": 2012,
       "y": 14,
       "d": "Water Resources",
       "st": "Review Started",
-      "r": 5
+      "r": 5,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 2,
+      "undefined": "",
       "p": "Singur Industrial Land Restoration",
       "v": 450,
       "s": 2011,
       "y": 15,
       "d": "Industry",
       "st": "Land Survey Initiated",
-      "r": 10
+      "r": 10,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 3,
+      "undefined": "",
       "p": "SSC Recruitment Scam Redressal",
       "v": null,
       "s": 2016,
       "y": 10,
       "d": "Education",
       "st": "SIT Constituted",
-      "r": 25
+      "r": 25,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 4,
+      "undefined": "",
       "p": "Narada Sting CBI Cases",
       "v": null,
       "s": 2016,
       "y": 10,
       "d": "Law & Justice",
       "st": "In Court",
-      "r": 40
+      "r": 40,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 5,
+      "undefined": "",
       "p": "MGNREGA Wage Diversion Audit",
       "v": 3000,
       "s": 2015,
       "y": 11,
       "d": "Rural Dev",
       "st": "CAG Audit Ordered",
-      "r": 15
+      "r": 15,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 6,
+      "undefined": "",
       "p": "Kolkata Port Road Connectivity",
       "v": 620,
       "s": 2018,
       "y": 8,
       "d": "Transport",
       "st": "DPR Under Review",
-      "r": 8
+      "r": 8,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 7,
+      "undefined": "",
       "p": "Bengal Safari Expansion",
       "v": 110,
       "s": 2019,
       "y": 7,
       "d": "Forest",
       "st": "Pending",
-      "r": 0
+      "r": 0,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 8,
+      "undefined": "",
       "p": "Raiganj Medical College",
       "v": 340,
       "s": 2017,
       "y": 9,
       "d": "Health",
       "st": "Construction Stalled",
-      "r": 30
+      "r": 30,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 9,
+      "undefined": "",
       "p": "Smart City Mission (4 Cities)",
       "v": 2100,
       "s": 2017,
       "y": 9,
       "d": "Urban Dev",
       "st": "30% Complete",
-      "r": 30
+      "r": 30,
+      "source": "",
+      "thumb": "",
+      "link": ""
     },
     {
-      "id": 10,
+      "undefined": "",
       "p": "Deucha Pachami Coal Block",
       "v": 1000,
       "s": 2021,
       "y": 5,
       "d": "Mining",
       "st": "Env. Review",
-      "r": 12
+      "r": 12,
+      "source": "",
+      "thumb": "",
+      "link": ""
     }
   ]
 }
