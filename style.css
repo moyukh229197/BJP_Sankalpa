@@ -420,6 +420,26 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.
 .popup-meta span{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--text2);padding:4px 8px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.03)}
 .popup-meta b{color:var(--text);font-family:'Outfit';font-size:11px}
 .map-popup-cluster{color:var(--green-light)!important;font-size:10px!important;text-transform:uppercase;letter-spacing:1.2px}
+/* ADMIN EDITOR */
+.admin-overlay{position:fixed;inset:0;z-index:9999;display:none}
+.admin-overlay.open{display:block}
+.admin-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(10px)}
+.admin-drawer{position:absolute;top:0;right:0;width:min(100vw,620px);height:100%;background:linear-gradient(180deg,rgba(10,13,20,.98),rgba(8,10,16,.98));border-left:1px solid var(--border);box-shadow:-18px 0 48px rgba(0,0,0,.4);padding:22px 22px 18px;display:flex;flex-direction:column;gap:14px;overflow:hidden}
+.admin-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.admin-kicker{font-size:10px;text-transform:uppercase;letter-spacing:1.6px;color:var(--saffron)}
+.admin-head h3{font-size:22px}
+.admin-close{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);font-size:24px;line-height:1;cursor:pointer}
+.admin-note{font-size:12px;color:var(--text2);line-height:1.6}
+.admin-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.admin-stats span{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:64px;padding:10px 8px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.03);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1.1px;text-align:center}
+.admin-stats b{font-family:'Outfit';font-size:20px;color:var(--text);margin-bottom:4px}
+#adminJson{flex:1;min-height:320px;width:100%;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03);color:var(--text);padding:14px;font:12px/1.5 monospace;resize:none;outline:none}
+#adminJson:focus{border-color:var(--border-hover);box-shadow:0 0 0 3px rgba(255,119,34,.08)}
+.admin-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.admin-btn{height:38px;padding:0 14px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);font:700 12px 'Inter';cursor:pointer;transition:all .25s var(--ease)}
+.admin-btn:hover{border-color:var(--border-hover);background:rgba(255,119,34,.08);color:var(--saffron)}
+.admin-btn.primary{background:linear-gradient(135deg,var(--saffron),var(--saffron-deep));border-color:transparent;color:#fff}
+.admin-btn.primary:hover{filter:brightness(1.05);color:#fff}
 /* ANIMATIONS */
 .reveal{opacity:0;transform:translateY(24px);transition:all .7s var(--ease)}.reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-left{opacity:0;transform:translateX(-30px);transition:all .7s var(--ease)}.reveal-left.visible{opacity:1;transform:translateX(0)}
@@ -451,6 +471,8 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.
   .moment-card{min-width:280px;max-width:280px}
   .tl-day{min-width:240px}
   .election-shell{padding:132px 16px 36px}
+  .admin-drawer{width:100%;padding:18px 14px}
+  .admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .election-hero{display:block}
   .eci-source{margin-top:18px}
   .election-hero h1{font-size:30px}

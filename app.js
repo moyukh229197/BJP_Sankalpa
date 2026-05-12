@@ -89,6 +89,42 @@ const moments=[
   {title:"Writers' Building Restoration Announced",desc:"Historic secretariat to be restored and reoccupied by new government.",date:"May 11, 2026",badge:"HERITAGE",thumb:"https://i.ytimg.com/vi/KORtre6IVLk/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=KORtre6IVLk"}
 ];
 
+const ADMIN_STORAGE_KEY='sbst-admin-content-v1';
+const ADMIN_SESSION_KEY='sbst-admin-auth';
+const DEFAULT_SITE_DATA=JSON.parse(JSON.stringify({manifesto,dailyLog,moments,backlog}));
+const cloneData=v=>JSON.parse(JSON.stringify(v));
+function normalizeSiteData(raw){
+  const base=cloneData(DEFAULT_SITE_DATA);
+  if(!raw || typeof raw!=='object') return base;
+  ['manifesto','dailyLog','moments','backlog'].forEach(key=>{
+    if(Array.isArray(raw[key])) base[key]=raw[key];
+  });
+  return base;
+}
+function syncArray(target, source){
+  target.splice(0,target.length,...cloneData(source));
+}
+function applySiteData(data){
+  const clean=normalizeSiteData(data);
+  syncArray(manifesto, clean.manifesto);
+  syncArray(dailyLog, clean.dailyLog);
+  syncArray(moments, clean.moments);
+  syncArray(backlog, clean.backlog);
+  return clean;
+}
+function currentSiteData(){
+  return cloneData({manifesto,dailyLog,moments,backlog});
+}
+function loadPersistedSiteData(){
+  try{
+    const raw=localStorage.getItem(ADMIN_STORAGE_KEY);
+    if(!raw) return applySiteData(DEFAULT_SITE_DATA);
+    return applySiteData(JSON.parse(raw));
+  }catch(err){
+    return applySiteData(DEFAULT_SITE_DATA);
+  }
+}
+
 // ── BACKLOG ──
 const backlog=[
   {id:1,p:"Ghatal Master Plan (Flood Control)",v:800,s:2012,y:14,d:"Water Resources",st:"Review Started",r:5},
@@ -114,7 +150,6 @@ function fmtDate(d){return new Date(d+'T00:00:00+05:30').toLocaleDateString('en-
 function stCls(s){return s==='Completed'?'completed':s==='In Progress'?'progress':'pending'}
 function stBadge(s){return s==='Completed'?'badge-completed':s==='In Progress'?'badge-progress':'badge-pending'}
 const catEmoji={Finance:'💰',Women:'👩','Law & Order':'⚖️',Healthcare:'🏥',Security:'🛡️',Employment:'💼',Infrastructure:'🏗️',Industry:'🏭',Youth:'🎓',Governance:'🏛️'};
-function sourceSearch(q){return `https://www.google.com/search?q=${encodeURIComponent(q)}`;}
 function youtubeThumb(url){
   const m=String(url||'').match(/(?:v=|youtu\.be\/)([A-Za-z0-9_-]{11})/);
   return m ? `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg` : '';
@@ -124,6 +159,139 @@ function sourceIcon(link,label='Open source'){
     <button type="button" class="source-link" aria-label="${label}" title="${label}" onclick="event.stopPropagation();window.open('${link}','_blank','noopener,noreferrer')">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
     </button>`;
+}
+
+const ADMIN_PASSWORD='BJP365';
+let adminPanelOpen=false;
+
+function ensureAdminPanel(){
+  if($('adminOverlay')) return;
+  const shell=document.createElement('div');
+  shell.id='adminOverlay';
+  shell.className='admin-overlay';
+  shell.innerHTML=`
+    <div class="admin-backdrop"></div>
+    <aside class="admin-drawer" role="dialog" aria-modal="true" aria-label="Hidden admin editor">
+      <div class="admin-head">
+        <div>
+          <div class="admin-kicker">Hidden Admin</div>
+          <h3>Content Editor</h3>
+        </div>
+        <button class="admin-close" type="button" data-admin-close aria-label="Close editor">×</button>
+      </div>
+      <div class="admin-note">Edit the JSON bundle for moments, daily log, promises, and backlog. Images, video thumbnails, and source links are all editable here.</div>
+      <div class="admin-stats" id="adminStats"></div>
+      <textarea id="adminJson" spellcheck="false"></textarea>
+      <div class="admin-actions">
+        <button type="button" class="admin-btn" data-admin-reset>Reset defaults</button>
+        <button type="button" class="admin-btn" data-admin-export>Export JSON</button>
+        <button type="button" class="admin-btn primary" data-admin-save>Save & refresh</button>
+      </div>
+    </aside>`;
+  document.body.appendChild(shell);
+  shell.querySelector('[data-admin-close]').onclick=closeAdminPanel;
+  shell.querySelector('.admin-backdrop').onclick=closeAdminPanel;
+  shell.querySelector('[data-admin-save]').onclick=saveAdminPanel;
+  shell.querySelector('[data-admin-reset]').onclick=resetAdminPanel;
+  shell.querySelector('[data-admin-export]').onclick=exportAdminPanel;
+}
+
+function updateAdminStats(){
+  const el=$('adminStats');
+  if(!el) return;
+  const data=currentSiteData();
+  const sources=[...data.moments.map(m=>m.yt),...data.dailyLog.flatMap(d=>d.events.map(e=>e.source).filter(Boolean))].filter(Boolean).length;
+  el.innerHTML=[
+    ['Moments',data.moments.length],
+    ['Days',data.dailyLog.length],
+    ['Promises',data.manifesto.length],
+    ['Backlog',data.backlog.length],
+    ['Links',sources],
+  ].map(([k,v])=>`<span><b>${v}</b>${k}</span>`).join('');
+}
+
+function openAdminPanel(){
+  ensureAdminPanel();
+  const box=$('adminJson');
+  if(box) box.value=JSON.stringify(currentSiteData(),null,2);
+  updateAdminStats();
+  $('adminOverlay').classList.add('open');
+  adminPanelOpen=true;
+}
+
+function closeAdminPanel(){
+  const overlay=$('adminOverlay');
+  if(overlay) overlay.classList.remove('open');
+  adminPanelOpen=false;
+}
+
+function saveAdminPanel(){
+  const box=$('adminJson');
+  if(!box) return;
+  try{
+    const parsed=JSON.parse(box.value);
+    const clean=applySiteData(parsed);
+    localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(clean));
+    refreshSite();
+    updateAdminStats();
+    alert('Saved. The page has been refreshed from the edited content bundle.');
+  }catch(err){
+    alert('That JSON could not be saved. Please check the structure and try again.');
+  }
+}
+
+function resetAdminPanel(){
+  if(!confirm('Reset the site content back to the default version?')) return;
+  localStorage.removeItem(ADMIN_STORAGE_KEY);
+  const clean=applySiteData(DEFAULT_SITE_DATA);
+  const box=$('adminJson');
+  if(box) box.value=JSON.stringify(clean,null,2);
+  refreshSite();
+  updateAdminStats();
+}
+
+function exportAdminPanel(){
+  const blob=new Blob([JSON.stringify(currentSiteData(),null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download='sonar-bangla-site-content.json';
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+function refreshSite(){
+  activeTLDay=Math.max(0,dailyLog.length-1);
+  renderMoments();
+  renderFilters();
+  renderPromises();
+  renderTimelineCompact();
+  setupTLNav();
+  renderTimelineVertical();
+  renderBacklog();
+  renderInfra();
+  initReveal();
+}
+
+function initAdminShortcut(){
+  document.addEventListener('keydown',e=>{
+    if(e.ctrlKey && e.altKey && e.key.toLowerCase()==='a'){
+      e.preventDefault();
+      if(sessionStorage.getItem(ADMIN_SESSION_KEY)==='1'){
+        openAdminPanel();
+        return;
+      }
+      const pass=prompt('Admin password');
+      if(pass===null) return;
+      if(pass===ADMIN_PASSWORD){
+        sessionStorage.setItem(ADMIN_SESSION_KEY,'1');
+        openAdminPanel();
+      }else{
+        alert('Wrong password.');
+      }
+    }
+    if(e.key==='Escape' && adminPanelOpen) closeAdminPanel();
+  });
 }
 
 function actionBucket(time){
@@ -263,7 +431,7 @@ function renderPromises(filter='all'){
       <div class="promise-header">
         <div class="promise-icon">${catEmoji[p.cat]||'📌'}</div>
         <div class="promise-title">${p.title}</div>
-        ${sourceIcon(sourceSearch(`${p.title} ${p.desc} West Bengal BJP`),'Open source')}
+        ${p.source ? sourceIcon(p.source,'Open source') : ''}
       </div>
       <div class="promise-desc">${p.desc}</div>
       <div class="promise-meta">
@@ -472,7 +640,7 @@ function renderBacklog(){
       <td><span class="bl-yrs">${b.y} yrs</span></td>
       <td><span class="badge ${b.r>20?'badge-progress':'badge-pending'}">${b.st}</span></td>
       <td><div style="display:flex;align-items:center;gap:6px"><div class="res-bar"><div class="res-fill" style="width:${b.r}%"></div></div><span class="res-text">${b.r}%</span></div></td>
-      <td>${sourceIcon(sourceSearch(`${b.p} ${b.d} West Bengal backlog`),'Open source')}</td>
+      <td>${b.source ? sourceIcon(b.source,'Open source') : ''}</td>
     </tr>`).join('');
 }
 
@@ -490,7 +658,7 @@ function renderInfra(){
   grid.innerHTML=data.map(i=>{
     const off=C-(i.p/100)*C;
     return`<div class="infra-card reveal">
-      ${sourceIcon(sourceSearch(`${i.t} West Bengal`),'Open source')}
+      ${i.source ? sourceIcon(i.source,'Open source') : ''}
       <h3>${i.t}</h3><div class="idesc">${i.d}</div>
       <div class="pr-wrap">
         <div class="pr-ring"><svg width="100" height="100" viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="42"/><circle class="fill" cx="50" cy="50" r="42" stroke="${i.c}" stroke-dasharray="${C}" stroke-dashoffset="${off}"/></svg><div class="ct" style="color:${i.c}">${i.p}%<span>Done</span></div></div>
@@ -530,6 +698,9 @@ function setupNav(){
 //  INIT
 // ═══════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded',()=>{
+  loadPersistedSiteData();
+  initAdminShortcut();
+
   // Day badge
   const dayBadge=$('dayBadge');
   if(dayBadge) dayBadge.textContent=`Day ${dayNum()} of 365`;
@@ -541,14 +712,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   initParticles();
 
   // Sections
-  renderMoments();
-  renderFilters();
-  renderPromises();
-  renderTimelineCompact();
-  setupTLNav();
-  renderTimelineVertical();
-  renderBacklog();
-  renderInfra();
+  refreshSite();
 
   // Tickers
   const tW=$('tickW'),tY=$('tickY');
