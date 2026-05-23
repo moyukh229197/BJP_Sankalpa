@@ -560,3 +560,28 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.
   .admin-login-form input{min-width:0;width:100%}
   .admin-section-titlebar{flex-direction:column;align-items:flex-start}
 }
+
+/* ═══ LIVE BADGE ═══ */
+.live-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:24px;font-family:'Outfit';font-size:11px;font-weight:700;color:#fff;background:rgba(255,60,60,.12);border:1px solid rgba(255,60,60,.25);letter-spacing:1.2px;text-transform:uppercase;transition:all .4s var(--ease);cursor:default;margin-left:8px}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#FF3C3C;animation:livePulse 1.8s ease infinite;box-shadow:0 0 8px rgba(255,60,60,.5)}
+@keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(255,60,60,.5);opacity:1}50%{box-shadow:0 0 12px 4px rgba(255,60,60,.2);opacity:.7}}
+.live-badge.updated{background:rgba(76,175,80,.12);border-color:rgba(76,175,80,.25)}
+.live-badge.updated .live-dot{background:#4CAF50;box-shadow:0 0 8px rgba(76,175,80,.5);animation:liveFlash .6s ease}
+@keyframes liveFlash{0%{transform:scale(1)}50%{transform:scale(1.8);box-shadow:0 0 16px rgba(76,175,80,.6)}100%{transform:scale(1)}}
+
+/* ═══ TOAST NOTIFICATION ═══ */
+.toast-container{position:fixed;bottom:24px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+.toast{pointer-events:auto;display:flex;align-items:center;gap:12px;padding:14px 20px;background:linear-gradient(135deg,rgba(14,18,28,.96),rgba(10,13,20,.94));border:1px solid rgba(255,119,34,.25);border-radius:16px;backdrop-filter:blur(16px);box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.04) inset;color:var(--text);font-size:13px;font-weight:500;min-width:280px;max-width:420px;transform:translateX(120%);opacity:0;transition:all .5s cubic-bezier(.22,1,.36,1)}
+.toast.show{transform:translateX(0);opacity:1}
+.toast.hide{transform:translateX(120%);opacity:0}
+.toast-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(76,175,80,.15),rgba(76,175,80,.05));border:1px solid rgba(76,175,80,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.toast-body{flex:1}
+.toast-title{font-family:'Outfit';font-weight:700;font-size:14px;margin-bottom:2px;color:var(--saffron)}
+.toast-msg{font-size:12px;color:var(--text2);line-height:1.4}
+.toast-close{width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text3);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s var(--ease);flex-shrink:0;line-height:1}
+.toast-close:hover{border-color:var(--saffron);color:var(--saffron);background:rgba(255,119,34,.08)}
+.toast-progress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--green-light));border-radius:0 0 16px 16px;animation:toastCountdown 5s linear forwards}
+@keyframes toastCountdown{from{width:100%}to{width:0}}
+
+/* ═══ LIVE-AGO FOOTER ═══ */
+.live-ago{color:var(--saffron);font-weight:600}

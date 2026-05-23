@@ -13,8 +13,10 @@
   <nav class="navbar"><div class="nav-inner">
     <a href="#" class="nav-brand"><img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="nav-logo"><div><div class="nav-title">সোনার বাংলা সংকল্প ট্র্যাকার</div><div class="nav-subtitle">Sonar Bangla Sankalp Tracker</div></div></a>
     <div class="nav-links"><a href="#moments" class="active">Key Moments</a><a href="election-result.html">Election Result</a><a href="#promises">Promises</a><a href="timeline.html">Daily Action Log</a><a href="#backlog">Backlog</a><a href="#infrastructure">Infrastructure</a></div>
-    <div class="nav-day-badge" id="dayBadge">Day 1 of 365</div>
+    <div class="nav-day-badge" id="dayBadge">Day 13 of 365</div>
+    <span class="live-badge" id="liveBadge"><span class="live-dot"></span>LIVE</span>
   </div></nav>
+  <div class="toast-container" id="toastContainer"></div>
 
   <section class="hero" id="hero">
     <div class="hero-bg"><img src="ChatGPT Image May 11, 2026, 10_22_49 PM.png" alt="Sankalp Patra Progress"><div></div></div>
@@ -26,8 +28,8 @@
         <div class="hero-stats">
           <div class="hero-stat reveal"><div class="number" id="statTotal">15</div><div class="label">Total Promises</div></div>
           <div class="hero-stat reveal"><div class="number" id="statDone">1</div><div class="label">Completed</div></div>
-          <div class="hero-stat reveal"><div class="number" id="statWIP">7</div><div class="label">In Progress</div></div>
-          <div class="hero-stat reveal"><div class="number" id="statPend">7</div><div class="label">Pending</div></div>
+          <div class="hero-stat reveal"><div class="number" id="statWIP">9</div><div class="label">In Progress</div></div>
+          <div class="hero-stat reveal"><div class="number" id="statPend">5</div><div class="label">Pending</div></div>
         </div>
       </div>
       <div class="hero-side">
@@ -97,7 +99,7 @@
     <div class="ft-tri"></div>
     <img src="Logo_of_the_Bharatiya_Janata_Party.svg.webp" alt="BJP Logo" class="footer-logo">
     <p>সোনার বাংলা সংকল্প ট্র্যাকার — An open accountability initiative</p>
-    <p style="margin-top:6px;font-size:10px">Data sourced from official government notifications & verified news. Last updated: <span id="lastUp"></span></p>
+    <p style="margin-top:6px;font-size:10px">Data sourced from official government notifications &amp; verified news. Last updated: <span id="lastUp"></span> · <span id="liveAgo" class="live-ago"></span></p>
   </footer>
   <script src="app.js"></script>
 </body>

@@ -6,13 +6,13 @@ const OATH_D=new Date(OATH),DL45_D=new Date(DL45),DL180_D=new Date(DL180);
 
 // ── MANIFESTO DATA ──
 const manifesto=[
-  {id:1,title:"7th Pay Commission & DA Arrears",desc:"Implement 7th Pay Commission for state employees and clear all pending DA arrears.",cat:"Finance",dl:"2026-06-23",status:"In Progress",prog:15,pri:"high"},
-  {id:2,title:"Annapurna Scheme — ₹3,000/month for Women",desc:"Monthly ₹3,000 financial assistance to all eligible women under Annapurna Scheme.",cat:"Women",dl:"2026-08-09",status:"Pending",prog:5,pri:"high"},
+  {id:1,title:"7th Pay Commission & DA Arrears",desc:"Implement 7th Pay Commission for state employees and clear all pending DA arrears.",cat:"Finance",dl:"2026-06-23",status:"In Progress",prog:50,pri:"high"},
+  {id:2,title:"Annapurna Scheme — ₹3,000/month for Women",desc:"Monthly ₹3,000 financial assistance to all eligible women under Annapurna Scheme.",cat:"Women",dl:"2026-08-09",status:"In Progress",prog:60,pri:"high"},
   {id:3,title:"Uniform Civil Code (UCC)",desc:"Draft and pass Uniform Civil Code legislation in WB State Assembly.",cat:"Law & Order",dl:"2026-11-09",status:"Pending",prog:0,pri:"medium"},
   {id:4,title:"Ayushman Bharat Rollout",desc:"Full statewide implementation of Ayushman Bharat PM-JAY health insurance.",cat:"Healthcare",dl:"2026-06-10",status:"In Progress",prog:40,pri:"high"},
-  {id:5,title:"BSF Border Fencing",desc:"Transfer land to BSF and complete Bangladesh border fencing.",cat:"Security",dl:"2026-06-25",status:"In Progress",prog:20,pri:"high"},
+  {id:5,title:"BSF Border Fencing",desc:"Transfer land to BSF and complete Bangladesh border fencing.",cat:"Security",dl:"2026-06-25",status:"In Progress",prog:35,pri:"high"},
   {id:6,title:"Fill All State Dept Vacancies",desc:"Transparent recruitment to fill 2 lakh+ vacant posts across departments.",cat:"Employment",dl:"2026-12-31",status:"Pending",prog:5,pri:"medium"},
-  {id:7,title:"CBI Investigation — TMC Corruption",desc:"Refer all pending TMC-era corruption cases to CBI.",cat:"Law & Order",dl:"2026-08-09",status:"In Progress",prog:10,pri:"high"},
+  {id:7,title:"CBI Investigation — TMC Corruption",desc:"Refer all pending TMC-era corruption cases to CBI.",cat:"Law & Order",dl:"2026-08-09",status:"In Progress",prog:20,pri:"high"},
   {id:8,title:"Ghatal Master Plan",desc:"Execute the Ghatal Master Plan for permanent flood control.",cat:"Infrastructure",dl:"2026-12-31",status:"Pending",prog:0,pri:"medium"},
   {id:9,title:"Singur Industrial Park",desc:"Restore Singur land as a modern industrial park.",cat:"Industry",dl:"2026-11-09",status:"Pending",prog:0,pri:"medium"},
   {id:10,title:"Youth Grant — ₹2,000/month",desc:"Monthly ₹2,000 stipend for unemployed educated youth.",cat:"Youth",dl:"2026-07-25",status:"Pending",prog:0,pri:"high"},
@@ -25,57 +25,78 @@ const manifesto=[
 
 // ── DAILY LOG (from May 4 — Election Result Day) ──
 const dailyLog=[
-  {date:"2026-05-04",day:-5,label:"🏆 Election Results Day",events:[
-    {time:"8:00 AM",title:"Counting Begins Across West Bengal",desc:"EVM counting begins at 294 constituency centres across the state."},
-    {time:"12:00 PM",title:"BJP Crosses Majority Mark",desc:"BJP crosses the 148-seat majority mark in trends. Celebrations erupt across Bengal."},
-    {time:"4:00 PM",title:"TMC Concedes Defeat",desc:"Trinamool Congress accepts defeat after 15 years in power. Mamata Banerjee congratulates BJP."},
-    {time:"6:00 PM",title:"Suvendu Adhikari Named CM Candidate",desc:"BJP Parliamentary Board names Suvendu Adhikari as the Chief Minister of West Bengal."}
+  {date:"2026-05-04",dayNumber:-5,label:"🏆 Election Results Day",events:[
+    {time:"8:00 AM",title:"Counting Begins Across West Bengal",desc:"EVM counting begins at 294 constituency centres across the state.",category:"Governance",icon:"bar-chart"},
+    {time:"12:00 PM",title:"BJP Crosses Majority Mark",desc:"BJP crosses the 148-seat majority mark in trends. Celebrations erupt across Bengal.",category:"Governance",icon:"landmark"},
+    {time:"4:00 PM",title:"TMC Concedes Defeat",desc:"Trinamool Congress accepts defeat after 15 years in power. Mamata Banerjee congratulates BJP.",category:"Governance",icon:"users"},
+    {time:"6:00 PM",title:"Suvendu Adhikari Named CM Candidate",desc:"BJP Parliamentary Board names Suvendu Adhikari as the Chief Minister of West Bengal.",category:"Governance",icon:"user-check"}
   ]},
-  {date:"2026-05-05",day:-4,label:"Victory Celebrations",events:[
-    {time:"10:00 AM",title:"Celebrations Across Bengal",desc:"Victory rallies in all 23 districts. Workers distribute sweets and burst firecrackers."},
-    {time:"4:00 PM",title:"PM Modi Congratulates Bengal",desc:"PM Modi addresses the nation, calls it 'a new dawn for Sonar Bangla'."}
+  {date:"2026-05-05",dayNumber:-4,label:"Victory Celebrations",events:[
+    {time:"10:00 AM",title:"Celebrations Across Bengal",desc:"Victory rallies in all 23 districts. Workers distribute sweets and burst firecrackers.",category:"Governance",icon:"smile"},
+    {time:"4:00 PM",title:"PM Modi Congratulates Bengal",desc:"PM Modi addresses the nation, calls it 'a new dawn for Sonar Bangla'.",category:"Governance",icon:"award"}
   ]},
-  {date:"2026-05-06",day:-3,label:"Transition Planning",events:[
-    {time:"11:00 AM",title:"Suvendu Meets Governor at Raj Bhavan",desc:"CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government."},
-    {time:"3:00 PM",title:"Cabinet Formation Discussions",desc:"BJP central leadership meets to finalize the Council of Ministers."},
-    {time:"5:00 PM",title:"Kolkata Police Clamps Down on Rallies with Earthmovers",desc:"Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",source:"https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html",thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg"}
+  {date:"2026-05-06",dayNumber:-3,label:"Transition Planning",events:[
+    {time:"11:00 AM",title:"Suvendu Meets Governor at Raj Bhavan",desc:"CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government.",category:"Governance",icon:"building"},
+    {time:"3:00 PM",title:"Cabinet Formation Discussions",desc:"BJP central leadership meets to finalize the Council of Ministers.",category:"Governance",icon:"users"},
+    {time:"5:00 PM",title:"Kolkata Police Clamps Down on Rallies with Earthmovers",desc:"Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",category:"Law & Order",icon:"shield-alert",source:"https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html",thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/06/550x309/A-damaged-portion-of-a-market-after-the-BJP-suppor_1778073389348.jpg"}
   ]},
-  {date:"2026-05-07",day:-2,label:"Cabinet Finalized",events:[
-    {time:"10:00 AM",title:"42-Member Ministry List Released",desc:"Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry."},
-    {time:"2:15 PM",title:"400+ Arrested, 200 FIRs Filed in Post-Poll Violence",desc:"Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",source:"https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/",thumb:"https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg"},
-    {time:"3:00 PM",title:"Police Deployment Increased After Aide's Killing",desc:"Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",source:"https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html",thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg"},
-    {time:"5:00 PM",title:"Oath Ceremony Date Announced",desc:"Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata."}
+  {date:"2026-05-07",dayNumber:-2,label:"Cabinet Finalized",events:[
+    {time:"10:00 AM",title:"42-Member Ministry List Released",desc:"Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry.",category:"Governance",icon:"landmark"},
+    {time:"2:15 PM",title:"400+ Arrested, 200 FIRs Filed in Post-Poll Violence",desc:"Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",category:"Law & Order",icon:"shield-alert",source:"https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/",thumb:"https://images.indianexpress.com/2026/05/Acting-DGP-Siddh-Nath-Gupta-at-a-press-conference-in-Kolkata-on-Wednesday.-Express.jpg"},
+    {time:"3:00 PM",title:"Police Deployment Increased After Aide's Killing",desc:"Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",category:"Law & Order",icon:"shield-alert",source:"https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html",thumb:"https://www.hindustantimes.com/ht-img/img/2026/05/07/1600x900/hqdefault_1778131660821_1778131664350.jpg"},
+    {time:"5:00 PM",title:"Oath Ceremony Date Announced",desc:"Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata.",category:"Governance",icon:"calendar"}
   ]},
-  {date:"2026-05-08",day:-1,label:"Eve of Government",events:[
-    {time:"All Day",title:"Brigade Parade Ground Preparations",desc:"Massive stage setup at Brigade Parade Ground. 2.5 lakh chairs arranged. LED screens installed across Kolkata."},
-    {time:"8:00 PM",title:"PM Modi Arrives in Kolkata",desc:"Prime Minister lands at NSC Bose International Airport. Received by Suvendu Adhikari."}
+  {date:"2026-05-08",dayNumber:-1,label:"Eve of Government",events:[
+    {time:"All Day",title:"Brigade Parade Ground Preparations",desc:"Massive stage setup at Brigade Parade Ground. 2.5 lakh chairs arranged. LED screens installed across Kolkata.",category:"Governance",icon:"building-2"},
+    {time:"8:00 PM",title:"PM Modi Arrives in Kolkata",desc:"Prime Minister lands at NSC Bose International Airport. Received by Suvendu Adhikari.",category:"Governance",icon:"plane-landing"}
   ]},
-  {date:"2026-05-09",day:0,label:"🇮🇳 Oath Ceremony",events:[
-    {time:"11:00 AM",title:"CM Suvendu Adhikari Sworn In",desc:"Takes oath as Chief Minister at Brigade Parade Ground. PM Modi, NDA leaders, 2 lakh+ supporters attend."},
-    {time:"12:30 PM",title:"Council of Ministers Takes Oath",desc:"Full 42-member council sworn in with key portfolios assigned."},
-    {time:"4:00 PM",title:"CM's First Address to the State",desc:"CM Adhikari pledges to fulfill all Sankalp Patra promises. Announces 'Mission 365 Days'."}
+  {date:"2026-05-09",dayNumber:0,label:"🇮🇳 Oath Ceremony",events:[
+    {time:"11:00 AM",title:"CM Suvendu Adhikari Sworn In",desc:"Takes oath as Chief Minister at Brigade Parade Ground. PM Modi, NDA leaders, 2 lakh+ supporters attend.",category:"Governance",icon:"user-check"},
+    {time:"12:30 PM",title:"Council of Ministers Takes Oath",desc:"Full 42-member council sworn in with key portfolios assigned.",category:"Governance",icon:"users-2"},
+    {time:"4:00 PM",title:"CM's First Address to the State",desc:"CM Adhikari pledges to fulfill all Sankalp Patra promises. Announces 'Mission 365 Days'.",category:"Governance",icon:"megaphone"}
   ]},
-  {date:"2026-05-10",day:1,label:"Day 1 — Nabanna",events:[
-    {time:"10:00 AM",title:"CM Arrives at Nabanna Secretariat",desc:"First visit to state secretariat. Reviews pending files and administrative backlog."},
-    {time:"3:00 PM",title:"Meeting with Chief Secretary & DGP",desc:"Assesses law & order situation and pending administrative matters."},
-    {time:"5:00 PM",title:"Administrative Reshuffle Begins",desc:"Key IAS/IPS transfers initiated. New DGP and Home Secretary appointed."}
+  {date:"2026-05-10",dayNumber:1,label:"Day 1 — Nabanna",events:[
+    {time:"10:00 AM",title:"CM Arrives at Nabanna Secretariat",desc:"First visit to state secretariat. Reviews pending files and administrative backlog.",category:"Governance",icon:"building-2"},
+    {time:"3:00 PM",title:"Meeting with Chief Secretary & DGP",desc:"Assesses law & order situation and pending administrative matters.",category:"Governance",icon:"handshake"},
+    {time:"5:00 PM",title:"Administrative Reshuffle Begins",desc:"Key IAS/IPS transfers initiated. New DGP and Home Secretary appointed.",category:"Governance",icon:"refresh-cw"}
   ]},
-  {date:"2026-05-11",day:2,label:"Day 2 — First Cabinet 🔥",events:[
-    {time:"10:00 AM",title:"First Cabinet Meeting at Nabanna",desc:"Historic first Cabinet meeting. 9 landmark decisions on Day 1 itself."},
-    {time:"10:30 AM",title:"BSF Border Fencing Approved",desc:"Land transfer to BSF approved for Bangladesh border fence. 45-day target."},
-    {time:"11:00 AM",title:"Ayushman Bharat Adopted",desc:"PM-JAY health scheme adopted — blocked by TMC for 5+ years."},
-    {time:"11:15 AM",title:"Vishwakarma & Ujjwala Greenlit",desc:"PM Vishwakarma Yojana + PM Ujjwala 3.0 approved immediately."},
-    {time:"11:30 AM",title:"BNS Criminal Code Implemented",desc:"Bharatiya Nyaya Sanhita implemented statewide — replacing IPC."},
-    {time:"12:00 PM",title:"Job Age Limit Extended +5 Years",desc:"Relief for lakhs of youth affected by SSC recruitment delays."},
-    {time:"12:30 PM",title:"Census Exercise Initiated",desc:"State Census commencement approved — pending since 2021."},
-    {time:"2:00 PM",title:"Writers' Buildings Restoration",desc:"Secretariat to shift back to historic Writers' Buildings in central Kolkata."},
-    {time:"3:00 PM",title:"All Welfare Schemes to Continue",desc:"CM assures no existing schemes discontinued. All beneficiaries protected."},
-    {time:"4:00 PM",title:"Cabinet Portfolios Finalised",desc:"West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",source:"https://www.moneycontrol.com/news/india/west-bengal-cabinet-portfolios-announced-full-list-of-ministers-and-their-departments-13915507.html",thumb:"https://images.moneycontrol.com/static-mcnews/2026/05/20260509175021_West-Bengal-chief-minister-Suvendu-Adhikari.png"},
-    {time:"4:30 PM",title:"No Deputy CM; Home & Finance Retained",desc:"The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",source:"https://newsarenaindia.com/states/no-deputy-cm-in-bengal-adhikari-allocates-portfolios/76980",thumb:"https://images.newsarenaindia.com/suvendu-4jpg_1778508352131.jpg"},
-    {time:"5:00 PM",title:"BSF Land Transfer Process Begins",desc:"The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",source:"https://www.moneycontrol.com/news/india/suvendu-adhikari-s-first-cabinet-meeting-clears-45-day-deadline-for-bsf-land-transfer-in-bengal-unveils-key-decisions-13915009.html",thumb:"https://images.moneycontrol.com/static-mcnews/2026/05/20260509061100_Suvendu-Adhikari-CM-1.jpg"}
+  {date:"2026-05-11",dayNumber:2,label:"Day 2 — First Cabinet 🔥",events:[
+    {time:"10:00 AM",title:"First Cabinet Meeting at Nabanna",desc:"Historic first Cabinet meeting. 9 landmark decisions on Day 1 itself.",category:"Governance",icon:"landmark"},
+    {time:"10:30 AM",title:"BSF Border Fencing Approved",desc:"Land transfer to BSF approved for Bangladesh border fence. 45-day target.",category:"Security",icon:"shield"},
+    {time:"11:00 AM",title:"Ayushman Bharat Adopted",desc:"PM-JAY health scheme adopted — blocked by TMC for 5+ years.",category:"Healthcare",icon:"heart-pulse"},
+    {time:"11:15 AM",title:"Vishwakarma & Ujjwala Greenlit",desc:"PM Vishwakarma Yojana + PM Ujjwala 3.0 approved immediately.",category:"Industry",icon:"flame"},
+    {time:"11:30 AM",title:"BNS Criminal Code Implemented",desc:"Bharatiya Nyaya Sanhita implemented statewide — replacing IPC.",category:"Law & Order",icon:"scale"},
+    {time:"12:00 PM",title:"Job Age Limit Extended +5 Years",desc:"Relief for lakhs of youth affected by SSC recruitment delays.",category:"Employment",icon:"graduation-cap"},
+    {time:"12:30 PM",title:"State Census Exercise Initiated",desc:"Cabinet approves immediate commencement of the Census exercise in West Bengal, pending since 2021.",category:"Governance",icon:"bar-chart"},
+    {time:"2:00 PM",title:"Writers' Buildings Restoration Announced",desc:"Government announces plan to shift the state secretariat back to the historic Writers' Buildings in central Kolkata.",category:"Governance",icon:"building-2"},
+    {time:"3:00 PM",title:"Existing Welfare Schemes to Continue",desc:"CM Adhikari assures that no existing social welfare schemes will be discontinued. All beneficiaries will continue to receive benefits.",category:"Women",icon:"heart-handshake"},
+    {time:"4:00 PM",title:"Cabinet Portfolios Finalised",desc:"West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",category:"Governance",icon:"landmark",source:"https://www.moneycontrol.com/news/india/west-bengal-cabinet-portfolios-announced-full-list-of-ministers-and-their-departments-13915507.html",thumb:"https://images.moneycontrol.com/static-mcnews/2026/05/20260509175021_West-Bengal-chief-minister-Suvendu-Adhikari.png"},
+    {time:"4:30 PM",title:"No Deputy CM; Home & Finance Retained",desc:"The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",category:"Governance",icon:"shield",source:"https://newsarenaindia.com/states/no-deputy-cm-in-bengal-adhikari-allocates-portfolios/76980",thumb:"https://images.newsarenaindia.com/suvendu-4jpg_1778508352131.jpg"},
+    {time:"5:00 PM",title:"BSF Land Transfer Process Begins",desc:"The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",category:"Security",icon:"shield-check",source:"https://www.moneycontrol.com/news/india/suvendu-adhikari-s-first-cabinet-meeting-clears-45-day-deadline-for-bsf-land-transfer-in-bengal-unveils-key-decisions-13915009.html",thumb:"https://images.moneycontrol.com/static-mcnews/2026/05/20260509061100_Suvendu-Adhikari-CM-1.jpg"}
   ]},
-  {date:"2026-05-12",day:3,label:"Day 3 — CBI Probe",events:[
-    {time:"10:00 AM",title:"CBI Takes Over Probe Into Suvendu Aide Murder",desc:"The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",source:"https://www.tribuneindia.com/news/india/suvendu-adhikari-aide-murder-cbi-takes-over-probe-after-sit-arrests-3-suspects/amp",thumb:"https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWIwMDM5NmUwLTRkZTktMTFmMS05NWQzLWFiMTg3NjE5Y2M0NS5qcGc="}
+  {date:"2026-05-12",dayNumber:3,label:"Day 2 — CBI Probe",events:[
+    {time:"10:00 AM",title:"CBI Takes Over Probe Into Suvendu Aide Murder",desc:"The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",category:"Law & Order",icon:"shield-alert",source:"https://www.tribuneindia.com/news/india/suvendu-adhikari-aide-murder-cbi-takes-over-probe-after-sit-arrests-3-suspects/amp",thumb:"https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWIwMDM5NmUwLTRkZTktMTFmMS05NWQzLWFiMTg3NjE5Y2M0NS5qcGc="}
+  ]},
+  {date:"2026-05-18",dayNumber:9,label:"Day 9 — Second Cabinet",events:[
+    {time:"10:00 AM",title:"Second Cabinet Meeting at Nabanna",desc:"CM Suvendu Adhikari chairs the second Cabinet meeting. Multiple major policy decisions are approved.",category:"Governance",icon:"landmark",source:"https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"},
+    {time:"10:30 AM",title:"7th State Pay Commission Approved",desc:"The cabinet approves the constitution of the 7th State Pay Commission for salaries, pensions, and allowances revision of state employees.",category:"Finance",icon:"scale",source:"https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"},
+    {time:"11:15 AM",title:"'Annapurna' Scheme Approved",desc:"Cabinet greenlights the 'Annapurna' scheme (Annapurna Bhandar), providing ₹3,000 per month to eligible women aged 25 to 60 via DBT starting June 1, 2026.",category:"Women",icon:"heart-handshake",source:"https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"},
+    {time:"12:00 PM",title:"Free Public Transport for Women",desc:"In-principle approval granted for free travel for women in state-run buses, effective June 1, 2026.",category:"Women",icon:"bus",source:"https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"},
+    {time:"12:30 PM",title:"Discontinuation of Religion-Based Aid",desc:"The cabinet decides to discontinue government financial assistance programs based on religious categorization starting June 2026 (including imams, muezzins, and purohits).",category:"Governance",icon:"shield-alert",source:"https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"},
+    {time:"1:00 PM",title:"Scrapping and Revising OBC List",desc:"Scraps existing state OBC list in line with the Calcutta High Court judgment; panel formed to identify quota eligibility.",category:"Governance",icon:"users",source:"https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"}
+  ]},
+  {date:"2026-05-20",dayNumber:11,label:"Day 11 — BSF Land Corridor",events:[
+    {time:"2:00 PM",title:"27-km BSF Land Corridor Formally Transferred",desc:"State government formally transfers a 27-km land corridor to the Border Security Force spanning five districts, enabling pending Bangladesh border fencing work to commence immediately.",category:"Security",icon:"shield-check",source:"https://www.thehindu.com/news/national/west-bengal/"},
+    {time:"4:00 PM",title:"Detect, Delete & Deport — Mechanism Active",desc:"CM Adhikari confirms the 'Detect, Delete & Deport' framework for illegal infiltrators came into effect. Police and RPF directed to hand over infiltrators (not covered under CAA) directly to BSF for deportation. CMO to receive weekly reports.",category:"Security",icon:"shield-alert",source:"https://www.thehindu.com/news/national/west-bengal/"}
+  ]},
+  {date:"2026-05-21",dayNumber:12,label:"Day 12 — OBC List & Media",events:[
+    {time:"11:00 AM",title:"Revised OBC List of 66 Classes Notified",desc:"The state government formally notifies a revised list of 66 OBC classes for reservation in state services, aligning with the Calcutta High Court directive.",category:"Governance",icon:"file-text",source:"https://newsonair.gov.in/"},
+    {time:"3:00 PM",title:"Media Interaction Restrictions Issued",desc:"Administration issues a strict directive prohibiting government employees and officials from interacting with media outlets without prior approval.",category:"Governance",icon:"shield-alert",source:"https://www.thehindu.com/news/national/west-bengal/"}
+  ]},
+  {date:"2026-05-22",dayNumber:13,label:"Day 13 — Urban Reform & Border Action",events:[
+    {time:"9:00 AM",title:"'Detect, Delete & Deport' — CAA-Exempt Deportations Confirmed",desc:"CM Adhikari reaffirms that infiltrators not covered under CAA will be directly handed to BSF without producing before courts. CMO to receive weekly oversight reports on BSF-BGB handovers.",category:"Security",icon:"shield-check",source:"https://www.thehindu.com/news/national/west-bengal/"},
+    {time:"11:00 AM",title:"Agnimitra Paul Defends Urban Demolition Drive",desc:"Urban Development Minister Agnimitra Paul defends zero-tolerance policy on illegal structures. Notices served to building owners; demolitions proceed on failure to present valid legal documents. Drives linked to Tiljala fire safety concerns.",category:"Governance",icon:"building",source:"https://uniindia.com/"},
+    {time:"2:00 PM",title:"TMC Portraits Replaced in Government Offices",desc:"BJP workers replace portraits of former CM Mamata Banerjee with those of President Droupadi Murmu, PM Modi, and CM Suvendu Adhikari in government offices including Asansol Municipal Corporation.",category:"Governance",icon:"landmark",source:"https://www.aninews.in/"}
   ]}
 ];
 
@@ -84,6 +105,7 @@ const moments=[
   {title:"BJP Wins Bengal — Historic Victory",desc:"BJP crosses 200+ seats, ending 15 years of TMC rule in West Bengal.",date:"May 4, 2026",badge:"RESULT DAY",thumb:"https://i.ytimg.com/vi/RHuQIN8Eb5c/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=RHuQIN8Eb5c"},
   {title:"Suvendu Adhikari Sworn In as CM",desc:"Historic oath ceremony at Brigade Parade Ground with PM Modi present.",date:"May 9, 2026",badge:"OATH",thumb:"https://i.ytimg.com/vi/HM1zLB3BKzU/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=HM1zLB3BKzU"},
   {title:"First Cabinet — 9 Landmark Decisions",desc:"Ayushman Bharat, BSF fencing, BNS implementation, Census approved on Day 1.",date:"May 11, 2026",badge:"DAY 2",thumb:"https://i.ytimg.com/vi/2TsXcYSWss4/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=2TsXcYSWss4"},
+  {title:"Second Cabinet — Historic Decisions",desc:"Cabinet approves ₹3,000/month Annapurna scheme, 7th Pay Commission, and free bus rides for women.",date:"May 18, 2026",badge:"CABINET",thumb:"https://i.ytimg.com/vi/W-9a_N19xZ4/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=W-9a_N19xZ4"},
   {title:"PM Modi's 'Sonar Bangla' Address",desc:"PM congratulates Bengal, calls it 'a new dawn for Sonar Bangla'.",date:"May 5, 2026",badge:"NATIONAL",thumb:"https://i.ytimg.com/vi/mvF4KRNYmnQ/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=mvF4KRNYmnQ"},
   {title:"Ayushman Bharat — Finally in Bengal!",desc:"State adopts PM-JAY after 5 years of TMC blockade.",date:"May 11, 2026",badge:"HEALTHCARE",thumb:"https://i.ytimg.com/vi/It3VkaK6BcQ/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=It3VkaK6BcQ"},
   {title:"Writers' Building Restoration Announced",desc:"Historic secretariat to be restored and reoccupied by new government.",date:"May 11, 2026",badge:"HERITAGE",thumb:"https://i.ytimg.com/vi/KORtre6IVLk/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=KORtre6IVLk"}
@@ -178,6 +200,25 @@ function refreshSite(){
   renderBacklog();
   renderInfra();
   initReveal();
+  renderHeroStats();
+}
+
+function renderHeroStats(){
+  const totalEl = $('statTotal');
+  const doneEl = $('statDone');
+  const wipEl = $('statWIP');
+  const pendEl = $('statPend');
+  if (!totalEl || !doneEl || !wipEl || !pendEl) return;
+
+  const total = manifesto.length;
+  const completed = manifesto.filter(p => p.status === 'Completed').length;
+  const inProgress = manifesto.filter(p => p.status === 'In Progress').length;
+  const pending = manifesto.filter(p => p.status === 'Pending').length;
+
+  totalEl.textContent = total;
+  doneEl.textContent = completed;
+  wipEl.textContent = inProgress;
+  pendEl.textContent = pending;
 }
 
 function actionBucket(time){
@@ -233,7 +274,7 @@ function bucketLabel(bucket){
 function actionMeta(day, e){
   const text=`${e.title} ${e.desc} ${day.label}`;
   return {
-    dept: actionDept(text),
+    dept: e.category || actionDept(text),
     status: actionStatus(text),
     type: actionType(text),
     important: actionImportance(text),
@@ -581,6 +622,114 @@ function setupNav(){
 }
 
 // ═══════════════════════════════════════════════════════════
+//  TOAST NOTIFICATIONS
+// ═══════════════════════════════════════════════════════════
+function showToast(title, msg, icon='✅'){
+  const container = $('toastContainer');
+  if(!container) return;
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `
+    <div class="toast-icon">${icon}</div>
+    <div class="toast-body">
+      <div class="toast-title">${title}</div>
+      <div class="toast-msg">${msg}</div>
+    </div>
+    <button class="toast-close" aria-label="Close">&times;</button>
+    <div class="toast-progress"></div>
+  `;
+  container.appendChild(toast);
+  // Trigger animation
+  requestAnimationFrame(()=>requestAnimationFrame(()=>toast.classList.add('show')));
+  const dismiss = () => {
+    toast.classList.remove('show');
+    toast.classList.add('hide');
+    setTimeout(()=>toast.remove(), 500);
+  };
+  toast.querySelector('.toast-close').onclick = dismiss;
+  setTimeout(dismiss, 5000);
+}
+
+// ═══════════════════════════════════════════════════════════
+//  LIVE REFRESH SYSTEM
+// ═══════════════════════════════════════════════════════════
+let _lastDataHash = '';
+let _lastRefreshTime = Date.now();
+let _liveAgoInterval = null;
+
+function dataHash(data){
+  return JSON.stringify(data).length + ':' + JSON.stringify(data).slice(0,200);
+}
+
+function updateLiveAgo(){
+  const el = $('liveAgo');
+  if(!el) return;
+  const diff = Math.floor((Date.now() - _lastRefreshTime)/1000);
+  if(diff < 60) el.textContent = 'Updated just now';
+  else if(diff < 3600) el.textContent = `Updated ${Math.floor(diff/60)}m ago`;
+  else el.textContent = `Updated ${Math.floor(diff/3600)}h ago`;
+}
+
+function flashLiveBadge(){
+  const badge = $('liveBadge');
+  if(!badge) return;
+  badge.classList.add('updated');
+  setTimeout(()=>badge.classList.remove('updated'), 2000);
+}
+
+async function checkForUpdates(){
+  try{
+    const url = location.protocol === 'file:'
+      ? `data/site-content.json?_=${Date.now()}`
+      : `/api/content?_=${Date.now()}`;
+    const sources = location.protocol === 'file:'
+      ? [`data/site-content.json?_=${Date.now()}`]
+      : [`/api/content?_=${Date.now()}`, `data/site-content.json?_=${Date.now()}`];
+    
+    let newData = null;
+    for(const src of sources){
+      try{
+        const res = await fetch(src, {cache:'no-store'});
+        if(res.ok){ newData = await res.json(); break; }
+      }catch(e){ /* try next */ }
+    }
+    if(!newData) return;
+
+    const newHash = dataHash(newData);
+    _lastRefreshTime = Date.now();
+    updateLiveAgo();
+
+    // Update "Last updated" timestamp
+    const lu = $('lastUp');
+    if(lu) lu.textContent = new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'});
+
+    if(_lastDataHash && newHash !== _lastDataHash){
+      // Data changed! Apply and notify
+      applySiteData(newData);
+      refreshSite();
+      flashLiveBadge();
+      showToast('New Data Loaded', 'The dashboard has been updated with the latest information.', '🔄');
+    }
+    _lastDataHash = newHash;
+  }catch(err){
+    // Silent fail — will retry next interval
+  }
+}
+
+function startLiveRefresh(){
+  // Set initial hash
+  _lastDataHash = dataHash(currentSiteData());
+  _lastRefreshTime = Date.now();
+  updateLiveAgo();
+
+  // Update "ago" every 30 seconds
+  _liveAgoInterval = setInterval(updateLiveAgo, 30000);
+
+  // Poll for data changes every 5 minutes
+  setInterval(checkForUpdates, 5 * 60 * 1000);
+}
+
+// ═══════════════════════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded',()=>{
@@ -614,5 +763,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     // Last updated
     const lu=$('lastUp');
     if(lu)lu.textContent=new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'});
+
+    // 🔴 Start live refresh system
+    startLiveRefresh();
   })();
 });

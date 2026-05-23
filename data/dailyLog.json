@@ -1,69 +1,83 @@
 [
   {
-    "date": "2026-05-09",
-    "dayNumber": -1,
-    "label": "Oath Ceremony",
+    "date": "2026-05-04",
+    "dayNumber": -5,
+    "label": "🏆 Election Results Day",
     "events": [
       {
-        "time": "11:00 AM",
-        "title": "CM Suvendu Adhikari Sworn In",
-        "description": "Suvendu Adhikari takes oath as the Chief Minister of West Bengal at Brigade Parade Ground, Kolkata. PM Modi, NDA leaders, and over 2 lakh supporters attend the historic ceremony.",
+        "time": "8:00 AM",
+        "title": "Counting Begins Across West Bengal",
+        "desc": "EVM counting begins at 294 constituency centres across the state.",
         "category": "Governance",
-        "icon": "flag"
+        "icon": "bar-chart"
       },
       {
-        "time": "12:30 PM",
-        "title": "Council of Ministers Takes Oath",
-        "description": "Full 42-member council of ministers sworn in, including key portfolios: Home, Finance, Health, Education, and Industry.",
+        "time": "12:00 PM",
+        "title": "BJP Crosses Majority Mark",
+        "desc": "BJP crosses the 148-seat majority mark in trends. Celebrations erupt across Bengal.",
+        "category": "Governance",
+        "icon": "landmark"
+      },
+      {
+        "time": "4:00 PM",
+        "title": "TMC Concedes Defeat",
+        "desc": "Trinamool Congress accepts defeat after 15 years in power. Mamata Banerjee congratulates BJP.",
         "category": "Governance",
         "icon": "users"
+      },
+      {
+        "time": "6:00 PM",
+        "title": "Suvendu Adhikari Named CM Candidate",
+        "desc": "BJP Parliamentary Board names Suvendu Adhikari as the Chief Minister of West Bengal.",
+        "category": "Governance",
+        "icon": "user-check"
       }
     ]
   },
   {
-    "date": "2026-05-10",
-    "dayNumber": 0,
-    "label": "Day Zero",
+    "date": "2026-05-05",
+    "dayNumber": -4,
+    "label": "Victory Celebrations",
     "events": [
       {
         "time": "10:00 AM",
-        "title": "CM Visits Nabanna Secretariat",
-        "description": "CM Adhikari arrives at Nabanna (State Secretariat) for the first time. Reviews pending files and administrative backlog.",
+        "title": "Celebrations Across Bengal",
+        "desc": "Victory rallies in all 23 districts. Workers distribute sweets and burst firecrackers.",
         "category": "Governance",
-        "icon": "building"
+        "icon": "smile"
       },
       {
-        "time": "3:00 PM",
-        "title": "Meeting with Chief Secretary & DGP",
-        "description": "High-priority meeting with the Chief Secretary and DGP to assess law & order situation and pending administrative matters.",
-        "category": "Law & Order",
-        "icon": "shield"
+        "time": "4:00 PM",
+        "title": "PM Modi Congratulates Bengal",
+        "desc": "PM Modi addresses the nation, calls it 'a new dawn for Sonar Bangla'.",
+        "category": "Governance",
+        "icon": "award"
       }
     ]
   },
   {
     "date": "2026-05-06",
-    "dayNumber": -4,
+    "dayNumber": -3,
     "label": "Transition Planning",
     "events": [
       {
         "time": "11:00 AM",
         "title": "Suvendu Meets Governor at Raj Bhavan",
-        "description": "CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government.",
+        "desc": "CM-designate Suvendu Adhikari meets Governor R.N. Ravi to stake claim to form government.",
         "category": "Governance",
         "icon": "building"
       },
       {
         "time": "3:00 PM",
         "title": "Cabinet Formation Discussions",
-        "description": "BJP central leadership meets to finalize the Council of Ministers.",
+        "desc": "BJP central leadership meets to finalize the Council of Ministers.",
         "category": "Governance",
         "icon": "users"
       },
       {
         "time": "5:00 PM",
         "title": "Kolkata Police Clamps Down on Rallies with Earthmovers",
-        "description": "Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
+        "desc": "Police restrictions on procession routes were issued after post-poll clashes, with officers warning against carrying heavy machinery into public gatherings.",
         "category": "Law & Order",
         "icon": "shield-alert",
         "source": "https://www.hindustantimes.com/india-news/no-rallies-with-earthmovers-allowed-says-kolkata-police-on-post-poll-clashes-101778073396306.html",
@@ -73,20 +87,20 @@
   },
   {
     "date": "2026-05-07",
-    "dayNumber": -3,
+    "dayNumber": -2,
     "label": "Cabinet Finalized",
     "events": [
       {
         "time": "10:00 AM",
         "title": "42-Member Ministry List Released",
-        "description": "Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry.",
+        "desc": "Final list of Council of Ministers released. Key portfolios: Home, Finance, Health, Education, Industry.",
         "category": "Governance",
         "icon": "landmark"
       },
       {
         "time": "2:15 PM",
         "title": "400+ Arrested, 200 FIRs Filed in Post-Poll Violence",
-        "description": "Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
+        "desc": "Police say arrests and FIRs have climbed as violence erupts across West Bengal, with monitoring tightened across sensitive pockets.",
         "category": "Law & Order",
         "icon": "alert-triangle",
         "source": "https://indianexpress.com/article/cities/kolkata/over-400-arrested-200-firs-filed-say-police-as-violence-erupts-across-west-bengal-10676801/lite/",
@@ -95,7 +109,7 @@
       {
         "time": "3:00 PM",
         "title": "Police Deployment Increased After Aide's Killing",
-        "description": "Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
+        "desc": "Security was stepped up after the killing of a Suvendu Adhikari aide, with additional forces moved into sensitive areas.",
         "category": "Law & Order",
         "icon": "shield-check",
         "source": "https://www.hindustantimes.com/india-news/west-bengal-post-poll-tension-heightens-after-suvendu-adhikari-s-aide-shot-dead-police-deployment-increased-101778128508265-amp.html",
@@ -104,84 +118,161 @@
       {
         "time": "5:00 PM",
         "title": "Oath Ceremony Date Announced",
-        "description": "Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata.",
+        "desc": "Governor announces swearing-in ceremony for May 9 at Brigade Parade Ground, Kolkata.",
         "category": "Governance",
         "icon": "building"
       }
     ]
   },
   {
-    "date": "2026-05-11",
+    "date": "2026-05-08",
+    "dayNumber": -1,
+    "label": "Eve of Government",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Brigade Parade Ground Preparations",
+        "desc": "Massive stage setup at Brigade Parade Ground. 2.5 lakh chairs arranged. LED screens installed across Kolkata.",
+        "category": "Governance",
+        "icon": "settings"
+      },
+      {
+        "time": "8:00 PM",
+        "title": "PM Modi Arrives in Kolkata",
+        "desc": "Prime Minister lands at NSC Bose International Airport. Received by Suvendu Adhikari.",
+        "category": "Governance",
+        "icon": "plane-arrival"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-09",
+    "dayNumber": 0,
+    "label": "🇮🇳 Oath Ceremony",
+    "events": [
+      {
+        "time": "11:00 AM",
+        "title": "CM Suvendu Adhikari Sworn In",
+        "desc": "Suvendu Adhikari takes oath as the Chief Minister of West Bengal at Brigade Parade Ground, Kolkata. PM Modi, NDA leaders, and over 2 lakh supporters attend the historic ceremony.",
+        "category": "Governance",
+        "icon": "flag"
+      },
+      {
+        "time": "12:30 PM",
+        "title": "Council of Ministers Takes Oath",
+        "desc": "Full 42-member council of ministers sworn in, including key portfolios: Home, Finance, Health, Education, and Industry.",
+        "category": "Governance",
+        "icon": "users"
+      },
+      {
+        "time": "4:00 PM",
+        "title": "CM's First Address to the State",
+        "desc": "CM Adhikari pledges to fulfill all Sankalp Patra promises. Announces 'Mission 365 Days'.",
+        "category": "Governance",
+        "icon": "megaphone"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-10",
     "dayNumber": 1,
+    "label": "Day Zero",
+    "events": [
+      {
+        "time": "10:00 AM",
+        "title": "CM Visits Nabanna Secretariat",
+        "desc": "CM Adhikari arrives at Nabanna (State Secretariat) for the first time. Reviews pending files and administrative backlog.",
+        "category": "Governance",
+        "icon": "building"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Meeting with Chief Secretary & DGP",
+        "desc": "High-priority meeting with the Chief Secretary and DGP to assess law & order situation and pending administrative matters.",
+        "category": "Law & Order",
+        "icon": "shield"
+      },
+      {
+        "time": "5:00 PM",
+        "title": "Administrative Reshuffle Begins",
+        "desc": "Key IAS/IPS transfers initiated. New DGP and Home Secretary appointed.",
+        "category": "Governance",
+        "icon": "refresh-cw"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "dayNumber": 2,
     "label": "Day 1 — First Cabinet",
     "events": [
       {
         "time": "10:00 AM",
         "title": "First Cabinet Meeting at Nabanna",
-        "description": "CM Adhikari chairs the historic first Cabinet meeting. Multiple landmark decisions taken on Day 1 itself.",
+        "desc": "CM Adhikari chairs the historic first Cabinet meeting. Multiple landmark decisions taken on Day 1 itself.",
         "category": "Governance",
         "icon": "landmark"
       },
       {
         "time": "10:30 AM",
         "title": "BSF Border Fencing — Land Transfer Approved",
-        "description": "Cabinet approves transfer of land to BSF for construction of fencing along the Bangladesh border. 45-day target set for completion.",
+        "desc": "Cabinet approves transfer of land to BSF for construction of fencing along the Bangladesh border. 45-day target set for completion.",
         "category": "Security",
         "icon": "shield-check"
       },
       {
         "time": "11:00 AM",
         "title": "Ayushman Bharat Adopted in West Bengal",
-        "description": "State formally adopts the Ayushman Bharat PM-JAY health insurance scheme, previously blocked by the TMC government for over 5 years.",
+        "desc": "State formally adopts the Ayushman Bharat PM-JAY health insurance scheme, previously blocked by the TMC government for over 5 years.",
         "category": "Healthcare",
         "icon": "heart-pulse"
       },
       {
         "time": "11:15 AM",
         "title": "PM Vishwakarma & Ujjwala 3.0 Greenlit",
-        "description": "Cabinet approves immediate implementation of PM Vishwakarma Yojana for artisans and PM Shri Ujjwala Yojana 3.0 for free LPG connections.",
+        "desc": "Cabinet approves immediate implementation of PM Vishwakarma Yojana for artisans and PM Shri Ujjwala Yojana 3.0 for free LPG connections.",
         "category": "Industry",
         "icon": "flame"
       },
       {
         "time": "11:30 AM",
         "title": "Bharatiya Nyaya Sanhita Implemented",
-        "description": "BNS, BNSS, and BSA criminal law codes officially implemented statewide, replacing the holdover IPC/CrPC regime.",
+        "desc": "BNS, BNSS, and BSA criminal law codes officially implemented statewide, replacing the holdover IPC/CrPC regime.",
         "category": "Law & Order",
         "icon": "scale"
       },
       {
         "time": "12:00 PM",
         "title": "Job Age Limit Extended by 5 Years",
-        "description": "Upper age limit for state government job applicants extended by 5 years — providing relief to lakhs of aspirants affected by SSC delays.",
+        "desc": "Upper age limit for state government job applicants extended by 5 years — providing relief to lakhs of aspirants affected by SSC delays.",
         "category": "Employment",
         "icon": "user-plus"
       },
       {
         "time": "12:30 PM",
         "title": "State Census Exercise Initiated",
-        "description": "Cabinet approves immediate commencement of the Census exercise in West Bengal, pending since 2021.",
+        "desc": "Cabinet approves immediate commencement of the Census exercise in West Bengal, pending since 2021.",
         "category": "Governance",
         "icon": "bar-chart"
       },
       {
         "time": "2:00 PM",
         "title": "Writers' Buildings Restoration Announced",
-        "description": "Government announces plan to shift the state secretariat back to the historic Writers' Buildings in central Kolkata.",
+        "desc": "Government announces plan to shift the state secretariat back to the historic Writers' Buildings in central Kolkata.",
         "category": "Governance",
         "icon": "building-2"
       },
       {
         "time": "3:00 PM",
         "title": "Existing Welfare Schemes to Continue",
-        "description": "CM Adhikari assures that no existing social welfare schemes will be discontinued. All beneficiaries will continue to receive benefits.",
+        "desc": "CM Adhikari assures that no existing social welfare schemes will be discontinued. All beneficiaries will continue to receive benefits.",
         "category": "Women",
         "icon": "heart-handshake"
       },
       {
         "time": "4:00 PM",
         "title": "Cabinet Portfolios Finalised",
-        "description": "West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",
+        "desc": "West Bengal allocates departments to the five sworn-in ministers, with Panchayat, Food, BC Welfare, North Bengal Development and Women & Child Welfare among the key portfolios.",
         "category": "Governance",
         "icon": "landmark",
         "source": "https://www.moneycontrol.com/news/india/west-bengal-cabinet-portfolios-announced-full-list-of-ministers-and-their-departments-13915507.html",
@@ -190,7 +281,7 @@
       {
         "time": "4:30 PM",
         "title": "No Deputy CM; Home & Finance Retained",
-        "description": "The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",
+        "desc": "The government decides against appointing a Deputy Chief Minister for now, with Home and Finance staying with the Chief Minister.",
         "category": "Governance",
         "icon": "shield",
         "source": "https://newsarenaindia.com/states/no-deputy-cm-in-bengal-adhikari-allocates-portfolios/76980",
@@ -199,7 +290,7 @@
       {
         "time": "5:00 PM",
         "title": "BSF Land Transfer Process Begins",
-        "description": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
+        "desc": "The state begins the process to transfer land to the BSF for border fencing along the Bangladesh frontier, with a 45-day completion target.",
         "category": "Security",
         "icon": "shield-check",
         "source": "https://www.moneycontrol.com/news/india/suvendu-adhikari-s-first-cabinet-meeting-clears-45-day-deadline-for-bsf-land-transfer-in-bengal-unveils-key-decisions-13915009.html",
@@ -209,17 +300,712 @@
   },
   {
     "date": "2026-05-12",
-    "dayNumber": 2,
-    "label": "Day 3 — CBI Probe",
+    "dayNumber": 3,
+    "label": "Day 2 — CBI Probe",
     "events": [
       {
         "time": "10:00 AM",
         "title": "CBI Takes Over Probe Into Suvendu Aide Murder",
-        "description": "The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",
+        "desc": "The Central Bureau of Investigation takes over the probe after SIT arrests three suspects in the murder case.",
         "category": "Law & Order",
         "icon": "shield-alert",
         "source": "https://www.tribuneindia.com/news/india/suvendu-adhikari-aide-murder-cbi-takes-over-probe-after-sit-arrests-3-suspects/amp",
         "thumb": "https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWIwMDM5NmUwLTRkZTktMTFmMS05NWQzLWFiMTg3NjE5Y2M0NS5qcGc="
+      }
+    ]
+  },
+  {
+    "date": "2026-05-15",
+    "dayNumber": 6,
+    "label": "Day 6",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Will ensure safe return of people who fled their homes, says Suvendu",
+        "desc": "CM rejects allegations of post-poll violence; Opposition leader says several people have been forced to flee their homes as fear is prevailing in the State",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/will-ensure-safe-return-of-people-who-fled-their-homes-says-suvendu/article70983010.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Rathindra Bose, a Chartered Accountant and BJP north Bengal MLA, elected Speaker",
+        "desc": "This is the first time that a leader from north Bengal has been selected for the Speaker’s post; Mr. Bose is the MLA from the Cooch Behar Dakshin Assembly seat, where he defeated Trinamool Congress’s Avijit De Bhaumik",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/rathindra-bose-a-chartered-accountant-from-north-bengal-elected-speaker-of-bengal-assembly/article70981810.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal CM Suvendu Adhikari resigns from Nandigram seat, retains Bhabanipur",
+        "desc": "n Bhabanipur, he beat TMC supremo Mamata Banerjee by a margin of 15,105 votes",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bengal-cm-suvendu-adhikari-resigns-from-nandigram-seat-retains-bhabanipur/article70982685.ece"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-16",
+    "dayNumber": 7,
+    "label": "Day 7",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Athlete Swapna Barman becomes victim of poll violence, house attacked",
+        "desc": "Trinamool Congress sent fact-finding teams to different districts of the State to ascertain the extent of post-poll violence",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/tmc-accuses-bjp-workers-of-torching-athlete-politician-swapna-barmans-house/article70986875.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal Government orders re-verification of caste certificates issued since 2011",
+        "desc": "About 1.69 crore SC, ST and OBC certificates have been issued in the State since 2011; a letter issued by the Backward Classes Welfare Department to all District Magistrates on May 14 says about 47.8 lakh certificates, which include 32.51 lakh SC cer",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bengal-government-caste-certificates-verification-since-2011-bjp-minister-tudu/article70986241.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "FIR filed against TMC's Abhishek over 'inflammatory' remarks during Bengal polls",
+        "desc": "Social activist Rajib Sarkar raised a complaint alleging that the TMC MP Abhishek Banerjee made provocative comments on post-poll violence and the vote counting process",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/fir-filed-against-tmcs-abhishek-over-inflammatory-remarks-during-bengal-polls/article70986561.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Adhikari aide killing: CBI conducts searches at multiple locations",
+        "desc": "The search operation was conducted late at night on May 15 and continued till the early hours of May 16",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/adhikari-aide-killing-cbi-conducts-searches-at-multiple-locations/article70986557.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Mamata asks Trinamool Congress poll candidates to rebuild party; says dissenters",
+        "desc": "At a meeting with the Trinamool Congress' contesting candidates, she said the organisation would rise again despite suffering a crushing defeat in the recently concluded Assembly elections",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/mamata-asks-trinamool-congress-poll-candidates-to-rebuild-party-says-dissenters-free-to-leave/article70985984.ece"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-17",
+    "dayNumber": 8,
+    "label": "Day 8",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Clashes erupt in West Bengal over prayer restrictions",
+        "desc": "Congress leader Adhir Ranjan Chowdhury has sought the Chief Minister’s intervention to mitigate the tensions triggered by the government’s recent guidelines on animal slaughter",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/police-personnel-injured-as-protest-against-demolition-drive-turns-violent-in-kolkata/article70990486.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Trinamool leaders face arrests, public anger, return extorted money",
+        "desc": "The crackdown intensified after Chief Minister Suvendu Adhikari urged people to file complaints against those who had allegedly extorted money from them during the previous Trinamool Congress regime",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/trinamool-leaders-face-arrests-public-anger-return-extorted-money/article70990819.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "EPICs found strewn in Birbhum field; Aadhaar cards recovered from Trinamool offi",
+        "desc": "BJP leaders alleges that the Trinamool’s party office had long been used for illegal activities and that residents' identity documents had been kept there for questionable purposes",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/epics-found-strewn-in-birbhum-field-aadhaar-cards-recovered-from-trinamool-office-in-bidhannagar/article70990537.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal committed to handover land to BSF within 45 days for border fencing:",
+        "desc": "West Bengal minister Ashok Kirtania said land acquisition in most parts of the North 24 Parganas district was progressing satisfactorily, but flagged resistance in the Basirhat area",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-committed-to-handover-land-to-bsf-within-45-days-for-border-fencing-minister/article70990199.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Major anti-encroachment drive conducted to clear out Howrah station area in Beng",
+        "desc": "Many temporary stalls and structures occupying footpaths and public spaces near the bus stand and Ganga ghat area were removed using bulldozers and earthmovers as part of a railway land clearance initiative for passengers' convenience",
+        "category": "Women",
+        "icon": "heart-handshake",
+        "source": "https://www.thehindu.com/news/national/west-bengal/major-anti-encroachment-drive-conducted-to-clear-out-howrah-station-area-in-bengal/article70989803.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal govt. gives nod for handover of seven national highway stretches to NHAI,",
+        "desc": "These stretches were under the national highway wing of the State PWD, and the handover proposals had been pending for nearly a year despite repeated requests, the statement said",
+        "category": "Infrastructure",
+        "icon": "building-2",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bengal-govt-gives-nod-for-handover-of-seven-national-highway-stretches-to-nhai-nhidcl/article70989701.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Suvendu targets Abhishek, says all his properties will be accounted for",
+        "desc": "West Bengal Chief Minister Suvendu Adhikari held his first public meeting after winning elections at Falta, which falls under the Diamond Harbour Lok Sabha seat held by Abhishek Banerjee; Re-polling in the Falta assembly seat will be held on May 21",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/bengal-cm-suvendu-adhikari-alleges-diamond-harbour-people-denied-voting-rights-for-decade/article70987305.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "TMC sends fact-finding teams across Bengal, alleges attacks and killings after p",
+        "desc": "Party claims over 3,000 workers were attacked and at least 10 killed in post-poll violence; BJP dismisses exercise as “drama” while Calcutta High Court orders safe return of victims",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/tmc-sends-fact-finding-teams-across-bengal-alleges-attacks-and-killings-after-poll-defeat/article70987416.ece"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-18",
+    "dayNumber": 9,
+    "label": "Day 9 — Second Cabinet",
+    "events": [
+      {
+        "time": "10:00 AM",
+        "title": "Second Cabinet Meeting at Nabanna",
+        "desc": "CM Suvendu Adhikari chairs the second Cabinet meeting. Multiple major policy decisions are approved.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "7th State Pay Commission Approved",
+        "desc": "The cabinet approves the constitution of the 7th State Pay Commission for salaries, pensions, and allowances revision of state employees.",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"
+      },
+      {
+        "time": "11:15 AM",
+        "title": "'Annapurna' Scheme Approved",
+        "desc": "Cabinet greenlights the 'Annapurna' scheme (Annapurna Bhandar), providing ₹3,000 per month to eligible women aged 25 to 60 via DBT starting June 1, 2026.",
+        "category": "Women",
+        "icon": "heart-handshake",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Free Public Transport for Women",
+        "desc": "In-principle approval granted for free travel for women in state-run buses, effective June 1, 2026.",
+        "category": "Women",
+        "icon": "bus",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"
+      },
+      {
+        "time": "12:30 PM",
+        "title": "Discontinuation of Religion-Based Aid",
+        "desc": "The cabinet decides to discontinue government financial assistance programs based on religious categorization starting June 2026 (including imams, muezzins, and purohits).",
+        "category": "Governance",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"
+      },
+      {
+        "time": "1:00 PM",
+        "title": "Scrapping and Revising OBC List",
+        "desc": "Scraps existing state OBC list in line with the Calcutta High Court judgment; panel formed to identify quota eligibility.",
+        "category": "Governance",
+        "icon": "users",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Calcutta HC grants protection to TMC’s Falta candidate Jahangir Khan from coerci",
+        "desc": "The court directed that no coercive steps will be taken against Mr. Khan in connection with the pending criminal prosecutions till May 26.",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.thehindu.com/news/national/west-bengal/tmcs-falta-candidate-moves-calcutta-high-court-seeking-protection-from-coercive-action/article70993383.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Jute industry seeks new West Bengal government’s intervention to tide over raw m",
+        "desc": "At least 14 mills across the Hooghly industrial belt have either suspended operations or are facing severe production disruptions, according to IJMA sources",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/jute-industry-seeks-new-west-bengal-governments-intervention-to-tide-over-raw-material-crisis/article70992797.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "TMC MLA's son held with firearms in Bengal",
+        "desc": "“Arghya Mondal and the others were found to be in possession of firearms. Two pistols and six mobile phones were seized during the operation,” says the officer",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/tmc-mlas-son-held-with-firearms-in-bengal/article70993102.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Watch: Vande Mataram will be sung in every school in West Bengal, says Dilip Gho",
+        "desc": "Watch: Vande Mataram will be sung in every school in West Bengal, says Dilip Ghosh",
+        "category": "Education",
+        "icon": "book-open",
+        "source": "https://www.thehindu.com/shorts/watch-vande-mataram-will-be-sung-in-every-school-in-west-bengal-says-dilip-ghosh/article70993044.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Suvendu Adhikari holds first 'janata darbar' after becoming CM",
+        "desc": "Several people, including students, participated in the interactions with the CM at the BJP office in Salt Lake area in Kolkata",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/suvendu-adhikari-holds-first-janata-darbar-after-becoming-cm/article70992804.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal does not believe in bulldozer politics, says Mamata Banerjee",
+        "desc": "Mamata Banerjee’s remark comes amid eviction drives at various places in the State",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bengal-does-not-believe-in-bulldozer-politics-says-mamata-banerjee/article70991265.ece"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-19",
+    "dayNumber": 10,
+    "label": "Day 10",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Trinamool Congress candidate for Falta Assembly seat Jahangir Khan withdraws fro",
+        "desc": "Party condemns move, states decision to withdraw from the Falta re-poll is Jahangir Khan’s personal choice and not that of the party.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/falta-assembly-repoll-tmc-candidate-jahangir-khan-pulls-out-of-contest/article70997471.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Adhikari aide murder case: CBI arrests another accused from U.P.’s Muzaffarnagar",
+        "desc": "He was arrested from U.P.’s Muzaffarnagar; to be produced in a Kolkata court",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/adhikari-aide-murder-case-cbi-arrests-another-accused-from-ups-muzaffarnagar/article70997199.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Messi tour organiser files complaint against former West Bengal Minister, former",
+        "desc": "The tour organiser Satadru Dutta lodged complaint at the Bidhannagar South Police Station on May 18, 2026",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/messi-tour-organiser-files-complaint-against-former-west-bengal-minister-former-top-cop-for-sabotaging-event/article70997158.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "What is Chicken’s Neck Corridor? India’s biggest military chokepoint",
+        "desc": "The strategic corridor, called the ‘Chicken’s Neck’ for its shape, is a strip of land located in northern West Bengal’s Siliguri area.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/what-is-chicken-neck-corridor-india-biggest-military-chokepoint/article70996989.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal govt to roll out Annapurna Bhandar, discontinue schemes based on rel",
+        "desc": "The approval of Annapurna Bhandar came in the second Cabinet meeting of the BJP government, nine days after the Chief Minister and five other ministers took oath",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-government-second-cabinet-annapurna-bhandar-discontinue-religious-categorisation-schemes/article70993188.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "No religious sloganeering, pelting of stones will be allowed, Suvendu warns prot",
+        "desc": "‘I am giving a clear message that there will be zero tolerance towards this kind of unrest, hooliganism and anti-national, anti-social activities,’ the newly elected West Bengal Chief Minister says",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/cities/kolkata/park-circus-violence-bengal-cm-suvendu-adhikari-attacks-on-police/article70993333.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal Police reopens 59 cases linked to 2021 post-poll violence, registers",
+        "desc": "Multiple Trinamool leaders come under the police crackdown as many face arrests in corruption and post-poll violence charges",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-cid-reopens-59-cases-linked-to-2021-post-poll-violence-181-fresh-firs-registered/article70993198.ece"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "dayNumber": 11,
+    "label": "Day 11 — BSF Land Corridor",
+    "events": [
+      {
+        "time": "2:00 PM",
+        "title": "27-km BSF Land Corridor Formally Transferred",
+        "desc": "State government formally transfers a 27-km land corridor to the Border Security Force spanning five districts, enabling pending Bangladesh border fencing work to commence immediately.",
+        "category": "Security",
+        "icon": "shield-check",
+        "source": "https://www.thehindu.com/news/national/west-bengal/"
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Detect, Delete & Deport — Mechanism Active",
+        "desc": "CM Adhikari confirms the 'Detect, Delete & Deport' framework for illegal infiltrators came into effect. Police and RPF directed to hand over infiltrators (not covered under CAA) directly to BSF for deportation. CMO to receive weekly reports.",
+        "category": "Security",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/"
+      },
+      {
+        "time": "All Day",
+        "title": "Suspense continues over West Bengal Cabinet expansion",
+        "desc": "There are 54 departments in the West Bengal government and Chief Minister Suvendu Adhikari holds charge of 42 of them, including Home, Finance, Industries, School, Higher Education and Health.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/suspense-continues-over-west-bengal-cabinet-expansion/article71002011.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "BJP govt. in State will be of nationalists, says CM Suvendu during maiden visit ",
+        "desc": "BJP government will work towards giving north Bengal its developmental dues to erase the deprivation meted out to the region earlier, says Suvendu Adhikari during his maiden visit to the region",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/cm-suvendu-begins-first-north-bengal-tour-promises-to-fulfill-regions-developmental-aspirations/article71001216.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Kolkata swelters as Meteorological department forecasts heavy rain in North Beng",
+        "desc": "Heavy downpour is likely over the sub-Himalayan districts of Darjeeling, Kalimpong, Jalpaiguri, Alipurduar and Cooch Behar from May 21 to 25",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.thehindu.com/news/cities/kolkata/kolkata-swelters-as-meteorological-department-forecasts-heavy-rain-in-north-bengal/article71001007.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "EC doubles security arrangements for Falta repoll in West Bengal",
+        "desc": "According to an official at the state Chief Electoral Officer, eight Central Armed Police Force (CAPF) personnel, equivalent to one full section, will be deployed at each polling booth",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/ec-doubles-security-arrangements-for-falta-repoll-in-west-bengal/article71000901.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Trouble mounts for Abhishek Banerjee as Kolkata civic body sends notice against ",
+        "desc": "In the last few days, Chief Minister Suvendu Adhikari has been talking about properties owned by the Trinamool Congress general secretary and other Trinamool leaders that are under scrutiny",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/trouble-mounts-for-abhishek-banerjee-as-kolkata-civic-body-sends-notice-against-his-properties/article70999005.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Shyam Metalics announces ₹20,000 crore investment push in Bengal",
+        "desc": "Company plans railway manufacturing unit in Kharagpur, expansion of workforce to 45,000; seeks easier land policy and faster industrial growth under new government",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/shyammetalicsannounces-20000-crore-investment-push-in-bengal/article70998622.ece"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-21",
+    "dayNumber": 12,
+    "label": "Day 12 — OBC List & Media",
+    "events": [
+      {
+        "time": "11:00 AM",
+        "title": "Revised OBC List of 66 Classes Notified",
+        "desc": "The state government formally notifies a revised list of 66 OBC classes for reservation in state services, aligning with the Calcutta High Court directive.",
+        "category": "Governance",
+        "icon": "file-text",
+        "source": "https://newsonair.gov.in/"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Media Interaction Restrictions Issued",
+        "desc": "Administration issues a strict directive prohibiting government employees and officials from interacting with media outlets without prior approval.",
+        "category": "Governance",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/"
+      },
+      {
+        "time": "All Day",
+        "title": "No coercive action against Abhishek Banerjee: Calcutta HC directs West Bengal Po",
+        "desc": "The court, however, makes oral observations that the TMC leader’s remarks were uncalled for",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/no-coercive-action-against-abhishek-banerjee-calcutta-hc-directs-west-bengal-police/article71007331.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Row over Vande Mataram being made mandatory in West Bengal’s madrasas",
+        "desc": "Opposition parties criticise the move, but Trinamool largely remains silent on the issue",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/after-state-run-schools-vande-mataram-now-compulsory-in-all-bengal-madrasas/article71005310.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Calcutta High Court asks Bengal government to decide on exemption in animal slau",
+        "desc": "A division Bench presided by Chief Justice Sujoy Paul directed that the State shall take a decision in this regard within 24 hours from the date of communication of this order",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/calcutta-high-court-asks-bengal-government-to-decide-on-exemption-in-animal-slaughter-rules-for-eid-ul-adha/article71007493.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "88% voter turnout as Bengal’s Falta repoll remains peaceful",
+        "desc": "The repolling in Falta was conducted amid massive security deployment with armoured cars, drone surveillance and hundreds of Central forces on the ground",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/repolling-in-falta-assembly-west-bengal/article71004713.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal government issues orders prohibiting officials to speak to media",
+        "desc": "Trinamool Congress general secretary Abhishek Banerjee shared the circular on social media a and said, that the phrase ‘complete prohibition’ echoing through this circular like a warning ”not to protect governance, but to enforce silence upon Govt em",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-government-issues-orders-prohibiting-officials-to-speak-to-media/article71005700.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal government to detect, delete and deport illegal infiltrators, says C",
+        "desc": "The West Bengal government handed over land for construction of border fencing along 27 km of India Bangladesh border across five districts of the State",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-government-to-detect-delete-and-deport-illegal-infiltrators-says-cm-suvendu-adhikari/article71003089.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Trinamool MLAs hold protest in West Bengal Assembly over hawker eviction and tor",
+        "desc": "Senior leaders like Firhad Hakim, Kunal Ghosh, Ritabrata Banerjee, and Nayana Bandyopadhyay were seen leading the sit-in demonstration inside the Assembly compound on May 20",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/trinamool-mlas-hold-protest-in-west-bengal-assembly-over-hawker-eviction-andtorture-againstparty-workers/article71002120.ece"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "dayNumber": 13,
+    "label": "Day 13 — Urban Reform & Border Action",
+    "events": [
+      {
+        "time": "9:00 AM",
+        "title": "'Detect, Delete & Deport' — CAA-Exempt Deportations Confirmed",
+        "desc": "CM Adhikari reaffirms that infiltrators not covered under CAA will be directly handed to BSF without producing before courts. CMO to receive weekly oversight reports on BSF-BGB handovers.",
+        "category": "Security",
+        "icon": "shield-check",
+        "source": "https://www.thehindu.com/news/national/west-bengal/"
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Agnimitra Paul Defends Urban Demolition Drive",
+        "desc": "Urban Development Minister Agnimitra Paul defends zero-tolerance policy on illegal structures. Notices served to building owners; demolitions proceed on failure to present valid legal documents. Drives linked to Tiljala fire safety concerns.",
+        "category": "Governance",
+        "icon": "building",
+        "source": "https://uniindia.com/"
+      },
+      {
+        "time": "2:00 PM",
+        "title": "TMC Portraits Replaced in Government Offices",
+        "desc": "BJP workers replace portraits of former CM Mamata Banerjee with those of President Droupadi Murmu, PM Modi, and CM Suvendu Adhikari in government offices including Asansol Municipal Corporation.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.aninews.in/"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal SIR: Tribunals dispose of over 6,500 appeals so far, allow 61.5% cases ba",
+        "desc": ". The status of over 1,200 remaining cases among the disposed matters was not immediately clear from the data",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/bengal-sir-tribunals-dispose-of-over-6500-appeals-so-far-allow-615-cases-back-in-voter-rolls/article71010370.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Decoding SIR impact in West Bengal",
+        "desc": "The post-SIR polls in West Bengal saw the BJP secure a decisive victory, with AITC chief Mamata Banerjee alleging electoral manipulation. Large-scale deletions and opaque additions of electors during the SIR had a major impact on the rolls’ demograph",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/decoding-sir-impact-in-west-bengal/article71007868.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "TMC alleges Leader of Opposition not allotted room in Bengal Assembly",
+        "desc": "LoP Sobhandeb Chattopadhyay warned that the party MLAs would hold a dharna over the alleged delay in the allotment",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/tmc-alleges-leader-of-opposition-not-allotted-room-in-bengal-assembly/article71010411.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal government notifies free bus travel for women in State-run buses fro",
+        "desc": "The Transport Department notification says that a smart card with QR code, photograph, and beneficiary details will be issued to all eligible women upon application",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-government-notifies-free-bus-travel-for-women-in-state-run-buses-from-june-1/article71010026.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Calcutta HC orders setting up SIT of CBI to probe hushing up charges in R G Kar ",
+        "desc": "The Bench said that, considering the social ramifications of the gruesome incident, a three-member SIT would look into charges of evidence destruction and allegations made by the medic's parents that there were attempts to hush up and downplay the in",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/calcutta-hc-orders-setting-up-sit-of-cbi-to-probe-hushing-up-charges-in-r-g-kar-rape-murder-case/article71008955.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Singing of 'Vande Mataram' compulsory in all schools, madrasas in Bengal: Dilip ",
+        "desc": "The order by the Directorate of Madrasah Education came nearly a week after the State's BJP Government made singing the national song mandatory in all schools",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/singing-of-vande-mataram-compulsory-in-all-schools-madrasas-in-bengal-dilip-ghosh/article71009507.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "ED raids in case against Sona Pappu, ex-Kolkata Police Deputy Commissioner",
+        "desc": "The premises include those of Mohammad Ali alias Max Raju, Saurav Adhikari, nephew of Biswas, and a \"close associate\" of Biswas named Ruhil Amin Ali, who is a Kolkata Police Sub Inspector, and Biswas' house in Murshidabad.",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/ed-raids-in-case-against-sona-pappu-ex-kolkata-police-deputy-commissioner/article71009244.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Ranchi bizman held for alleged cheating, rape of Chhattisgarh BJP leader: Cops",
+        "desc": "An FIR was registered against Sanjay Singh at on May 14 on charges of rape, extortion and cheating, among others, following a complaint lodged by the woman BJP leader",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.hindustantimes.com/india-news/ranchi-bizman-held-for-alleged-cheating-rape-of-chhattisgarh-bjp-leader-cops-101779462328029.html"
+      },
+      {
+        "time": "All Day",
+        "title": "BJP’s Prasad Lad meets Manoj Jarange Patil in govt’s outreach to quota activist",
+        "desc": "The ruling alliance in Maharashtra wants to persuade the Maratha quota activist to at least defer the protest, if not call it off entirely",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.hindustantimes.com/india-news/bjps-prasad-lad-meets-manoj-jarange-patil-in-govt-s-outreach-to-maratha-leader-101779455427057.html"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-23",
+    "dayNumber": 14,
+    "label": "Day 14",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "One more Trinamool councillor from Bidhannagar arrested",
+        "desc": "Charges against the arrested TMC leaders include extortion, intimidation, and money laundering; the TMC’s top leadership remains largely silent on the arrests",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/one-more-trinamool-councillor-from-bidhannagar-arrested/article71014932.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Ayushman Bharat scheme to roll out in West Bengal from July 1: CM Suvendu Adhika",
+        "desc": "Work on enrollment into scheme has already started; plan afoot to rope in all six crore beneficiaries of previous Trinamool government’s Swastha Saathi health scheme",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-gets-3000-crore-for-healthcare-revamp-ayushman-bharat-card-rollout-from-july-cm-suvendu-adhikari/article71014164.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal gained infamy due to recruitment scams, new policy in next Budget se",
+        "desc": "Noting that the Calcutta High Court and the Supreme Court had to intervene in these illegalities during the previous TMC government, he said West Bengal's image has suffered",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-gained-infamy-due-to-recruitment-scams-will-bring-state-out-of-this-situation-cm-suvendu-adhikari/article71013661.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "CPI(M) says TMC melting down faster than ice; hopes to take over Opposition spac",
+        "desc": "The CPI(M) leader Mohammed Salim said the party will fight for the safety of the minorities and any impending danger to the culture of West Bengal and amity among the people",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/cpim-says-tmc-melting-down-faster-than-ice-hopes-to-take-over-opposition-space-in-west-bengal/article71013663.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Trinamool’s Kalyan upset with CPI(M)’s Bikash for lawyering for former TMC MLA",
+        "desc": "Without directly naming Bikash Ranjan Bhattacharya, Kalyan Banerjee, who is himself a senior advocate, raised questions on the CPI(M) leader for defending his own party’s former MLA and her husband both of whom “face serious allegations of corruption",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/trinamools-kalyan-upset-with-cpims-bikash-for-lawyering-for-former-tmc-mla/article71013710.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal CM on first visit to Delhi after taking charge, meets President, Prime Mi",
+        "desc": "The West Bengal Chief Minister posted on social media that the Prime Minister Narendra Modi re-emphasized his vision of Sabka Saath, Sabka Vikas and reiterated that the development of West Bengal remains a top priority for the Central Government.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bengal-cm-on-first-visit-to-delhi-after-taking-charge-meets-president-prime-minister-and-home-minister/article71011958.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "BJP's Bengal win can reshape India's economic direction: Pradeep Gupta",
+        "desc": "Pradeep Gupta pointed out that regions with a strong port infrastructure and trade networks historically became centres of prosperity",
+        "category": "Infrastructure",
+        "icon": "building-2",
+        "source": "https://www.thehindu.com/news/national/bjps-bengal-win-can-reshape-indias-economic-direction-pradeep-gupta/article71011488.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengali actors face heat after power shift to BJP; FIR filed over 2021 social me",
+        "desc": "Parambrata Chatterjee says he had to ‘compromise’ and align with the TMC led by former Chief Minister Mamata Banerjee for the sake of his one-year-old son",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/bengali-actors-face-heat-after-power-shift-to-bjp-fir-filed-over-2021-social-media-posts-linked-to-post-poll-violence/article71011482.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "On Trinamool Turncoats In Bengal, BJP Between A Rock And A Hard Place",
+        "desc": "The BJP's state unit has bluntly declined to give way to prospective Trinamool turncoats, arguing the party isn't a dharmshala.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/on-trinamool-turncoats-in-bengal-bjp-between-a-rock-and-a-hard-place-11538626#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "Raghav Chadha Appointed Chairman Of Rajya Sabha Committee On Petitions",
+        "desc": "Rajya Sabha MP Raghav Chadha who switched from the AAP to the BJP recently has been appointed as the new chairman of the Committee on Petitions of the Upper House.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/raghav-chadha-appointed-chairman-of-rajya-sabha-committee-on-petitions-11538418#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "RG Kar Case: Bengal Starts Departmental Proceedings Against Suspended Doctor",
+        "desc": "The West Bengal government on Saturday initiated departmental proceedings against a doctor suspended following the rape and murder at RG Kar Medical College and Hospital, and also ordered a separate enquiry into his admission to a postgraduate course",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/rg-kar-case-bengal-starts-departmental-proceedings-against-suspended-doctor-11537840#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "India, US to continue working together for global good: PM Modi to US secy Rubio",
+        "desc": "Rubio flew into Kolkata early on Saturday to begin a four-day visit to India, during which he will hold talks with his counterpart S Jaishankar on Sunday",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.hindustantimes.com/india-news/india-us-to-continue-working-together-for-global-good-pm-modi-to-us-secy-rubio-101779550678342.html"
+      },
+      {
+        "time": "All Day",
+        "title": "Centre sanctions  ₹2,103 cr to Bengal under National Health Mission: Adhikari",
+        "desc": "A proposal will be sent to the Centre along with a separate proposal for setting up All India Institutes of Medical Sciences in north Bengal",
+        "category": "Healthcare",
+        "icon": "heart-pulse",
+        "source": "https://www.hindustantimes.com/india-news/centre-sanctions-rs-2-103-cr-to-bengal-under-national-health-mission-adhikari-101779541674530.html"
+      },
+      {
+        "time": "All Day",
+        "title": "FIR against UP Congress chief Ajay Rai over ‘inexcusable’ remarks on PM Modi",
+        "desc": "BJP national spokesperson CR Kesavan lambasted Congress leader Rahul Gandhi for allegedly encouraging such behaviour by his party members.",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.hindustantimes.com/india-news/fir-against-up-congress-chief-ajay-rai-over-inexcusable-remarks-on-pm-modi-rahul-gandhi-bjp-101779521923952.html"
+      },
+      {
+        "time": "All Day",
+        "title": "US Secretary of State Marco Rubio arrives in Kolkata as part of his 4-day visit ",
+        "desc": "US Secretary of State Marco Rubio arrives in Kolkata as part of his 4-day visit to India",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.hindustantimes.com/india-news/us-secretary-of-state-marco-rubio-arrives-in-kolkata-as-part-of-his-4-day-visit-to-india-101779502666585.html"
       }
     ]
   }

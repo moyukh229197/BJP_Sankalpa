@@ -1,0 +1,14 @@
+{
+  "name": "sonar-bangla-sankalp-tracker",
+  "version": "1.0.0",
+  "description": "Auto-update system for the Sonar Bangla Sankalp Tracker — fetches news via RSS and uses Gemini AI for structured extraction.",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "update": "node auto-update.js",
+    "watch": "node -e \"import('./auto-update.js').then(m => { m.default?.(); setInterval(() => import('./auto-update.js').then(m => m.default?.()), 6*60*60*1000); })\""
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0"
+  }
+}
