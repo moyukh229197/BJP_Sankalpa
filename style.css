@@ -647,16 +647,53 @@ h1,h2,h3,h4,h5,h6 {
   max-width: 1440px;
   margin: 0 auto;
 }
+.moments-carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(11, 16, 28, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s var(--ease);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+.scroll-btn:hover {
+  background: var(--saffron);
+  border-color: var(--saffron);
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+.scroll-btn.left { left: 10px; }
+.scroll-btn.right { right: 10px; }
+
 .moments-scroll {
   display: flex;
   gap: 24px;
   overflow-x: auto;
-  padding: 24px 4px 28px;
+  padding: 24px 40px 28px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 85%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent, black 6%, black 85%, transparent 100%);
+  scroll-behavior: smooth;
+  width: 100%;
 }
 .moments-scroll::-webkit-scrollbar {
   display: none;
@@ -749,7 +786,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .moment-thumb .moment-overlay-date {
   position: absolute;
-  top: 14px;
+  bottom: 14px;
   right: 14px;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(4px);

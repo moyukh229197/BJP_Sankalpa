@@ -361,10 +361,21 @@ function updateCD(){
 // ═══════════════════════════════════════════════════════════
 //  KEY MOMENTS GALLERY
 // ═══════════════════════════════════════════════════════════
+function scrollMoments(dir) {
+  const c = $('momentsScroll');
+  if(!c) return;
+  const scrollAmount = 374; // card width (350) + gap (24)
+  c.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
+}
+
 function renderMoments(){
   const c=$('momentsScroll');
   if(!c) return;
-  c.innerHTML=moments.map(m=>`
+  
+  // Clone and reverse so the newest moments appear on the left
+  const displayMoments = [...moments].reverse();
+  
+  c.innerHTML=displayMoments.map(m=>`
     <div class="moment-card reveal-scale" role="link" tabindex="0" data-open="${m.yt}">
       <div class="moment-thumb">
         <img src="${m.thumb}" alt="${m.title}" onerror="this.src='https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=640&q=60'">
