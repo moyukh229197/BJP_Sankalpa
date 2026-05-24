@@ -16,25 +16,58 @@ if (!GEMINI_API_KEY) {
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
+// Run multiple targeted searches and merge results
+const SEARCH_QUERIES = [
+  'Suvendu Adhikari news today',
+  'West Bengal BJP government today',
+  'Bengal CM Suvendu Adhikari',
+  'West Bengal government decision today',
+  'Bengal BJP cabinet news'
+];
+
 async function fetchLatestNews() {
-  console.log("Fetching latest news from YouTube via yt-search...");
-  const res = await yts('West Bengal BJP OR Suvendu Adhikari news');
+  console.log("Running multiple YouTube searches...");
 
-  // yt-search returns a mix of results, we just want the top 10 videos
-  const videos = res.videos.slice(0, 10).map(item => ({
-    videoId: item.videoId,
-    title: item.title,
-    description: item.description,
-    channel: item.author.name,
-    publishedAt: item.ago || 'Recently',
-    thumbnail: item.thumbnail
-  }));
+  const seen = new Set();
+  const allVideos = [];
 
-  return videos;
+  // Run all searches in parallel
+  const results = await Promise.allSettled(
+    SEARCH_QUERIES.map(q => yts(q))
+  );
+
+  for (const result of results) {
+    if (result.status !== 'fulfilled') continue;
+    for (const item of result.value.videos.slice(0, 8)) {
+      if (!item.videoId || seen.has(item.videoId)) continue;
+      seen.add(item.videoId);
+      allVideos.push({
+        videoId: item.videoId,
+        title: item.title,
+        description: item.description || '',
+        channel: item.author?.name || 'Unknown',
+        publishedAt: item.ago || 'Recently',
+        thumbnail: `https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`,
+        url: `https://www.youtube.com/watch?v=${item.videoId}`
+      });
+    }
+  }
+
+  console.log(`Found ${allVideos.length} unique videos across all searches.`);
+  return allVideos;
 }
 
-async function filterWithAI(videos) {
+async function filterWithAI(videos, existingUrls) {
   console.log("Filtering and formatting with Gemini AI...");
+
+  // Pre-filter out already-stored videos to save tokens
+  const freshVideos = videos.filter(v => !existingUrls.has(v.url));
+  if (freshVideos.length === 0) {
+    console.log("All fetched videos are already in the database.");
+    return [];
+  }
+  console.log(`Sending ${freshVideos.length} fresh videos to Gemini...`);
+
   const model = genAI.getGenerativeModel({
     model: "gemini-2.5-flash",
     generationConfig: {
@@ -44,12 +77,12 @@ async function filterWithAI(videos) {
         items: {
           type: SchemaType.OBJECT,
           properties: {
-            title: { type: SchemaType.STRING, description: "A catchy, short title for the moment" },
-            desc: { type: SchemaType.STRING, description: "A 1-2 sentence description of the news" },
-            date: { type: SchemaType.STRING, description: "Date in format 'May 14, 2026'" },
-            badge: { type: SchemaType.STRING, description: "A short, 1-word uppercase badge (e.g., 'UPDATE', 'NEWS', 'CABINET')" },
-            yt: { type: SchemaType.STRING, description: "The full YouTube video URL" },
-            thumb: { type: SchemaType.STRING, description: "The high-res thumbnail URL provided in the input" }
+            title:  { type: SchemaType.STRING, description: "Short, punchy Hindi-English title for the moment" },
+            desc:   { type: SchemaType.STRING, description: "1-2 sentence factual description of the news" },
+            date:   { type: SchemaType.STRING, description: "Inferred publish date in format like 'May 24, 2026'. Use today's date if 'ago' says '1 hour ago', '3 hours ago' etc." },
+            badge:  { type: SchemaType.STRING, description: "1-2 word uppercase tag like 'BREAKING', 'CABINET', 'SPEECH', 'VISIT', 'SCHEME'" },
+            yt:     { type: SchemaType.STRING, description: "Full YouTube URL https://www.youtube.com/watch?v=..." },
+            thumb:  { type: SchemaType.STRING, description: "The thumbnail URL from the input" }
           },
           required: ["title", "desc", "date", "badge", "yt", "thumb"]
         }
@@ -57,20 +90,37 @@ async function filterWithAI(videos) {
     }
   });
 
+  const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
   const prompt = `
-  You are curating the "Key Moments" section for the West Bengal BJP Government Dashboard.
-  Review the following recent YouTube video snippets. Select up to 3 to 4 of the most important, relevant, and reliable breaking news updates regarding the government, cabinet decisions, CM Suvendu Adhikari, or significant state events that occurred today.
-  Ignore generic noise, duplicate topics, or unrelated national news. If there are no highly critical updates, it is okay to return fewer or an empty array.
-  
-  Format the output strictly as a JSON array of objects.
-  
-  Videos:
-  ${JSON.stringify(videos, null, 2)}
-  `;
+Today's date is ${today}.
+
+You are curating the "Key Moments" section for the official West Bengal BJP Government accountability dashboard.
+
+Review these recent YouTube videos fetched from news channels. Select 3 to 4 of the most important, genuine, breaking news stories about:
+- CM Suvendu Adhikari's actions, speeches, visits
+- West Bengal cabinet decisions and government schemes
+- Significant BJP political events in Bengal
+- Government welfare announcements
+
+REJECT: entertainment, cricket, unrelated national news, opinion/debate shows, duplicate stories about the same event.
+If fewer than 3 videos are genuinely newsworthy, return only those. Return empty array [] if none qualify.
+
+Use the "publishedAt" field (e.g. "3 hours ago", "1 day ago") to infer the correct date. Today is ${today}.
+
+Videos:
+${JSON.stringify(freshVideos, null, 2)}
+`;
 
   const result = await model.generateContent(prompt);
   const text = result.response.text();
-  return JSON.parse(text);
+
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    console.error("Failed to parse Gemini response:", text);
+    return [];
+  }
 }
 
 async function updateMoments() {
@@ -80,33 +130,35 @@ async function updateMoments() {
 
     const rawVideos = await fetchLatestNews();
     if (rawVideos.length === 0) {
-      console.log("No new videos found.");
+      console.log("No videos found from any search.");
       return;
     }
 
-    const newMoments = await filterWithAI(rawVideos);
-    if (!newMoments || newMoments.length === 0) {
-      console.log("AI found no highly relevant updates to add.");
-      return;
-    }
-
-    // Filter out moments that are already in the array (by checking URL)
     const existingUrls = new Set(siteData.moments.map(m => m.yt));
-    const uniqueNewMoments = newMoments.filter(m => !existingUrls.has(m.yt));
 
-    if (uniqueNewMoments.length === 0) {
-      console.log("No new unique moments to add.");
+    const newMoments = await filterWithAI(rawVideos, existingUrls);
+    if (!newMoments || newMoments.length === 0) {
+      console.log("AI found no new qualifying updates to add.");
       return;
     }
 
-    // Prepend new moments so they appear first
+    // Final dedup check
+    const uniqueNewMoments = newMoments.filter(m => !existingUrls.has(m.yt));
+    if (uniqueNewMoments.length === 0) {
+      console.log("No new unique moments after dedup.");
+      return;
+    }
+
+    // Prepend newest on top — frontend sorts by date anyway
     siteData.moments = [...uniqueNewMoments, ...siteData.moments];
-    
-    // Cap at 100 items so we can store roughly a month of updates at 3-4 per day
+
+    // Cap at 100 (≈ 1 month at 3-4/day)
     siteData.moments = siteData.moments.slice(0, 100);
 
     await fs.writeFile(DATA_FILE, JSON.stringify(siteData, null, 2));
-    console.log(`Successfully added ${uniqueNewMoments.length} new moments.`);
+    console.log(`✅ Successfully added ${uniqueNewMoments.length} new moments!`);
+    uniqueNewMoments.forEach(m => console.log(`  • [${m.date}] ${m.title}`));
+
   } catch (err) {
     console.error("Error updating moments:", err);
     process.exit(1);

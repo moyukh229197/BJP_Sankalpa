@@ -371,8 +371,15 @@ function scrollMoments(dir) {
 function renderMoments(){
   const c=$('momentsScroll');
   if(!c) return;
-  
-  c.innerHTML=moments.map(m=>`
+
+  // Sort newest first — parse "May 4, 2026" style dates
+  const sorted = [...moments].sort((a, b) => {
+    const da = new Date(a.date || 0);
+    const db = new Date(b.date || 0);
+    return db - da; // descending: newest first
+  });
+
+  c.innerHTML=sorted.map(m=>`
     <div class="moment-card reveal-scale" role="link" tabindex="0" data-open="${m.yt}">
       <div class="moment-thumb">
         <img src="${m.thumb}" alt="${m.title}" onerror="this.src='https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=640&q=60'">
