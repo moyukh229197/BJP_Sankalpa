@@ -201,6 +201,7 @@ function refreshSite(){
   renderInfra();
   initReveal();
   renderHeroStats();
+  renderHeroHighlight();
 }
 
 function renderHeroStats(){
@@ -220,6 +221,40 @@ function renderHeroStats(){
   wipEl.textContent = inProgress;
   pendEl.textContent = pending;
 }
+
+function renderHeroHighlight(){
+  const container = $('heroHighlightNews');
+  if (!container) return;
+  
+  if (!dailyLog || dailyLog.length === 0) {
+    container.innerHTML = '<div class="hl-loading">No updates available</div>';
+    return;
+  }
+
+  // Get the most recent day that has events
+  const latestDay = [...dailyLog].reverse().find(d => d.events && d.events.length > 0);
+  
+  if (!latestDay) {
+    container.innerHTML = '<div class="hl-loading">No recent events</div>';
+    return;
+  }
+
+  // Get the first (most important) event of that day
+  const topEvent = latestDay.events[0];
+  const dateStr = fmtDate(latestDay.date);
+  
+  container.innerHTML = `
+    <a href="#timeline" class="hl-card">
+      <div class="hl-meta">
+        <span class="hl-cat">${topEvent.category || 'Update'}</span>
+        <span class="hl-date">${dateStr}</span>
+      </div>
+      <div class="hl-title">${topEvent.title}</div>
+      <div class="hl-desc">${topEvent.desc}</div>
+    </a>
+  `;
+}
+
 
 function actionBucket(time){
   const t=(time||'').toLowerCase();

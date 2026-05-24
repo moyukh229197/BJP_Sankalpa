@@ -428,7 +428,7 @@ h1,h2,h3,h4,h5,h6 {
   perspective: 1000px;
 }
 
-.spotlight-widget {
+.highlight-widget {
   background: rgba(11, 16, 28, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
@@ -440,123 +440,82 @@ h1,h2,h3,h4,h5,h6 {
   transition: transform 0.5s var(--ease);
 }
 
-.spotlight-widget:hover {
+.highlight-widget:hover {
   transform: rotateY(0deg) rotateX(0deg);
 }
 
-.widget-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Outfit';
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text);
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.pulse-indicator {
-  width: 8px;
-  height: 8px;
-  background: var(--saffron);
-  border-radius: 50%;
-  animation: pulseSaffron 2s infinite;
-}
-
-@keyframes pulseSaffron {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 119, 34, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(255, 119, 34, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 119, 34, 0); }
-}
-
-.countdown-list {
+.highlight-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
-.countdown-item {
+.hl-loading {
+  color: var(--text3);
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0;
+  animation: blink 1.5s infinite;
+}
+
+.hl-card {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.04);
-  border-left-width: 4px;
+  border-left: 4px solid var(--saffron);
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s var(--ease);
 }
 
-.countdown-item.saffron-border { border-left-color: var(--saffron); }
-.countdown-item.green-border { border-left-color: var(--green-light); }
+.hl-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
 
-.cd-header {
+.hl-meta {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 16px;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
-.cd-header h3 {
-  font-size: 15px;
+.hl-date {
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hl-cat {
+  font-size: 10px;
+  background: rgba(255, 119, 34, 0.15);
+  color: var(--saffron);
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.hl-title {
+  font-size: 18px;
   font-weight: 700;
   color: var(--text);
   line-height: 1.4;
-  max-width: 65%;
+  margin-bottom: 8px;
 }
 
-.cd-deadline {
-  font-family: 'Outfit';
-  font-size: 11px;
-  color: var(--text3);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-.cd-timer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.time-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  width: 60px;
-  padding: 8px 0;
-}
-
-.time-block .val {
-  font-family: 'Outfit';
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--text);
-  line-height: 1;
-}
-
-.time-block span {
-  font-size: 10px;
-  color: var(--text3);
-  text-transform: uppercase;
-  margin-top: 4px;
-  letter-spacing: 0.5px;
-}
-
-.colon {
-  font-family: 'Outfit';
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text3);
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0.3; }
+.hl-desc {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* COUNTDOWN CARDS */
