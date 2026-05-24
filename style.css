@@ -3488,3 +3488,153 @@ h1,h2,h3,h4,h5,h6 {
   .admin-login-form input { min-width: 0; width: 100%; }
   .admin-section-titlebar { flex-direction: column; align-items: flex-start; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   ENHANCED ELECTION VISUALIZATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Viz Row: Hemicycle + Donut side-by-side ─── */
+.viz-row {
+  display: flex; gap: 24px; max-width: 1200px; margin: 0 auto 32px; padding: 0 24px;
+}
+.hemicycle-wrap, .donut-wrap {
+  flex: 1; background: rgba(11,16,28,0.72); border: 1px solid var(--border);
+  border-radius: 20px; padding: 28px; backdrop-filter: blur(16px);
+}
+.hemicycle-wrap { flex: 2; }
+.donut-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.hemicycle-svg { width: 100%; height: auto; display: block; }
+.donut-svg { width: 220px; height: 220px; display: block; margin: 16px auto 0; }
+.donut-arc {
+  opacity: 0; animation: donutReveal 0.8s ease forwards;
+}
+@keyframes donutReveal { from { opacity: 0; stroke-dashoffset: 500; } to { opacity: 1; } }
+
+/* ─── Spotlight Section ─── */
+.spotlight-section {
+  max-width: 1200px; margin: 0 auto 32px; padding: 0 24px;
+}
+.spotlight-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;
+}
+.spotlight-card {
+  display: flex; align-items: center; gap: 14px; padding: 18px 20px;
+  background: rgba(11,16,28,0.72); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent, var(--saffron)); border-radius: 16px;
+  backdrop-filter: blur(16px); transition: all 0.35s var(--ease);
+  animation: spotlightIn 0.5s ease both;
+}
+.spotlight-card:hover {
+  border-color: var(--accent, var(--saffron)); transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3), 0 0 16px color-mix(in srgb, var(--accent, var(--saffron)) 15%, transparent);
+}
+@keyframes spotlightIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.spotlight-avatar {
+  width: 52px; height: 52px; border-radius: 14px; object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.08); flex-shrink: 0;
+}
+.spotlight-body { flex: 1; min-width: 0; }
+.spotlight-body strong { display: block; font-family: 'Outfit'; font-size: 14px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spotlight-party { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text2); margin-top: 3px; }
+.spotlight-seat { display: block; font-size: 10px; color: var(--text3); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+.spotlight-nums { display: flex; gap: 16px; flex-shrink: 0; text-align: center; }
+.spotlight-nums div { display: flex; flex-direction: column; }
+.spotlight-nums b { font-family: 'Outfit'; font-size: 15px; font-weight: 700; }
+.spotlight-nums small { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+/* ─── Victory Margins Section ─── */
+.margins-section {
+  max-width: 1200px; margin: 0 auto 32px; padding: 0 24px;
+}
+.margins-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px;
+}
+.margins-col {
+  background: rgba(11,16,28,0.72); border: 1px solid var(--border);
+  border-radius: 20px; padding: 24px; backdrop-filter: blur(16px);
+}
+.margins-col h3 { font-family: 'Outfit'; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+.margin-row {
+  display: flex; align-items: center; gap: 12px; padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.25s ease;
+}
+.margin-row:last-child { border-bottom: none; }
+.margin-row:hover { background: rgba(255,255,255,0.02); border-radius: 10px; padding-left: 8px; }
+.margin-rank {
+  width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  font-family: 'Outfit'; font-size: 11px; font-weight: 700; color: var(--text3); flex-shrink: 0;
+}
+.margin-info { flex: 1; min-width: 0; }
+.margin-info strong { display: block; font-family: 'Outfit'; font-size: 13px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.margin-info span { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text2); margin-top: 3px; }
+.margin-val { font-family: 'Outfit'; font-size: 16px; font-weight: 700; flex-shrink: 0; }
+
+/* ─── Region Breakdown Section ─── */
+.region-section {
+  max-width: 1200px; margin: 0 auto 32px; padding: 0 24px;
+}
+.region-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-top: 16px;
+}
+.region-card {
+  background: rgba(11,16,28,0.72); border: 1px solid var(--border);
+  border-radius: 16px; padding: 20px; backdrop-filter: blur(16px);
+  transition: all 0.3s var(--ease);
+}
+.region-card:hover { border-color: rgba(255,255,255,0.1); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+.region-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.region-icon { font-size: 24px; }
+.region-head strong { display: block; font-family: 'Outfit'; font-size: 15px; color: var(--text); }
+.region-head small { font-size: 11px; color: var(--text3); }
+.region-bar {
+  display: flex; height: 28px; border-radius: 10px; overflow: hidden; gap: 2px; margin-bottom: 10px;
+}
+.region-bar span {
+  min-width: 4px; border-radius: 6px; transition: all 0.5s var(--ease);
+  position: relative;
+}
+.region-bar span:hover { filter: brightness(1.3); transform: scaleY(1.1); }
+.region-labels { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.region-labels span { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text2); }
+
+/* ─── Swing Placeholder ─── */
+.swing-section {
+  max-width: 1200px; margin: 0 auto 32px; padding: 0 24px;
+}
+.swing-placeholder {
+  background: linear-gradient(135deg, rgba(11,16,28,0.72), rgba(18,24,40,0.72));
+  border: 1px solid var(--border); border-radius: 20px; padding: 48px 32px;
+  backdrop-filter: blur(16px); text-align: center; position: relative; overflow: hidden;
+}
+.swing-placeholder::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,119,34,0.04) 50%, transparent 70%);
+  background-size: 200% 100%; animation: swingShimmer 4s ease infinite;
+}
+@keyframes swingShimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.swing-icon { font-size: 36px; display: block; margin-bottom: 12px; }
+.swing-placeholder strong { display: block; font-family: 'Outfit'; font-size: 20px; color: var(--text); margin-bottom: 8px; position: relative; }
+.swing-placeholder p { font-size: 13px; color: var(--text3); max-width: 400px; margin: 0 auto; position: relative; line-height: 1.6; }
+
+/* ─── Map Pulse Animation ─── */
+@keyframes acPulse { 0%, 100% { stroke-opacity: 1; } 50% { stroke-opacity: 0.4; } }
+.ac-pulse { animation: acPulse 1.5s ease infinite; stroke: #f0f2f5 !important; stroke-width: 2.5 !important; }
+
+/* ─── Map Party Glow ─── */
+.map-party-glow {
+  box-shadow: 0 0 24px rgba(255,119,34,0.12), 0 0 48px rgba(255,119,34,0.06) inset;
+  border-color: rgba(255,119,34,0.2) !important;
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .viz-row { flex-direction: column; padding: 0 16px; }
+  .hemicycle-wrap, .donut-wrap { flex: none; }
+  .spotlight-grid { grid-template-columns: 1fr; }
+  .margins-grid { grid-template-columns: 1fr; }
+  .region-grid { grid-template-columns: 1fr; }
+  .spotlight-section, .margins-section, .region-section, .swing-section { padding: 0 16px; }
+}

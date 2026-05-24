@@ -427,13 +427,15 @@ function renderMap() {
     if (!layer) return;
     if (activeLayer && activeLayer !== layer) {
       activeLayer.setStyle(styleFor(activeLayer.feature));
+      if (activeLayer._path) activeLayer._path.classList.remove('ac-pulse');
     }
     activeLayer = layer;
     layer.setStyle({ weight: 2.4, color: '#f0f2f5', fillOpacity: 1 });
+    if (layer._path) layer._path.classList.add('ac-pulse');
     layer.closeTooltip();
     layer.bindPopup(constituencyPopupHtml(meta), { closeButton: false, autoPan: false }).openPopup();
     select.value = String(meta.acNo);
-    map.fitBounds(layer.getBounds(), { padding: [36, 36], maxZoom: 8 });
+    map.flyToBounds(layer.getBounds(), { padding: [36, 36], maxZoom: 8, duration: 0.8 });
     renderSummary();
   }
 
@@ -461,6 +463,7 @@ function renderMap() {
 
   renderMapFilters(party => {
     activeParty = party;
+    mapNode.classList.toggle('map-party-glow', party !== 'all');
     refreshStyles();
   });
 
@@ -507,7 +510,7 @@ function renderMap() {
   const glow = L.DomUtil.create('div', 'map-glow', map.getPanes().overlayPane);
   glow.style.pointerEvents = 'none';
 
-  map.fitBounds(geoLayer.getBounds(), { padding: [18, 18] });
+  map.flyToBounds(geoLayer.getBounds(), { padding: [18, 18], duration: 1 });
   applyMapTheme('light');
   renderSummary();
 
@@ -553,6 +556,160 @@ function renderMap() {
   renderSummary();
 }
 
+// ═══════════════════════════════════════════════════════════════
+//  ENHANCED VISUALIZATIONS
+// ═══════════════════════════════════════════════════════════════
+
+function renderHemicycle() {
+  const el = $('hemicycleSvg');
+  if (!el) return;
+  const seats = [];
+  PARTY_RESULTS.forEach(p => { for (let i = 0; i < p.won; i++) seats.push(p); });
+  const total = seats.length;
+  const rows = 7, rMin = 75, gap = 18, dotR = 5;
+  const radii = Array.from({length: rows}, (_, i) => rMin + i * gap);
+  const sumR = radii.reduce((a, b) => a + b, 0);
+  const perRow = radii.map(r => Math.round(total * r / sumR));
+  perRow[rows - 1] += total - perRow.reduce((a, b) => a + b, 0);
+  const w = 500, h = 270, cx = w / 2, cy = h - 15;
+  let svg = '';
+  let idx = 0;
+  for (let row = 0; row < rows; row++) {
+    const r = radii[row], n = perRow[row];
+    for (let i = 0; i < n && idx < total; i++) {
+      const a = Math.PI * (i + 0.5) / n;
+      const x = cx - r * Math.cos(a), y = cy - r * Math.sin(a);
+      svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${dotR}" fill="${seats[idx].color}" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="${(idx * 0.004).toFixed(3)}s" fill="freeze"/></circle>`;
+      idx++;
+    }
+  }
+  svg += `<line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy - radii[rows-1] - 12}" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="3,3"/>`;
+  svg += `<text x="${cx + 4}" y="${cy - radii[rows-1] - 16}" fill="var(--text3)" font-size="9" font-family="Outfit">${MAJORITY_MARK}</text>`;
+  el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" class="hemicycle-svg">${svg}</svg>`;
+}
+
+function renderVoteShareDonut() {
+  const el = $('donutSvg');
+  if (!el) return;
+  const r = 75, sw = 24, w = 220, h = 220, cx = w/2, cy = h/2;
+  const C = 2 * Math.PI * r;
+  let offset = 0, arcs = '';
+  const total = PARTY_RESULTS.reduce((a, p) => a + p.won, 0);
+  PARTY_RESULTS.forEach((p, i) => {
+    const len = (p.won / total) * C, g = 2;
+    arcs += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${p.color}" stroke-width="${sw}" stroke-dasharray="${Math.max(0,len-g)} ${C-len+g}" stroke-dashoffset="${-offset}" transform="rotate(-90 ${cx} ${cy})" class="donut-arc" style="animation-delay:${i*0.12}s"/>`;
+    offset += len;
+  });
+  const top = PARTY_RESULTS[0];
+  arcs += `<text x="${cx}" y="${cy-6}" text-anchor="middle" fill="var(--text)" font-family="Outfit" font-size="26" font-weight="700">${top.won}</text>`;
+  arcs += `<text x="${cx}" y="${cy+12}" text-anchor="middle" fill="${top.color}" font-family="Outfit" font-size="12" font-weight="600">${top.code}</text>`;
+  arcs += `<text x="${cx}" y="${cy+26}" text-anchor="middle" fill="var(--text3)" font-family="Inter" font-size="9">of ${total} seats</text>`;
+  el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" class="donut-svg">${arcs}</svg>`;
+}
+
+function animateCounters() {
+  document.querySelectorAll('.election-stat strong').forEach(el => {
+    const target = parseInt(el.textContent);
+    if (isNaN(target)) return;
+    const start = performance.now(), dur = 1500;
+    el.textContent = '0';
+    (function tick(now) {
+      const t = Math.min(1, (now - start) / dur);
+      const e = 1 - Math.pow(1 - t, 4);
+      el.textContent = Math.round(e * target);
+      if (t < 1) requestAnimationFrame(tick);
+    })(performance.now());
+  });
+}
+
+function renderCandidateSpotlight() {
+  const el = $('spotlightGrid');
+  if (!el) return;
+  const features = window.json_All_AC?.features || [];
+  const list = [];
+  features.forEach(f => {
+    const no = Number(f?.properties?.AC_NO);
+    const name = f?.properties?.AC_NAME1 || f?.properties?.AC_NAME || 'Unknown';
+    const d = constituencyDetails[no];
+    if (!d?.winner) return;
+    const result = resultByAc.get(no);
+    const port = candidatePortraits[String(no)] || candidatePortraits[no] || {};
+    const color = PARTY_LOOKUP[d.winner.party]?.color || result?.color || '#555E6E';
+    const margin = (d.winner.totalVotes || 0) - (d.runnerUp?.totalVotes || 0);
+    list.push({ no, name, candidate: d.winner.candidate, party: d.winner.party, votes: d.winner.totalVotes || 0, margin, color, img: port.winner || avatarDataUrl(d.winner.candidate, color) });
+  });
+  list.sort((a, b) => b.votes - a.votes);
+  el.innerHTML = list.slice(0, 5).map((c, i) => `
+    <div class="spotlight-card" style="--accent:${c.color};animation-delay:${i*0.08}s">
+      <img src="${c.img}" alt="${c.candidate}" class="spotlight-avatar">
+      <div class="spotlight-body">
+        <strong>${c.candidate}</strong>
+        <span class="spotlight-party"><span class="party-dot" style="background:${c.color}"></span>${c.party}</span>
+        <span class="spotlight-seat">${c.name}</span>
+      </div>
+      <div class="spotlight-nums">
+        <div><b style="color:${c.color}">${c.votes.toLocaleString()}</b><small>votes</small></div>
+        <div><b>${c.margin.toLocaleString()}</b><small>margin</small></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderTopMargins() {
+  const el = $('marginsGrid');
+  if (!el) return;
+  const features = window.json_All_AC?.features || [];
+  const entries = [];
+  features.forEach(f => {
+    const no = Number(f?.properties?.AC_NO);
+    const name = f?.properties?.AC_NAME1 || f?.properties?.AC_NAME || 'Unknown';
+    const d = constituencyDetails[no];
+    if (!d?.winner || !d?.runnerUp) return;
+    const margin = (d.winner.totalVotes || 0) - (d.runnerUp.totalVotes || 0);
+    const color = PARTY_LOOKUP[d.winner.party]?.color || resultByAc.get(no)?.color || '#555E6E';
+    entries.push({ name, winner: d.winner.candidate, party: d.winner.party, margin, color });
+  });
+  entries.sort((a, b) => b.margin - a.margin);
+  const biggest = entries.slice(0, 5);
+  const closest = entries.filter(e => e.margin > 0).sort((a, b) => a.margin - b.margin).slice(0, 5);
+  function col(title, icon, items) {
+    return `<div class="margins-col"><h3>${icon} ${title}</h3>${items.map((e, i) => `
+      <div class="margin-row">
+        <span class="margin-rank">#${i+1}</span>
+        <div class="margin-info"><strong>${e.name}</strong><span><span class="party-dot" style="background:${e.color}"></span>${e.winner}</span></div>
+        <b class="margin-val" style="color:${e.color}">${e.margin.toLocaleString()}</b>
+      </div>
+    `).join('')}</div>`;
+  }
+  el.innerHTML = col('Biggest Landslides', '🏔️', biggest) + col('Closest Fights', '⚔️', closest);
+}
+
+function renderRegionBreakdown() {
+  const el = $('regionGrid');
+  if (!el) return;
+  const REGIONS = [
+    { name: 'North Bengal', range: [1, 42], icon: '🏔️' },
+    { name: 'Rarh Bengal', range: [43, 100], icon: '🌾' },
+    { name: 'Kolkata Metro', range: [101, 147], icon: '🏙️' },
+    { name: 'South Bengal', range: [148, 210], icon: '🌊' },
+    { name: 'Midnapore Belt', range: [211, 294], icon: '⚡' }
+  ];
+  const features = window.json_All_AC?.features || [];
+  el.innerHTML = REGIONS.map(reg => {
+    const acs = features.filter(f => { const n = Number(f?.properties?.AC_NO); return n >= reg.range[0] && n <= reg.range[1]; });
+    const total = acs.length;
+    if (!total) return '';
+    const counts = {};
+    acs.forEach(f => { const p = resultByAc.get(Number(f?.properties?.AC_NO))?.party || 'OTH'; counts[p] = (counts[p]||0)+1; });
+    const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]);
+    return `<div class="region-card">
+      <div class="region-head"><span class="region-icon">${reg.icon}</span><div><strong>${reg.name}</strong><small>${total} seats</small></div></div>
+      <div class="region-bar">${sorted.map(([c,n]) => `<span style="width:${(n/total*100).toFixed(1)}%;background:${PARTY_LOOKUP[c]?.color||'#555E6E'}" title="${c}: ${n}"></span>`).join('')}</div>
+      <div class="region-labels">${sorted.map(([c,n]) => `<span><span class="party-dot" style="background:${PARTY_LOOKUP[c]?.color||'#555E6E'}"></span>${c} ${n}</span>`).join('')}</div>
+    </div>`;
+  }).join('');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const badge = $('dayBadge');
   if (badge) {
@@ -563,4 +720,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderPartyCards();
   renderLegend();
   renderMap();
+  renderHemicycle();
+  renderVoteShareDonut();
+  renderCandidateSpotlight();
+  renderTopMargins();
+  renderRegionBreakdown();
+  setTimeout(animateCounters, 300);
 });

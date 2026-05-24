@@ -54,7 +54,23 @@
       <div class="winner-meter" aria-label="BJP majority meter"><span></span></div>
     </section>
 
+    <section class="viz-row">
+      <div class="hemicycle-wrap">
+        <div class="election-panel-head"><div><h2>Assembly Composition</h2><p>294 seats in parliament view.</p></div></div>
+        <div id="hemicycleSvg"></div>
+      </div>
+      <div class="donut-wrap">
+        <div class="election-panel-head"><div><h2>Seat Share</h2><p>Party-wise distribution.</p></div></div>
+        <div id="donutSvg"></div>
+      </div>
+    </section>
+
     <section class="election-stat-grid" id="electionStats"></section>
+
+    <section class="spotlight-section">
+      <div class="election-panel-head"><div><h2>Star Winners</h2><p>Candidates with the highest vote counts.</p></div></div>
+      <div class="spotlight-grid" id="spotlightGrid"></div>
+    </section>
 
     <section class="election-layout">
       <div class="election-panel party-panel">
@@ -92,6 +108,24 @@
         <div class="map-lens-row" id="mapLens"></div>
         <div id="electionMap" class="election-map"></div>
         <div class="election-map-note">Not to scale</div>
+      </div>
+    </section>
+
+    <section class="margins-section">
+      <div class="election-panel-head"><div><h2>Victory Margins</h2><p>The biggest landslides and closest fights.</p></div></div>
+      <div class="margins-grid" id="marginsGrid"></div>
+    </section>
+
+    <section class="region-section">
+      <div class="election-panel-head"><div><h2>Region-wise Breakdown</h2><p>Party performance across Bengal's regions.</p></div></div>
+      <div id="regionGrid" class="region-grid"></div>
+    </section>
+
+    <section class="swing-section">
+      <div class="swing-placeholder">
+        <span class="swing-icon">📊</span>
+        <strong>Swing Analysis: 2021 → 2026</strong>
+        <p>Historical seat-by-seat comparison data will be available here soon.</p>
       </div>
     </section>
 
