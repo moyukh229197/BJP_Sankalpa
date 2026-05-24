@@ -1008,5 +1008,92 @@
         "source": "https://www.hindustantimes.com/india-news/us-secretary-of-state-marco-rubio-arrives-in-kolkata-as-part-of-his-4-day-visit-to-india-101779502666585.html"
       }
     ]
+  },
+  {
+    "date": "2026-05-24",
+    "dayNumber": 15,
+    "label": "Day 15",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Falta repoll results LIVE: BJP takes commanding lead after eight rounds of count",
+        "desc": "Although officially six candidates are in the fray for the seat, Trinamool Congress nominee Jahangir Khan, a couple of days before the repoll",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/falta-west-bengal-repoll-vote-counting-results-may-24-2026/article71016885.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "West Bengal elections 2026: Who lost the most?",
+        "desc": "Wiped out from the North, South-west and Greater Kolkata regions in West Bengal, Trinamool has been reduced to 80 seats – its lowest since 2011",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/west-bengal-elections-2026-who-lost-the-most/article70942818.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Counting of votes in Bengal’s Falta Assembly repoll begins",
+        "desc": "\"The counting is progressing peacefully. Adequate security arrangements have been made at the counting centre,\" a poll panel official said.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/bengals-falta-assembly-repoll-result-may-24/article71016837.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Falta constituency results 2026: Why are the votes for the West Bengal seat bein",
+        "desc": "Voting for the Falta Assembly constituency seat was originally held on April 29 2026, as part of the second phase of the West Bengal Assembly elections.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/news/national/west-bengal/falta-constituency-repolling-2026-results-counting-vote-share-west-bengal-election-updates/article71016906.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "PM Modi’s jhalmuri break in Jhargram leaves Trinamool fuming",
+        "desc": "Jharkhand Chief Minister Hemant Soren and his wife Kalpana Soren had to return after waiting for hours to campaign in Jhargram as they were not allowed to land, the party says",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.thehindu.com/elections/west-bengal-assembly/pm-modis-jhalmuri-break-in-jhargram-leaves-trinamool-fuming/article70881765.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal To Set Up 'Holding Centres' In Every District To Keep Illegal Immigrants",
+        "desc": "These holding centres will come up in every district to house people who get detained under suspicion of being Bangladeshi national or Rohingya",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/west-bengal-to-set-up-holding-centres-to-keep-illegal-immigrants-11540775#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "'Trying to create anarchy': BJP leaders target Rahul Gandhi over 'Modi govt will",
+        "desc": "Piyush Goyal also accused Gandhi and the Congress party of \"habouring hate for India.\"",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.hindustantimes.com/india-news/trying-to-create-anarchy-bjp-leaders-target-rahul-gandhi-over-narendra-modi-government-will-fall-remark-piyush-goyal-101779615006128.html"
+      },
+      {
+        "time": "All Day",
+        "title": "After zero in Bihar polls 2025, Prashant Kishor targets assembly seat left by BJ",
+        "desc": "Jan Suraaj Party to fight bypoll to seat vacated by Nitin Nabin, can defeat BJP: Prashant Kishor",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.hindustantimes.com/india-news/after-zero-in-bihar-polls-2025-prashant-kishor-targets-assembly-seat-left-by-bjps-nitin-nabin-in-bankipur-bypoll-101779609403530.html"
+      },
+      {
+        "time": "All Day",
+        "title": "Bengal's Falta election: How Jahangir Khan of Trinamool, who backed out before r",
+        "desc": "The TMC's Jahangir Khan was at over 3% of the vote share in Falta despite his political exit from the contest, as per EC's vote-count update",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.hindustantimes.com/india-news/bengals-falta-election-how-is-jahangir-khan-of-trinamool-who-backed-out-before-repoll-still-getting-votes-as-per-ec-101779606799358.html"
+      },
+      {
+        "time": "All Day",
+        "title": "Falta election results 2026 LIVE: BJP’s Debangshu Panda set for massive win; Suv",
+        "desc": "Falta election results LIVE: BJP's Debangshu Panda is leading in Falta seat against CPI(M) rival Sambhu Nath Kurmi. Congress is at the third spot, while TMC is down at the fourth spot. TMC's Jahangir Khan had announced that he would not contest the r",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.hindustantimes.com/india-news/falta-election-eci-results-live-updates-falta-repoll-bengal-bjp-debangshu-tmc-jahangir-pushpa-khan-latest-vote-counting-101779592279292.html"
+      }
+    ]
   }
 ]
