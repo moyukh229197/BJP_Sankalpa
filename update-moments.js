@@ -1,4 +1,4 @@
-import { google } from 'googleapis';
+import yts from 'yt-search';
 import { GoogleGenerativeAI, SchemaType } from '@google/generative-ai';
 import fs from 'fs/promises';
 import path from 'path';
@@ -7,39 +7,27 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_FILE = path.join(__dirname, 'data', 'site-content.json');
 
-const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-if (!YOUTUBE_API_KEY || !GEMINI_API_KEY) {
-  console.error("Missing YOUTUBE_API_KEY or GEMINI_API_KEY environment variables.");
+if (!GEMINI_API_KEY) {
+  console.error("Missing GEMINI_API_KEY environment variable.");
   process.exit(1);
 }
-
-const youtube = google.youtube({
-  version: 'v3',
-  auth: YOUTUBE_API_KEY
-});
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 async function fetchLatestNews() {
-  console.log("Fetching latest news from YouTube...");
-  const res = await youtube.search.list({
-    part: 'snippet',
-    q: 'West Bengal Government OR West Bengal BJP OR Suvendu Adhikari news',
-    order: 'date',
-    maxResults: 10,
-    type: 'video',
-    relevanceLanguage: 'en'
-  });
+  console.log("Fetching latest news from YouTube via yt-search...");
+  const res = await yts('West Bengal BJP OR Suvendu Adhikari news');
 
-  const videos = res.data.items.map(item => ({
-    videoId: item.id.videoId,
-    title: item.snippet.title,
-    description: item.snippet.description,
-    channel: item.snippet.channelTitle,
-    publishedAt: item.snippet.publishedAt,
-    thumbnail: item.snippet.thumbnails.high.url
+  // yt-search returns a mix of results, we just want the top 10 videos
+  const videos = res.videos.slice(0, 10).map(item => ({
+    videoId: item.videoId,
+    title: item.title,
+    description: item.description,
+    channel: item.author.name,
+    publishedAt: item.ago || 'Recently',
+    thumbnail: item.thumbnail
   }));
 
   return videos;

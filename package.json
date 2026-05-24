@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
-    "googleapis": "^172.0.0"
+    "yt-search": "^2.13.1"
   }
 }
