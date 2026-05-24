@@ -1946,46 +1946,138 @@ h1,h2,h3,h4,h5,h6 {
   padding: 120px 32px 48px;
 }
 .election-hero {
+  position: relative;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 32px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 0 48px;
+  margin-bottom: 40px;
+  border-radius: 24px;
+  background: rgba(11, 16, 28, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
 }
-.election-kicker {
+
+.hero-bg-glows {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-glows .glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  animation: floatGlow 10s ease-in-out infinite alternate;
+}
+
+.hero-bg-glows .saffron {
+  background: var(--saffron);
+  top: -100px;
+  left: -50px;
+}
+
+.hero-bg-glows .green {
+  background: var(--green-light);
+  bottom: -150px;
+  right: -50px;
+  animation-delay: -5s;
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, 30px) scale(1.1); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   font-family: 'Outfit';
   font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green-light);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(26, 175, 13, 0.7);
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(26, 175, 13, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(26, 175, 13, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(26, 175, 13, 0); }
+}
+
+.election-kicker {
+  font-family: 'Outfit';
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
+  letter-spacing: 2px;
   color: var(--saffron);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
+
 .election-hero h1 {
-  font-size: 46px;
+  font-size: 56px;
   font-weight: 900;
-  margin-bottom: 10px;
-  letter-spacing: -2px;
-  background: linear-gradient(135deg, var(--white), #A0AEC0);
+  margin-bottom: 16px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.election-hero h1 .highlight {
+  background: linear-gradient(135deg, var(--saffron), #FF9955);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .election-hero p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text2);
   max-width: 620px;
   line-height: 1.6;
+  margin-bottom: 32px;
 }
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
 .eci-source {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  text-decoration: none;
-  color: var(--saffron);
-  border: 1px solid rgba(255, 119, 34, 0.2);
-  background: rgba(255, 119, 34, 0.06);
-  border-radius: var(--rx);
   padding: 10px 18px;
   font-family: 'Outfit';
   font-size: 13.5px;
