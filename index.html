@@ -19,36 +19,90 @@
   <div class="toast-container" id="toastContainer"></div>
 
   <section class="hero" id="hero">
-    <div class="hero-bg"><img src="ChatGPT Image May 11, 2026, 10_22_49 PM.png" alt="Sankalp Patra Progress"><div></div></div>
+    <div class="hero-bg-glows">
+      <div class="glow saffron"></div>
+      <div class="glow green"></div>
+      <div class="glow center-glow"></div>
+    </div>
     <div class="hero-particles" id="particles"></div>
+    
     <div class="hero-inner">
-      <div class="hero-text">
-        <h1 class="reveal"><span class="saffron">Sankalp</span> Patra<br><span class="green">Progress</span> Tracker</h1>
-        <p class="tagline reveal">Tracking every promise, every action, every day. A real-time accountability dashboard for the newly elected BJP government in West Bengal — starting from Election Day.</p>
-        <div class="hero-stats">
-          <div class="hero-stat reveal"><div class="number" id="statTotal">15</div><div class="label">Total Promises</div></div>
-          <div class="hero-stat reveal"><div class="number" id="statDone">1</div><div class="label">Completed</div></div>
-          <div class="hero-stat reveal"><div class="number" id="statWIP">9</div><div class="label">In Progress</div></div>
-          <div class="hero-stat reveal"><div class="number" id="statPend">5</div><div class="label">Pending</div></div>
+      <div class="hero-text-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> Live Accountability Dashboard
         </div>
-      </div>
-      <div class="hero-side">
-        <div class="hero-spotlight reveal-left">
-          <img src="ChatGPT Image May 11, 2026, 10_22_49 PM.png" alt="Sankalp Patra Progress">
-          <div class="hero-spotlight-overlay"></div>
-          <div class="hero-spotlight-copy">
-            <div>
-              <div class="hero-spotlight-kicker">Election Day to Day 365</div>
-              <div class="hero-spotlight-title">Visible progress. Measurable promises.</div>
+        <h1 class="reveal">
+          <span class="saffron">Sankalp</span> Patra<br>
+          <span class="green">Progress</span> Tracker
+        </h1>
+        <p class="tagline reveal">
+          Tracking every promise, every action, every day. A real-time accountability dashboard for the newly elected BJP government in West Bengal — starting from Election Day.
+        </p>
+        
+        <div class="premium-stats-grid reveal">
+          <div class="stat-card total">
+            <div class="stat-icon">📜</div>
+            <div class="stat-info">
+              <div class="number" id="statTotal">15</div>
+              <div class="label">Total Promises</div>
+            </div>
+          </div>
+          <div class="stat-card done">
+            <div class="stat-icon">✅</div>
+            <div class="stat-info">
+              <div class="number" id="statDone">1</div>
+              <div class="label">Completed</div>
+            </div>
+          </div>
+          <div class="stat-card wip">
+            <div class="stat-icon">⏳</div>
+            <div class="stat-info">
+              <div class="number" id="statWIP">9</div>
+              <div class="label">In Progress</div>
+            </div>
+          </div>
+          <div class="stat-card pending">
+            <div class="stat-icon">🗓️</div>
+            <div class="stat-info">
+              <div class="number" id="statPend">5</div>
+              <div class="label">Pending</div>
             </div>
           </div>
         </div>
-        <div class="hero-countdowns">
-          <div class="cd-card reveal-left"><h3>🔥 7th Pay Commission & DA Arrears</h3><div class="dl">Deadline: June 23, 2026 (45 days from oath)</div>
-            <div class="cd-digits"><div class="d-box"><div class="val" id="cd45d">--</div><div class="unit">Days</div></div><div class="d-box"><div class="val" id="cd45h">--</div><div class="unit">Hrs</div></div><div class="d-box"><div class="val" id="cd45m">--</div><div class="unit">Min</div></div><div class="d-box"><div class="val" id="cd45s">--</div><div class="unit">Sec</div></div></div>
+      </div>
+
+      <div class="hero-side-content">
+        <div class="spotlight-widget reveal-left">
+          <div class="widget-header">
+            <span class="pulse-indicator"></span>
+            Key Focus Areas
           </div>
-          <div class="cd-card green-accent reveal-left"><h3>⚖️ Uniform Civil Code (UCC)</h3><div class="dl">Deadline: November 9, 2026 (6 months)</div>
-            <div class="cd-digits"><div class="d-box"><div class="val" id="cd180d">--</div><div class="unit">Days</div></div><div class="d-box"><div class="val" id="cd180h">--</div><div class="unit">Hrs</div></div><div class="d-box"><div class="val" id="cd180m">--</div><div class="unit">Min</div></div><div class="d-box"><div class="val" id="cd180s">--</div><div class="unit">Sec</div></div></div>
+          <div class="countdown-list">
+            <div class="countdown-item saffron-border">
+              <div class="cd-header">
+                <h3>🔥 7th Pay Commission</h3>
+                <span class="cd-deadline">June 23, 2026</span>
+              </div>
+              <div class="cd-timer">
+                <div class="time-block"><div class="val" id="cd45d">--</div><span>Days</span></div><div class="colon">:</div>
+                <div class="time-block"><div class="val" id="cd45h">--</div><span>Hrs</span></div><div class="colon">:</div>
+                <div class="time-block"><div class="val" id="cd45m">--</div><span>Min</span></div><div class="colon">:</div>
+                <div class="time-block"><div class="val" id="cd45s">--</div><span>Sec</span></div>
+              </div>
+            </div>
+            
+            <div class="countdown-item green-border">
+              <div class="cd-header">
+                <h3>⚖️ Uniform Civil Code</h3>
+                <span class="cd-deadline">Nov 9, 2026</span>
+              </div>
+              <div class="cd-timer">
+                <div class="time-block"><div class="val" id="cd180d">--</div><span>Days</span></div><div class="colon">:</div>
+                <div class="time-block"><div class="val" id="cd180h">--</div><span>Hrs</span></div><div class="colon">:</div>
+                <div class="time-block"><div class="val" id="cd180m">--</div><span>Min</span></div><div class="colon">:</div>
+                <div class="time-block"><div class="val" id="cd180s">--</div><span>Sec</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
