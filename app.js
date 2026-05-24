@@ -372,19 +372,19 @@ function renderMoments(){
   const c=$('momentsScroll');
   if(!c) return;
   
-  // Clone and reverse so the newest moments appear on the left
-  const displayMoments = [...moments].reverse();
-  
-  c.innerHTML=displayMoments.map(m=>`
+  c.innerHTML=moments.map(m=>`
     <div class="moment-card reveal-scale" role="link" tabindex="0" data-open="${m.yt}">
       <div class="moment-thumb">
         <img src="${m.thumb}" alt="${m.title}" onerror="this.src='https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=640&q=60'">
         <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         <div class="moment-badge">${m.badge}</div>
-        <div class="moment-overlay-date">🗓️ ${m.date}</div>
         ${sourceIcon(m.yt,'Open source')}
       </div>
-      <div class="moment-body"><h4>${m.title}</h4><p>${m.desc}</p></div>
+      <div class="moment-body">
+        <h4>${m.title}</h4>
+        <p>${m.desc}</p>
+        <div class="moment-date-bottom">🗓️ ${m.date}</div>
+      </div>
     </div>`).join('');
   $$('.moment-card').forEach(card=>{
     const open=()=>window.open(card.dataset.open,'_blank','noopener,noreferrer');

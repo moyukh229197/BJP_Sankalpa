@@ -652,6 +652,12 @@ h1,h2,h3,h4,h5,h6 {
   display: flex;
   align-items: center;
 }
+.moments-mask {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent 100%);
+}
 .scroll-btn {
   position: absolute;
   top: 50%;
@@ -681,8 +687,8 @@ h1,h2,h3,h4,h5,h6 {
   height: 24px;
   fill: currentColor;
 }
-.scroll-btn.left { left: 10px; }
-.scroll-btn.right { right: 10px; }
+.scroll-btn.left { left: 0px; }
+.scroll-btn.right { right: 0px; }
 
 .moments-scroll {
   display: flex;
@@ -711,6 +717,8 @@ h1,h2,h3,h4,h5,h6 {
   cursor: pointer;
   box-shadow: var(--card-shadow);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .moment-card::after {
   content: '';
@@ -784,38 +792,20 @@ h1,h2,h3,h4,h5,h6 {
   box-shadow: 0 4px 10px rgba(255, 119, 34, 0.3);
   z-index: 2;
 }
-.moment-thumb .moment-overlay-date {
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(4px);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-family: 'Outfit';
-  z-index: 2;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
 .moment-body {
   padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .moment-body h4 {
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
   line-height: 1.4;
   color: var(--white);
 }
 .moment-body p {
-  font-size: 12.5px;
-  color: var(--text2);
-  line-height: 1.6;
-}
-.moment-body .moment-date {
-  font-size: 11px;
   color: var(--saffron);
   font-weight: 700;
   margin-top: 12px;

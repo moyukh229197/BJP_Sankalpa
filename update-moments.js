@@ -59,8 +59,8 @@ async function filterWithAI(videos) {
 
   const prompt = `
   You are curating the "Key Moments" section for the West Bengal BJP Government Dashboard.
-  Review the following recent YouTube video snippets. Select the 1 to 3 most important, relevant, and reliable news updates regarding the government, cabinet decisions, CM Suvendu Adhikari, or significant state events.
-  Ignore generic noise, duplicate topics, or unrelated national news.
+  Review the following recent YouTube video snippets. Select up to 3 to 4 of the most important, relevant, and reliable breaking news updates regarding the government, cabinet decisions, CM Suvendu Adhikari, or significant state events that occurred today.
+  Ignore generic noise, duplicate topics, or unrelated national news. If there are no highly critical updates, it is okay to return fewer or an empty array.
   
   Format the output strictly as a JSON array of objects.
   
@@ -99,11 +99,11 @@ async function updateMoments() {
       return;
     }
 
-    // Prepend new moments
+    // Prepend new moments so they appear first
     siteData.moments = [...uniqueNewMoments, ...siteData.moments];
     
-    // Cap at 20 items to keep file small
-    siteData.moments = siteData.moments.slice(0, 20);
+    // Cap at 100 items so we can store roughly a month of updates at 3-4 per day
+    siteData.moments = siteData.moments.slice(0, 100);
 
     await fs.writeFile(DATA_FILE, JSON.stringify(siteData, null, 2));
     console.log(`Successfully added ${uniqueNewMoments.length} new moments.`);
