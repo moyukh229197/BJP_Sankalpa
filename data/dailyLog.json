@@ -1376,6 +1376,30 @@
         "icon": "shield-alert",
         "source": "https://www.hindustantimes.com/india-news/neelam-meena-becomes-the-first-woman-chief-electoral-officer-of-west-bengal-101779717835836.html",
         "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/25/550x309/The-state-government-sent-the-names-of-three-senio_1779718248653.jpg"
+      },
+      {
+        "time": "All Day",
+        "title": "Arrests, mass resignations, ‘bulldozer action’ deepen Trinamool’s crisis across ",
+        "desc": "Drives against illegal construction, notices to properties linked to senior Trinamool leaders, and mass resignations in local bodies pile pressure on the TMC three weeks after the BJP assumed power in West Bengal",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/arrests-mass-resignations-bulldozer-action-deepen-trinamools-crisis-across-west-bengal/article71021549.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "'I-PAC Had No Manners, Spoke Rudely': Trinamool MP Kakoli Ghosh Dastidar",
+        "desc": "Kakoli Ghosh Dastidar attributed Trinamool's loss of five of the seven Assembly seats in the limits of Barasat Parliamentary constituency to the \"cumulative effect\" of anti-incumbency and Special Intensive Revision of electoral rolls.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/i-pac-had-no-manners-spoke-rudely-trinamool-mp-kakoli-ghosh-dastidar-11546514#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "\"Alliance With Congress Will Insult Punjab Mandate\": Bhagwant Mann To NDTV",
+        "desc": "The BJP and the Congress will barely cross the threshold of 10 seats in the 2027 assembly elections in Punjab, Bhagwant Mann predicted today.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/bhagwant-mann-ndtv-nava-punjab-summit-alliance-with-congress-will-insult-punjab-mandate-bhagwant-mann-to-ndtv-11546089#publisher=newsstand"
       }
     ]
   }
