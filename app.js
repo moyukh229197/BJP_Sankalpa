@@ -156,6 +156,62 @@ function ensureMinimumNewsCards(log,min=4){
   });
 }
 
+function isBengalRelevantEvent(event){
+  const text=[
+    event?.title,
+    event?.desc,
+    event?.description,
+    event?.category,
+    event?.sourceName,
+    event?.source
+  ].filter(Boolean).join(' ').toLowerCase();
+  if(!text.trim()) return false;
+
+  const bengalSignals=[
+    'west bengal','bengal','kolkata','calcutta','nabanna','raj bhavan','brigade',
+    'writers building',"writers' building",'vidhan sabha',
+    'bhabanipur','bhowanipore','nandigram','contai','purba medinipur',
+    'diamond harbour','falta','jhargram','siliguri','uttarkanya','north bengal',
+    'south bengal','asansol','cooch behar','rg kar','red road'
+  ];
+  const politicalSignals=[
+    'suvendu','subhendu','adhikari','mamata','abhishek','banerjee','bannerjee',
+    'dilip ghosh','agnimitra paul','nisith pramanik','samik bhattacharya',
+    'tmc','trinamool','bjp govt','bjp government','bjp wins','bjp worker',
+    'bjp workers','bjp mla','bjp mlas','bjp minister','bjp ministers',
+    'chief minister','cm ','state government','west bengal government',
+    'government','governance','election','poll','repoll','votes','counting',
+    'cabinet','minister','mla','speaker','police','cbi','fir','modi','amit shah'
+  ];
+  const hasBengalSignal=bengalSignals.some(k=>text.includes(k));
+  const hasPoliticalSignal=politicalSignals.some(k=>text.includes(k));
+  const offScopeSignals=[
+    'tamil nadu','madurai','coimbatore','karnataka','punjab','assam govt',
+    'uttar pradesh','up congress','ranchi','chhattisgarh','bengaluru',
+    'delhi gymkhana','bhagwant mann','raghav chadha','aap','rahul gandhi',
+    'kharge','siddaramaiah','prashant kishor','bankipur','jan suraaj',
+    'marco rubio','us secretary','global good','jarange patil'
+  ];
+  const hasOffScopeSignal=offScopeSignals.some(k=>text.includes(k));
+
+  if(hasOffScopeSignal && !hasBengalSignal && !/(?:suvendu|subhendu)\s+adhikari/.test(text)) return false;
+  if(hasBengalSignal && hasPoliticalSignal) return true;
+  if(/(?:suvendu|subhendu)\s+adhikari/.test(text)) return true;
+  if(/(?:mamata|abhishek)\s+ban(?:er|n)jee/.test(text)) return true;
+  if(/\b(?:tmc|trinamool)\b/.test(text) && hasBengalSignal) return true;
+  if(/\bbjp\b/.test(text) && hasBengalSignal) return true;
+  if(!hasOffScopeSignal && ['Governance','Law & Order','Security','Finance','Healthcare','Employment','Infrastructure','Industry','Women','Youth'].includes(event?.category || '')) return true;
+  return false;
+}
+
+function filterBengalRelevantLog(log){
+  if(!Array.isArray(log)) return [];
+  return log.map(day=>({
+    ...day,
+    events:(Array.isArray(day.events)?day.events:[]).filter(isBengalRelevantEvent)
+  })).filter(day=>day.events.length);
+}
+
 // ── KEY MOMENTS (YouTube thumbnails) ──
 const moments=[
   {title:"BJP Wins Bengal — Historic Victory",desc:"BJP crosses 200+ seats, ending 15 years of TMC rule in West Bengal.",date:"May 4, 2026",badge:"RESULT DAY",thumb:"https://i.ytimg.com/vi/RHuQIN8Eb5c/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=RHuQIN8Eb5c"},
@@ -169,7 +225,7 @@ const moments=[
 
 const cloneData=v=>JSON.parse(JSON.stringify(v));
 function defaultSiteData(){
-  return cloneData({manifesto,dailyLog:ensureMinimumNewsCards(dailyLog),moments,backlog});
+  return cloneData({manifesto,dailyLog:ensureMinimumNewsCards(filterBengalRelevantLog(dailyLog)),moments,backlog});
 }
 function normalizeSiteData(raw){
   const base=defaultSiteData();
@@ -177,7 +233,7 @@ function normalizeSiteData(raw){
   ['manifesto','dailyLog','moments','backlog'].forEach(key=>{
     if(Array.isArray(raw[key])) base[key]=raw[key];
   });
-  base.dailyLog=ensureMinimumNewsCards(base.dailyLog);
+  base.dailyLog=ensureMinimumNewsCards(filterBengalRelevantLog(base.dailyLog));
   return base;
 }
 function syncArray(target, source){
