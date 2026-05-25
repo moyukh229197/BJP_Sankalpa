@@ -200,7 +200,7 @@ function isBengalRelevantEvent(event){
   if(/(?:mamata|abhishek)\s+ban(?:er|n)jee/.test(text)) return true;
   if(/\b(?:tmc|trinamool)\b/.test(text) && hasBengalSignal) return true;
   if(/\bbjp\b/.test(text) && hasBengalSignal) return true;
-  if(!hasOffScopeSignal && ['Governance','Law & Order','Security','Finance','Healthcare','Employment','Infrastructure','Industry','Women','Youth'].includes(event?.category || '')) return true;
+  if(!event?.source && !hasOffScopeSignal && ['Governance','Law & Order','Security','Finance','Healthcare','Employment','Infrastructure','Industry','Women','Youth'].includes(event?.category || '')) return true;
   return false;
 }
 

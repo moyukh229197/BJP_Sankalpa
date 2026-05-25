@@ -139,6 +139,52 @@ function extractFirstImage(block, desc=''){
     || '';
 }
 
+function htmlAttr(html, property, attr='content'){
+  const escaped = property.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const patterns = [
+    new RegExp(`<meta[^>]+property=["']${escaped}["'][^>]+${attr}=["']([^"']+)["'][^>]*>`, 'i'),
+    new RegExp(`<meta[^>]+name=["']${escaped}["'][^>]+${attr}=["']([^"']+)["'][^>]*>`, 'i'),
+    new RegExp(`<meta[^>]+${attr}=["']([^"']+)["'][^>]+(?:property|name)=["']${escaped}["'][^>]*>`, 'i'),
+  ];
+  for(const pattern of patterns){
+    const match = html.match(pattern);
+    if(match?.[1]) return match[1].trim();
+  }
+  return '';
+}
+
+function absolutizeUrl(url, base){
+  if(!url) return '';
+  try{ return new URL(url, base).href; }
+  catch(e){ return url; }
+}
+
+function linkImage(html){
+  const match = html.match(/<link[^>]+rel=["'](?:image_src|preload)["'][^>]+href=["']([^"']+)["'][^>]*>/i)
+    || html.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["'](?:image_src|preload)["'][^>]*>/i);
+  return match?.[1]?.trim() || '';
+}
+
+async function fetchPreviewImage(url){
+  if(!url || !/^https?:\/\//i.test(url)) return '';
+  try{
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'SonarBanglaSankalpTracker/1.0 (+https://github.com/moyukh229197/BJP_Sankalpa)' },
+      signal: AbortSignal.timeout(10000),
+    });
+    if(!res.ok) return '';
+    const html = (await res.text()).slice(0, 200000);
+    const image = htmlAttr(html, 'og:image')
+      || htmlAttr(html, 'twitter:image')
+      || htmlAttr(html, 'twitter:image:src')
+      || htmlAttr(html, 'thumbnail')
+      || linkImage(html);
+    return absolutizeUrl(image, url);
+  }catch(e){
+    return '';
+  }
+}
+
 function parseRSSItems(xml){
   const items = [];
   const itemBlocks = xml.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || [];
@@ -164,7 +210,13 @@ async function fetchFeed(feed){
     const xml = await res.text();
     const items = parseRSSItems(xml);
     console.log(`  ✅ ${feed.name}: ${items.length} items`);
-    return items.map(item => ({ ...item, source: feed.name, sourceUrl: item.link }));
+    const enriched = [];
+    for(const item of items){
+      const sourceUrl = item.link;
+      const thumb = item.thumb || await fetchPreviewImage(sourceUrl);
+      enriched.push({ ...item, thumb, source: feed.name, sourceUrl });
+    }
+    return enriched;
   }catch(err){
     console.log(`  ⚠️  ${feed.name}: ${err.message}`);
     return [];
