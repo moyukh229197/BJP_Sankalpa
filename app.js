@@ -306,11 +306,32 @@ function mediaProvider(url,type=''){
 function mediaLabel(provider){
   return provider==='youtube' ? 'YouTube' : provider==='x' ? 'X' : provider==='facebook' ? 'Facebook' : 'Article';
 }
+function imageLike(url){
+  return /^https?:\/\//i.test(String(url||'')) && /\.(?:avif|webp|png|jpe?g|gif)(?:[?#].*)?$/i.test(String(url||''));
+}
 function eventMedia(e,source){
   const media=e.media || {};
-  const url=media.url || e.video || e.yt || source || '';
+  const url=media.url || e.video || e.yt || e.link || source || '';
   const provider=mediaProvider(url, media.type || e.sourceType || '');
-  const thumb=media.thumb || e.thumb || (provider==='youtube' ? youtubeThumb(url) : '');
+  const imageCandidates=[
+    media.thumb,
+    media.thumbnail,
+    media.image,
+    e.thumb,
+    e.thumbnail,
+    e.thumbnailUrl,
+    e.image,
+    e.imageUrl,
+    e.urlToImage,
+    e.enclosure?.url,
+    e.mediaContent?.url,
+    e.mediaThumbnail?.url,
+    provider==='youtube' ? youtubeThumb(url) : '',
+    imageLike(media.url) ? media.url : '',
+    imageLike(e.link) ? e.link : '',
+    imageLike(source) ? source : ''
+  ];
+  const thumb=imageCandidates.find(Boolean) || '';
   return {url,provider,thumb,label:media.label || e.sourceName || mediaLabel(provider)};
 }
 function sourceIcon(link,label='Open source'){

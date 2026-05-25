@@ -125,15 +125,31 @@ function extractTag(xml, tag){
   return m ? m[1].trim() : '';
 }
 
+function extractAttr(xml, tagPattern, attr){
+  const re = new RegExp(`<(?:${tagPattern})[^>]*\\s${attr}=["']([^"']+)["'][^>]*>`, 'i');
+  const m = xml.match(re);
+  return m ? m[1].trim() : '';
+}
+
+function extractFirstImage(block, desc=''){
+  return extractAttr(block, 'media:content|media\\\\:content', 'url')
+    || extractAttr(block, 'media:thumbnail|media\\\\:thumbnail', 'url')
+    || extractAttr(block, 'enclosure', 'url')
+    || extractAttr(desc, 'img', 'src')
+    || '';
+}
+
 function parseRSSItems(xml){
   const items = [];
   const itemBlocks = xml.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || [];
   for(const block of itemBlocks){
     const title = extractTag(block, 'title');
-    const desc = extractTag(block, 'description').replace(/<[^>]*>/g, '').slice(0, 400);
+    const rawDesc = extractTag(block, 'description');
+    const thumb = extractFirstImage(block, rawDesc);
+    const desc = rawDesc.replace(/<[^>]*>/g, '').slice(0, 400);
     const link = extractTag(block, 'link');
     const pubDate = extractTag(block, 'pubDate');
-    items.push({ title, desc, link, pubDate });
+    items.push({ title, desc, link, pubDate, thumb });
   }
   return items;
 }
@@ -172,7 +188,7 @@ async function extractWithGemini(articles){
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
     const batch = articles.slice(0, 20).map((a, i) =>
-      `[${i+1}] TITLE: ${a.title}\nDESC: ${a.desc}\nSOURCE: ${a.source}\nURL: ${a.sourceUrl}\nDATE: ${a.pubDate}`
+      `[${i+1}] TITLE: ${a.title}\nDESC: ${a.desc}\nSOURCE: ${a.source}\nURL: ${a.sourceUrl}\nTHUMB: ${a.thumb || ''}\nDATE: ${a.pubDate}`
     ).join('\n\n');
 
     const prompt = `You are a structured data extractor for the BJP West Bengal government's progress tracker.
@@ -187,6 +203,9 @@ For each relevant article, output a JSON array of objects with these fields:
 - "category": one of [Governance, Healthcare, Law & Order, Finance, Employment, Women, Industry, Infrastructure, Education, Security]
 - "icon": one of [landmark, heart-pulse, shield-alert, scale, graduation-cap, heart-handshake, flame, building-2, book-open, shield-check, newspaper]
 - "source": the source URL
+- "sourceName": publication/channel name
+- "sourceType": one of [article, youtube, x, facebook]
+- "thumb": image or video thumbnail URL when provided in the input; preserve it exactly
 
 Only include articles that are directly about BJP West Bengal government actions, policies, or decisions.
 Skip opinion pieces, editorials, and articles about other states.
@@ -236,7 +255,10 @@ function extractRuleBased(articles){
       desc: (article.desc || article.title).slice(0, 250),
       category: cat,
       icon: iconFor(cat),
+      sourceName: article.source || '',
+      sourceType: 'article',
       source: article.sourceUrl || '',
+      thumb: article.thumb || '',
     });
   }
   console.log(`  📋 Rule-based extracted ${events.length} events`);
