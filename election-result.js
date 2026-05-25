@@ -1,5 +1,6 @@
 const ECI_SOURCE_URL = 'https://results.eci.gov.in/ResultAcGenMay2026/partywiseresult-S25.htm';
 const OATH_DATE = new Date('2026-05-09T00:00:00+05:30');
+const SITE_SYNC_DATE = new Date('2026-05-25T00:00:00+05:30');
 
 const PARTY_RESULTS = [
   { code: 'BJP', name: 'Bharatiya Janata Party', won: 207, leading: 0, color: '#ff944d', link: 'partywisewinresult-369S25.htm' },
@@ -207,6 +208,11 @@ function renderStats() {
       <strong style="color:${stat.color}">${stat.value}</strong>
     </div>
   `).join('');
+
+  const syncBadge = $('syncBadge');
+  if (syncBadge) {
+    syncBadge.textContent = `Synced ${SITE_SYNC_DATE.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}`;
+  }
 }
 
 function renderPartyCards() {
