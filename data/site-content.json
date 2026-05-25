@@ -638,56 +638,11 @@
       "label": "Day 9 — Second Cabinet",
       "events": [
         {
-          "time": "10:00 AM",
-          "title": "Second Cabinet Meeting at Nabanna",
-          "desc": "CM Suvendu Adhikari chairs the second Cabinet meeting. Multiple major policy decisions are approved.",
-          "category": "Governance",
-          "icon": "landmark",
-          "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece",
-          "thumb": "https://www.thehindu.com/theme/images/og-image.png"
-        },
-        {
-          "time": "10:30 AM",
-          "title": "7th State Pay Commission Approved",
-          "desc": "The cabinet approves the constitution of the 7th State Pay Commission for salaries, pensions, and allowances revision of state employees.",
-          "category": "Finance",
-          "icon": "scale",
-          "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece",
-          "thumb": "https://www.thehindu.com/theme/images/og-image.png"
-        },
-        {
-          "time": "11:15 AM",
-          "title": "'Annapurna' Scheme Approved",
-          "desc": "Cabinet greenlights the 'Annapurna' scheme (Annapurna Bhandar), providing ₹3,000 per month to eligible women aged 25 to 60 via DBT starting June 1, 2026.",
-          "category": "Women",
-          "icon": "heart-handshake",
-          "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece",
-          "thumb": "https://www.thehindu.com/theme/images/og-image.png"
-        },
-        {
-          "time": "12:00 PM",
-          "title": "Free Public Transport for Women",
-          "desc": "In-principle approval granted for free travel for women in state-run buses, effective June 1, 2026.",
-          "category": "Women",
-          "icon": "bus",
-          "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece",
-          "thumb": "https://www.thehindu.com/theme/images/og-image.png"
-        },
-        {
           "time": "12:30 PM",
           "title": "Discontinuation of Religion-Based Aid",
           "desc": "The cabinet decides to discontinue government financial assistance programs based on religious categorization starting June 2026 (including imams, muezzins, and purohits).",
           "category": "Governance",
           "icon": "shield-alert",
-          "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece",
-          "thumb": "https://www.thehindu.com/theme/images/og-image.png"
-        },
-        {
-          "time": "1:00 PM",
-          "title": "Scrapping and Revising OBC List",
-          "desc": "Scraps existing state OBC list in line with the Calcutta High Court judgment; panel formed to identify quota eligibility.",
-          "category": "Governance",
-          "icon": "users",
           "source": "https://www.thehindu.com/news/national/west-bengal/bjp-government-in-west-bengal-announces-annapurna-scheme-free-bus-ride-for-women/article68189874.ece",
           "thumb": "https://www.thehindu.com/theme/images/og-image.png"
         },
@@ -822,15 +777,6 @@
       "dayNumber": 11,
       "label": "Day 11 — BSF Land Corridor",
       "events": [
-        {
-          "time": "2:00 PM",
-          "title": "27-km BSF Land Corridor Formally Transferred",
-          "desc": "State government formally transfers a 27-km land corridor to the Border Security Force spanning five districts, enabling pending Bangladesh border fencing work to commence immediately.",
-          "category": "Security",
-          "icon": "shield-check",
-          "source": "https://www.thehindu.com/news/national/west-bengal/",
-          "thumb": "https://www.thehindu.com/theme/images/th-online/OG-sections.png"
-        },
         {
           "time": "4:00 PM",
           "title": "Detect, Delete & Deport — Mechanism Active",
@@ -1246,12 +1192,12 @@
       "events": [
         {
           "time": "All Day",
-          "title": "Falta repoll results LIVE: BJP takes commanding lead after eight rounds of count",
-          "desc": "Although officially six candidates are in the fray for the seat, Trinamool Congress nominee Jahangir Khan, a couple of days before the repoll",
-          "category": "Finance",
-          "icon": "scale",
-          "source": "https://www.thehindu.com/elections/west-bengal-assembly/falta-west-bengal-repoll-vote-counting-results-may-24-2026/article71016885.ece",
-          "thumb": "https://th-i.thgim.com/public/incoming/8osl7u/article71017389.ece/alternates/LANDSCAPE_1200/PTI05_24_2026_000192A.jpg"
+          "title": "BJP wins Falta Assembly re-poll by over 1 lakh votes",
+          "desc": "While the results of the re-poll was a foregone conclusion after the BJP came to power in West Bengal, the margin of victory and the Trinamool slipping to the fourth position has surprised observers",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/elections/west-bengal-assembly/bengals-falta-assembly-repoll-result-may-24/article71016837.ece",
+          "thumb": "https://th-i.thgim.com/public/incoming/bc4vgf/article71017888.ece/alternates/LANDSCAPE_1200/PTI05_24_2026_000192A.jpg"
         },
         {
           "time": "All Day",
@@ -1261,15 +1207,6 @@
           "icon": "landmark",
           "source": "https://www.thehindu.com/elections/west-bengal-assembly/west-bengal-elections-2026-who-lost-the-most/article70942818.ece",
           "thumb": "https://th-i.thgim.com/public/todays-paper/tp-national/wkt8jz/article70940832.ece/alternates/LANDSCAPE_1200/04TH-SHRABANA-BGIMFUG9D4.4.jpg.jpg"
-        },
-        {
-          "time": "All Day",
-          "title": "Counting of votes in Bengal’s Falta Assembly repoll begins",
-          "desc": "\"The counting is progressing peacefully. Adequate security arrangements have been made at the counting centre,\" a poll panel official said.",
-          "category": "Governance",
-          "icon": "landmark",
-          "source": "https://www.thehindu.com/elections/west-bengal-assembly/bengals-falta-assembly-repoll-result-may-24/article71016837.ece",
-          "thumb": "https://th-i.thgim.com/public/incoming/bc4vgf/article71017888.ece/alternates/LANDSCAPE_1200/PTI05_24_2026_000192A.jpg"
         },
         {
           "time": "All Day",
@@ -1291,12 +1228,12 @@
         },
         {
           "time": "All Day",
-          "title": "Bengal To Set Up 'Holding Centres' In Every District To Keep Illegal Immigrants",
-          "desc": "These holding centres will come up in every district to house people who get detained under suspicion of being Bangladeshi national or Rohingya",
+          "title": "WB government directs districts to set up holding centres for detained illegal f",
+          "desc": "The development comes days after Chief Minister Suvendu Adhikari said that his government would follow a new policy of “detect, delete and deport” while dealing with “illegal infiltrators”. Last year in May, Union Ministry of Home Affairs (MHA) direc",
           "category": "Governance",
           "icon": "landmark",
-          "source": "https://www.ndtv.com/india-news/west-bengal-to-set-up-holding-centres-to-keep-illegal-immigrants-11540775#publisher=newsstand",
-          "thumb": "https://c.ndtvimg.com/2025-04/mhbphtss_illegal-immigrants_625x300_26_April_25.jpeg?im=FeatureCrop,algorithm=dnn,width=1600,height=900"
+          "source": "https://www.thehindu.com/news/national/west-bengal/wb-government-directs-districts-to-set-up-holding-centres-for-detained-illegal-foreigners/article71018365.ece",
+          "thumb": "https://th-i.thgim.com/public/incoming/ib5aeg/article71018664.ece/alternates/LANDSCAPE_1200/PTI05_21_2026_000472B.jpg"
         },
         {
           "time": "All Day",
@@ -1342,42 +1279,6 @@
           "icon": "landmark",
           "source": "https://www.thehindu.com/news/national/west-bengal/suvendu-urges-bjp-workers-to-follow-law-says-government-will-do-sabka-hisab/article71018513.ece",
           "thumb": "https://th-i.thgim.com/public/incoming/9tjszm/article71018676.ece/alternates/LANDSCAPE_1200/PTI05_15_2026_000160A.jpg"
-        },
-        {
-          "time": "All Day",
-          "title": "WB government directs districts to set up holding centres for detained illegal f",
-          "desc": "The development comes days after Chief Minister Suvendu Adhikari said that his government would follow a new policy of “detect, delete and deport” while dealing with “illegal infiltrators”. Last year in May, Union Ministry of Home Affairs (MHA) direc",
-          "category": "Governance",
-          "icon": "landmark",
-          "source": "https://www.thehindu.com/news/national/west-bengal/wb-government-directs-districts-to-set-up-holding-centres-for-detained-illegal-foreigners/article71018365.ece",
-          "thumb": "https://th-i.thgim.com/public/incoming/ib5aeg/article71018664.ece/alternates/LANDSCAPE_1200/PTI05_21_2026_000472B.jpg"
-        },
-        {
-          "time": "All Day",
-          "title": "BJP wins Falta Assembly re-poll by over 1 lakh votes",
-          "desc": "While the results of the re-poll was a foregone conclusion after the BJP came to power in West Bengal, the margin of victory and the Trinamool slipping to the fourth position has surprised observers",
-          "category": "Governance",
-          "icon": "landmark",
-          "source": "https://www.thehindu.com/elections/west-bengal-assembly/bengals-falta-assembly-repoll-result-may-24/article71016837.ece",
-          "thumb": "https://th-i.thgim.com/public/incoming/bc4vgf/article71017888.ece/alternates/LANDSCAPE_1200/PTI05_24_2026_000192A.jpg"
-        },
-        {
-          "time": "All Day",
-          "title": "Falta repoll results highlights: BJP’s Debangshu Panda wins Falta Assembly seat ",
-          "desc": "Panda secured 1,49,666 votes, while CPI(M)’s Sambhu Nath Kurmi came second with 40,645 votes cast in his favour. Congress candidate Abdur Razzak Molla stood third with 10,084 votes",
-          "category": "Governance",
-          "icon": "landmark",
-          "source": "https://www.thehindu.com/elections/west-bengal-assembly/falta-west-bengal-repoll-vote-counting-results-may-24-2026/article71016885.ece",
-          "thumb": "https://th-i.thgim.com/public/incoming/8osl7u/article71017389.ece/alternates/LANDSCAPE_1200/PTI05_24_2026_000192A.jpg"
-        },
-        {
-          "time": "All Day",
-          "title": "Falta constituency results 2026: Why did the West Bengal seat go to polls again?",
-          "desc": "Voting for the Falta Assembly constituency seat was originally held on April 29 2026, as part of the second phase of the West Bengal Assembly elections.",
-          "category": "Governance",
-          "icon": "landmark",
-          "source": "https://www.thehindu.com/news/national/west-bengal/falta-constituency-repolling-2026-results-counting-vote-share-west-bengal-election-updates/article71016906.ece",
-          "thumb": "https://th-i.thgim.com/public/incoming/vcqpg2/article70937939.ece/alternates/LANDSCAPE_1200/TH%20TRI-16.jpg.jpeg"
         },
         {
           "time": "All Day",
@@ -1453,39 +1354,12 @@
         },
         {
           "time": "All Day",
-          "title": "Who is Debangshu Panda? BJP leader who swept Bengal’s Falta repoll by over 1 lak",
-          "desc": "Panda secured 1,49,666 votes, defeating CPI(M) candidate Sambhu Nath Kurmi, who polled 40,645 votes.",
-          "category": "Finance",
-          "icon": "scale",
-          "source": "https://www.hindustantimes.com/india-news/who-is-debangshu-panda-bjp-leader-who-swept-west-bengal-s-falta-repoll-by-over-1-lakh-votes-tmc-cpim-101779625010246.html",
-          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/24/550x309/PTI05-24-2026-000192A-0_1779625153716_1779625259898_1bd66723-3219-4ba6-941d-8cf725037663.jpg"
-        },
-        {
-          "time": "All Day",
-          "title": "BJP sweeps Bengal’s Falta repoll as Debangshu Panda wins by over 1 lakh votes",
-          "desc": "Debangshu Panda received 1,49,666 votes, defeating his nearest rival by a margin of 1,09,021 votes.&nbsp;",
-          "category": "Finance",
-          "icon": "scale",
-          "source": "https://www.hindustantimes.com/india-news/bjps-debangshu-pandas-massive-win-in-falta-bypoll-victory-margin-of-over-1-lakh-votes-101779620767306.html",
-          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/24/550x309/PTI05-24-2026-000192A-0_1779620877035_1779620888692_da4085d9-bb6b-47cb-8cfe-f2226f323373.jpg"
-        },
-        {
-          "time": "All Day",
           "title": "Delhi Gymkhana Club: Government ends its subsidy to India’s aristocracy, writes ",
           "desc": "There have been several instances of financial impropriety and tax evasion by the club, notes BJP leader and Delhi minister Parvesh Verma",
           "category": "Governance",
           "icon": "landmark",
           "source": "https://www.hindustantimes.com/india-news/delhi-gymkhana-club-government-ends-its-subsidy-to-india-s-aristocracy-writes-parvesh-verma-101779621521940.html",
           "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/24/550x309/vermaaa_1779623152048_1779623163783_18c451aa-ddc5-4a5b-bc46-a7b844ff6d2d.png"
-        },
-        {
-          "time": "All Day",
-          "title": "Falta election results 2026 highlights: BJP’s Debangshu Panda sweeps Falta by ma",
-          "desc": "Falta election results highlights: BJP's Debangshu Panda won Falta seat against CPI(M) rival Sambhu Nath Kurmi. Congress retained third spot, while TMC was down at the fourth spot. TMC's Jahangir Khan had announced that he would not contest the repol",
-          "category": "Finance",
-          "icon": "scale",
-          "source": "https://www.hindustantimes.com/india-news/falta-election-eci-results-live-updates-falta-repoll-bengal-bjp-debangshu-tmc-jahangir-pushpa-khan-latest-vote-counting-101779592279292.html",
-          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/24/550x309/PTI05-24-2026-000191B-0_1779617284863_1779617304734_c2ca9a6b-35dc-4c71-9062-96e76af92740.jpg"
         }
       ]
     },
@@ -1532,12 +1406,12 @@
         },
         {
           "time": "All Day",
-          "title": "Bengal CM holds second 'janata darbar', hears public grievances",
-          "desc": "Hundreds of people, many of whom are job seekers, were seen queuing up at the party office since morning to interact with the CM",
+          "title": "Bengal chief minister Suvendu Adhikari holds second 'janata darbar', listens to ",
+          "desc": "West Bengal Chief Minister Suvendu Adhikari recently held his second 'janata darbar', listening to public demands at the BJP's state office in Salt Lake.",
           "category": "Governance",
           "icon": "landmark",
-          "source": "https://www.thehindu.com/news/national/west-bengal/bengal-cm-holds-second-janata-darbar-hears-public-grievances/article71020180.ece",
-          "thumb": "https://th-i.thgim.com/public/incoming/alqwfv/article71020192.ece/alternates/LANDSCAPE_1200/20260518104L.jpg"
+          "source": "https://www.hindustantimes.com/india-news/bengal-chief-minister-suvendu-adhikari-holds-second-janata-darbar-listens-to-public-grievances-101779691701466.html",
+          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/25/550x309/ANI-20260518104-0_1779692630822_1779692673625_3f66aad0-c58c-453b-8619-c7d1b77610e4.jpg"
         },
         {
           "time": "All Day",
@@ -1583,15 +1457,6 @@
           "icon": "scale",
           "source": "https://www.hindustantimes.com/india-news/farmers-to-msme-bearing-brunt-of-bjps-loot-kharge-slams-centre-for-fourth-fuel-price-hike-in-10-days-101779694165124.html",
           "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/25/550x309/PTI04-21-2026-000217A-0_1779694215638_1779694232152_88d8d20d-6dea-438f-aa46-92ce44d68232.jpg"
-        },
-        {
-          "time": "All Day",
-          "title": "Bengal chief minister Suvendu Adhikari holds second 'janata darbar', listens to ",
-          "desc": "West Bengal Chief Minister Suvendu Adhikari recently held his second 'janata darbar', listening to public demands at the BJP's state office in Salt Lake.",
-          "category": "Governance",
-          "icon": "landmark",
-          "source": "https://www.hindustantimes.com/india-news/bengal-chief-minister-suvendu-adhikari-holds-second-janata-darbar-listens-to-public-grievances-101779691701466.html",
-          "thumb": "https://www.hindustantimes.com/ht-img/img/2026/05/25/550x309/ANI-20260518104-0_1779692630822_1779692673625_3f66aad0-c58c-453b-8619-c7d1b77610e4.jpg"
         },
         {
           "time": "All Day",

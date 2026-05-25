@@ -321,20 +321,102 @@ function extractRuleBased(articles){
 //  DEDUPLICATION
 // ═══════════════════════════════════════════════════════════════
 
+const DEDUPE_STOPWORDS = new Set([
+  'the','a','an','and','or','of','to','in','on','for','from','with','after','before',
+  'as','by','at','is','are','was','were','be','been','being','will','says','said',
+  'live','updates','update','highlights','highlight','watch','video','exclusive',
+  'west','bengal','wb','chief','minister','cm','bjp','tmc','trinamool'
+]);
+
+const DEDUPE_ALIASES = [
+  [/chief minister/g, 'cm'],
+  [/suvendu adhikari/g, 'suvendu'],
+  [/subhendu adhikari/g, 'suvendu'],
+  [/mamata banerjee/g, 'mamata'],
+  [/abhishek banerjee/g, 'abhishek'],
+  [/janata darbar/g, 'janata darbar'],
+  [/janta darbar/g, 'janata darbar'],
+  [/re poll/g, 'repoll'],
+  [/re-poll/g, 'repoll'],
+];
+
+function normalizedStoryText(ev){
+  let text = `${ev?.title || ''} ${ev?.desc || ev?.description || ''}`.toLowerCase();
+  for(const [pattern, replacement] of DEDUPE_ALIASES) text = text.replace(pattern, replacement);
+  return text.replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function storyTokens(ev){
+  return normalizedStoryText(ev)
+    .split(/\s+/)
+    .filter(w => w.length > 2 && !DEDUPE_STOPWORDS.has(w));
+}
+
+function tokenSimilarity(a, b){
+  const aSet = new Set(storyTokens(a));
+  const bSet = new Set(storyTokens(b));
+  if(!aSet.size || !bSet.size) return 0;
+  let overlap = 0;
+  for(const token of aSet) if(bSet.has(token)) overlap++;
+  return overlap / Math.min(aSet.size, bSet.size);
+}
+
+function eventImageKey(ev){
+  const image = ev?.thumb || ev?.thumbnail || ev?.thumbnailUrl || ev?.image || ev?.imageUrl || ev?.urlToImage || ev?.media?.thumb || ev?.media?.image || '';
+  if(!image) return '';
+  try{
+    const url = new URL(image, 'https://local.invalid/');
+    return `${url.hostname}${url.pathname}`.toLowerCase().replace(/\/(?:550x309|1200x675|landscape_1200|medium|large|small)\//g, '/');
+  }catch(e){
+    return String(image).split(/[?#]/)[0].toLowerCase();
+  }
+}
+
+function isDuplicateStory(a, b){
+  if((a?.source || '') && (b?.source || '') && a.source === b.source) return true;
+  const sim = tokenSimilarity(a, b);
+  const aImg = eventImageKey(a);
+  const bImg = eventImageKey(b);
+  const aText = normalizedStoryText(a);
+  const bText = normalizedStoryText(b);
+  const sharedTopic = [
+    'janata darbar','falta repoll','falta assembly','holding centres',
+    'detect delete deport','obc list','bakri eid','red road','vande mataram',
+    'media interaction','police welfare board'
+  ].some(topic => aText.includes(topic) && bText.includes(topic));
+  if(sharedTopic && sim >= 0.25) return true;
+  if(aImg && bImg && aImg === bImg && sim >= 0.34) return true;
+  return sim >= 0.72;
+}
+
+function eventQualityScore(ev){
+  return (ev?.thumb || ev?.image || ev?.imageUrl ? 20 : 0)
+    + (ev?.source ? 10 : 0)
+    + Math.min(String(ev?.desc || '').length, 240) / 30
+    + Math.min(String(ev?.title || '').length, 100) / 50;
+}
+
 function deduplicateEvents(newEvents, existingDailyLog){
-  const existingTitles = [];
+  const existingEvents = [];
   for(const day of existingDailyLog){
     for(const ev of day.events || []){
-      existingTitles.push(ev.title);
+      existingEvents.push(ev);
     }
   }
 
-  return newEvents.filter(ev => {
-    for(const existing of existingTitles){
-      if(similarity(ev.title, existing) > 0.6) return false;
+  const unique = [];
+  for(const ev of newEvents){
+    if(existingEvents.some(existing => isDuplicateStory(existing, ev) || similarity(ev.title, existing.title) > 0.6)) continue;
+    const existingIndex = unique.findIndex(item => isDuplicateStory(item, ev));
+    if(existingIndex < 0){
+      unique.push(ev);
+      continue;
     }
-    return true;
-  });
+    if(eventQualityScore(ev) > eventQualityScore(unique[existingIndex])){
+      unique[existingIndex] = ev;
+    }
+  }
+  return unique;
 }
 
 // ═══════════════════════════════════════════════════════════════

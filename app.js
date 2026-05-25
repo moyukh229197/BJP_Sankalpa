@@ -204,11 +204,100 @@ function isBengalRelevantEvent(event){
   return false;
 }
 
+const dedupeStopwords=new Set([
+  'the','a','an','and','or','of','to','in','on','for','from','with','after','before',
+  'as','by','at','is','are','was','were','be','been','being','will','says','said',
+  'live','updates','update','highlights','highlight','watch','video','exclusive',
+  'west','bengal','wb','chief','minister','cm','bjp','tmc','trinamool'
+]);
+const dedupeAliases=[
+  [/chief minister/g,'cm'],
+  [/suvendu adhikari/g,'suvendu'],
+  [/subhendu adhikari/g,'suvendu'],
+  [/mamata banerjee/g,'mamata'],
+  [/abhishek banerjee/g,'abhishek'],
+  [/janata darbar/g,'janata darbar'],
+  [/janta darbar/g,'janata darbar'],
+  [/re poll/g,'repoll'],
+  [/re-poll/g,'repoll'],
+];
+
+function normalizedStoryText(e){
+  let text=`${e?.title || ''} ${e?.desc || e?.description || ''}`.toLowerCase();
+  dedupeAliases.forEach(([pattern,replacement])=>{ text=text.replace(pattern,replacement); });
+  return text.replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+}
+
+function storyTokens(e){
+  return normalizedStoryText(e)
+    .split(/\s+/)
+    .filter(w=>w.length>2 && !dedupeStopwords.has(w));
+}
+
+function tokenSimilarity(a,b){
+  const aSet=new Set(storyTokens(a));
+  const bSet=new Set(storyTokens(b));
+  if(!aSet.size || !bSet.size) return 0;
+  let overlap=0;
+  aSet.forEach(w=>{ if(bSet.has(w)) overlap++; });
+  return overlap / Math.min(aSet.size,bSet.size);
+}
+
+function eventImageKey(e){
+  const img=e?.thumb || e?.thumbnail || e?.thumbnailUrl || e?.image || e?.imageUrl || e?.urlToImage || e?.media?.thumb || e?.media?.image || '';
+  if(!img) return '';
+  try{
+    const url=new URL(img, typeof location==='undefined' ? 'https://local.invalid/' : location.href);
+    return `${url.hostname}${url.pathname}`.toLowerCase().replace(/\/(?:550x309|1200x675|landscape_1200|medium|large|small)\//g,'/');
+  }catch(err){
+    return String(img).split(/[?#]/)[0].toLowerCase();
+  }
+}
+
+function isDuplicateStory(a,b){
+  if((a?.source || '') && (b?.source || '') && a.source===b.source) return true;
+  const sim=tokenSimilarity(a,b);
+  const aImg=eventImageKey(a);
+  const bImg=eventImageKey(b);
+  const aText=normalizedStoryText(a);
+  const bText=normalizedStoryText(b);
+  const sharedTopic=[
+    'janata darbar','falta repoll','falta assembly','holding centres',
+    'detect delete deport','obc list','bakri eid','red road','vande mataram',
+    'media interaction','police welfare board'
+  ].some(topic=>aText.includes(topic) && bText.includes(topic));
+  if(sharedTopic && sim>=0.25) return true;
+  if(aImg && bImg && aImg===bImg && sim>=0.34) return true;
+  return sim>=0.72;
+}
+
+function eventQualityScore(e){
+  return (e?.thumb || e?.image || e?.imageUrl ? 20 : 0)
+    + (e?.source ? 10 : 0)
+    + Math.min(String(e?.desc || '').length, 240) / 30
+    + Math.min(String(e?.title || '').length, 100) / 50;
+}
+
+function dedupeEvents(events){
+  const unique=[];
+  for(const event of events){
+    const existingIndex=unique.findIndex(item=>isDuplicateStory(item,event));
+    if(existingIndex<0){
+      unique.push(event);
+      continue;
+    }
+    if(eventQualityScore(event)>eventQualityScore(unique[existingIndex])){
+      unique[existingIndex]={...event};
+    }
+  }
+  return unique;
+}
+
 function filterBengalRelevantLog(log){
   if(!Array.isArray(log)) return [];
   return log.map(day=>({
     ...day,
-    events:(Array.isArray(day.events)?day.events:[]).filter(isBengalRelevantEvent)
+    events:dedupeEvents((Array.isArray(day.events)?day.events:[]).filter(isBengalRelevantEvent))
   })).filter(day=>day.events.length);
 }
 
