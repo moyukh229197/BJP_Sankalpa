@@ -27,6 +27,8 @@ let content = { manifesto: [], dailyLog: [], moments: [], backlog: [] };
 
 const selectOptions = {
   status: ['Pending', 'In Progress', 'Completed'],
+  eventStatus: ['Pending', 'In Progress', 'Done'],
+  sourceTypes: ['article', 'youtube', 'x', 'facebook'],
   priority: ['low', 'medium', 'high'],
   categories: ['General', 'Governance', 'Finance', 'Law & Order', 'Healthcare', 'Security', 'Employment', 'Infrastructure', 'Industry', 'Youth', 'Women'],
 };
@@ -252,10 +254,13 @@ function renderEventCard(event, dayIndex, eventIndex) {
         ${fieldInput('Title', event.title, 'title', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
         ${fieldInput('Description', event.desc ?? event.description ?? '', 'desc', 'dailyLog', `${dayIndex}:${eventIndex}`, 'textarea', 'event')}
         ${fieldInput('Category', event.category || '', 'category', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
+        ${fieldSelect('Status', event.status || 'Pending', selectOptions.eventStatus, 'status', 'dailyLog', `${dayIndex}:${eventIndex}`, 'event')}
         ${fieldInput('Icon', event.icon || '', 'icon', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
+        ${fieldInput('Source name', event.sourceName || '', 'sourceName', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event', 'ABP Ananda, X, Facebook, etc.')}
+        ${fieldSelect('Source type', event.sourceType || 'article', selectOptions.sourceTypes, 'sourceType', 'dailyLog', `${dayIndex}:${eventIndex}`, 'event')}
         ${fieldInput('Source link', event.source || '', 'source', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
         ${fieldInput('Thumbnail', event.thumb || '', 'thumb', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
-        ${fieldInput('YouTube link', event.yt || '', 'yt', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
+        ${fieldInput('YouTube / video link', event.yt || event.video || '', 'yt', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
         ${fieldInput('Extra link', event.link || '', 'link', 'dailyLog', `${dayIndex}:${eventIndex}`, 'text', 'event')}
       </div>
     </section>
@@ -342,7 +347,7 @@ function addDailyEvent(dayIndex) {
   const day = content.dailyLog[dayIndex];
   if (!day) return;
   const next = day.events || [];
-  next.push({ time: '12:00 PM', title: 'New event', desc: '', category: 'General', icon: 'dot', source: '', thumb: '', yt: '', link: '' });
+  next.push({ time: '12:00 PM', title: 'New event', desc: '', category: 'General', status: 'Pending', icon: 'newspaper', sourceName: '', sourceType: 'article', source: '', thumb: '', yt: '', link: '' });
   day.events = next;
   renderSections();
   setStatus('Added a new daily log event.');

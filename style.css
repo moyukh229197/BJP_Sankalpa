@@ -1828,6 +1828,15 @@ h1,h2,h3,h4,h5,h6 {
   border-radius: 16px;
   padding: 12px 14px 10px;
   text-align: center;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  font: inherit;
+}
+.v-summary-pill:hover, .v-summary-pill.active {
+  border-color: rgba(255, 119, 34, 0.28);
+  background: rgba(255, 119, 34, 0.07);
+  transform: translateY(-2px);
 }
 .v-summary-pill span {
   display: block;
@@ -1844,6 +1853,14 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 22px;
   line-height: 1;
   color: var(--white);
+}
+.v-status-view {
+  margin: -4px 0 18px;
+  font-size: 11px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-weight: 700;
 }
 .v-day-highlight {
   background: linear-gradient(180deg, rgba(255, 119, 34, 0.06) 0%, rgba(255, 119, 34, 0.01) 100%);
@@ -1947,6 +1964,11 @@ h1,h2,h3,h4,h5,h6 {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+  display: block;
 }
 .v-ev-media img {
   display: block;
@@ -1957,6 +1979,39 @@ h1,h2,h3,h4,h5,h6 {
 }
 .v-ev:hover .v-ev-media img {
   transform: scale(1.04);
+}
+.v-media-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  font-size: 15px;
+  font-weight: 900;
+  backdrop-filter: blur(8px);
+}
+.v-media-label {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 9px;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.62);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
 }
 .v-ev-top {
   display: flex;
@@ -2044,6 +2099,19 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 10px;
   line-height: 1;
   color: var(--green-light);
+}
+.v-empty-status {
+  padding: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  color: var(--text3);
+  font-size: 12px;
+  text-align: center;
+}
+.v-card-head .source-link, .v-ev-footer .source-link {
+  position: static;
+  top: auto;
+  right: auto;
 }
 
 /* ELECTION RESULT PAGE */

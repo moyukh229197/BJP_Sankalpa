@@ -100,6 +100,62 @@ const dailyLog=[
   ]}
 ];
 
+const supplementalDailyNews={
+  "2026-05-05":[
+    {time:"9:30 AM",title:"BJP Sweep Framed as Bengal's Political Reset",desc:"Times of India analysis says Bengal voters handed governance to the BJP after a decisive anti-incumbency wave.",category:"Governance",status:"Done",sourceName:"Times of India",sourceType:"article",source:"https://timesofindia.indiatimes.com/city/kolkata/bjp-sweeps-bengal-anti-incumbency-topples-trinamool-bastion/articleshow/130814161.cms"},
+    {time:"7:30 PM",title:"Reserved Seats Swing Adds to Mandate Story",desc:"The Telegraph tracks the BJP and allies' performance across SC/ST constituencies as part of the larger election-result narrative.",category:"Governance",status:"Done",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/amp/elections/west-bengal-assembly-election-2026/bjp-and-allies-dominate-scst-constituencies-in-bengal-assam-assembly-polls/cid/2159333"}
+  ],
+  "2026-05-06":[
+    {time:"8:30 PM",title:"Bhabanipur Result Spotlight Continues",desc:"Follow-up coverage highlights Suvendu Adhikari's Bhabanipur win over Mamata Banerjee and the scale of the political upset.",category:"Governance",status:"Done",sourceName:"Times of India",sourceType:"article",source:"https://timesofindia.indiatimes.com/india/bhabanipur-chooses-dada-over-didi-suvendu-adhikari-beats-mamata-banerjee-emerges-giant-slayer-again/articleshow/130805697.cms"}
+  ],
+  "2026-05-08":[
+    {time:"4:45 PM",title:"Amit Shah Announces Suvendu as BJP Legislature Leader",desc:"The Telegraph reports the formal announcement clearing the path for Suvendu Adhikari to become Bengal's first BJP chief minister.",category:"Governance",status:"Done",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/amp/elections/west-bengal-assembly-election-2026/bjps-amit-shah-announces-suvendu-adhikari-as-west-bengal-chief-minister-after-2026-poll-win/cid/2159634"},
+    {time:"9:30 PM",title:"Brigade Oath Plans Dominate Bengali News",desc:"Anandabazar's live build-up tracks the swearing-in preparations, expected dignitaries and crowd arrangements at Brigade.",category:"Governance",status:"In Progress",sourceName:"Anandabazar Patrika",sourceType:"article",source:"https://www.anandabazar.com/amp/west-bengal/suvendu-adhikari-takes-oath-as-west-bengal-chief-minister-on-9th-may-live-updates-dgtl/cid/1685710"}
+  ],
+  "2026-05-09":[
+    {time:"1:59 PM",title:"Oath Ceremony Video Published",desc:"Times of India publishes video coverage of the oath ceremony after BJP ends 15 years of TMC rule in West Bengal.",category:"Governance",status:"Done",sourceName:"Times of India Video",sourceType:"article",source:"https://timesofindia.indiatimes.com/videos/news/bjp-ends-15-year-tmc-rule-in-bengal-as-suvendu-adhikari-takes-oath-as-chief-minister/amp_videoshow/130974081.cms"}
+  ],
+  "2026-05-10":[
+    {time:"12:45 PM",title:"Administrative Overhaul Signals Emerge",desc:"The Telegraph reports that the new government is preparing a wider bureaucratic and police recalibration after taking office.",category:"Governance",status:"In Progress",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/elections/west-bengal-assembly-election-2026/fresh-bureaucratic-police-overhaul-likely-in-bengal-under-suvendu-adhikari-govt-officials/cid/2159878"}
+  ],
+  "2026-05-12":[
+    {time:"9:45 AM",title:"First Cabinet Agenda Reconstructed",desc:"TOI's Kolkata edition details the new government's early agenda, including Ayushman Bharat, border fencing and bureaucratic overhaul.",category:"Governance",status:"In Progress",sourceName:"Times of India",sourceType:"article",source:"https://timesofindia.indiatimes.com/city/kolkata/new-bengal-govts-1st-major-meet-today-cm-suvendu-adhikari-to-hold-session-with-ias-officers-top-brass/articleshow/131001587.cms"},
+    {time:"5:40 PM",title:"Home and Finance Stay With CM for Now",desc:"TOI reports that Home and Finance remain with the Chief Minister while the first five ministers receive portfolios.",category:"Governance",status:"Done",sourceName:"Times of India",sourceType:"article",source:"https://timesofindia.indiatimes.com/city/kolkata/cm-keeps-home-fin-dilip-gets-rural-agnimitra-urban-devpt/amp_articleshow/131023392.cms"},
+    {time:"8:15 PM",title:"Former CM Security Kept Untouched",desc:"Kolkata police are instructed to maintain Mamata Banerjee's existing security cover, according to TOI reporting.",category:"Law & Order",status:"Done",sourceName:"Times of India",sourceType:"article",source:"https://timesofindia.indiatimes.com/city/kolkata/no-tinkering-with-ex-cm-security-says-suvendu/articleshow/131044417.cms"}
+  ],
+  "2026-05-15":[
+    {time:"4:30 PM",title:"Police Welfare Board Dissolved",desc:"The Telegraph reports the state dissolved the Police Welfare Board while stressing strict law enforcement and border vigilance.",category:"Law & Order",status:"Done",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/west-bengal/bengal-govt-dissolves-police-welfare-board-cm-suvendu-adhikari-stresses-strict-law-enforcement/cid/2160888"}
+  ],
+  "2026-05-20":[
+    {time:"10:00 AM",title:"First North Bengal Visit Scheduled",desc:"The Telegraph reports that the Chief Minister's first visit to North Bengal is planned around Uttarkanya in Siliguri.",category:"Governance",status:"In Progress",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/west-bengal/suvendu-to-visit-north-bengal-this-week-first-trip-as-chief-minister-to-region-loyal-to-bjp-prnt/cid/2160950"},
+    {time:"3:30 PM",title:"Uttarkanya Review Framed as Regional Outreach",desc:"North Bengal development and administrative review coverage adds a regional news card for the day's tracker.",category:"Infrastructure",status:"In Progress",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/west-bengal/suvendu-to-visit-north-bengal-this-week-first-trip-as-chief-minister-to-region-loyal-to-bjp-prnt/cid/2160950"}
+  ],
+  "2026-05-21":[
+    {time:"10:30 AM",title:"MLA Oath Coverage Anchors Assembly Week",desc:"The Telegraph's Assembly report covers the Chief Minister and newly elected legislators taking oath in the House.",category:"Governance",status:"Done",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/west-bengal/cm-suvendu-adhikari-other-newly-elected-legislators-take-oath-as-mlas-in-bengal-assembly/cid/2160366"},
+    {time:"5:30 PM",title:"Bhabanipur Retained, Nandigram Resigned",desc:"The Telegraph reports the Chief Minister retained Bhabanipur and resigned from Nandigram after winning both seats.",category:"Governance",status:"Done",sourceName:"The Telegraph",sourceType:"article",source:"https://www.telegraphindia.com/west-bengal/bengal-chief-minister-suvendu-adhikari-retains-bhabanipur-assembly-seat-resigns-from-nandigram/cid/2160343"}
+  ],
+  "2026-05-22":[
+    {time:"6:00 PM",title:"Centre Opens Bengal Funds Tap After Delhi Visit",desc:"TOI reports that the Centre agreed to release funds for Bengal schemes after the Chief Minister's first Delhi visit.",category:"Finance",status:"In Progress",sourceName:"Times of India",sourceType:"article",source:"https://timesofindia.indiatimes.com/india/centre-turns-on-west-bengal-funds-tap-after-suvendu-adhikaris-delhi-visit/articleshow/131271948.cms"}
+  ]
+};
+
+function ensureMinimumNewsCards(log,min=4){
+  if(!Array.isArray(log)) return log;
+  return log.map(day=>{
+    const copy={...day,events:Array.isArray(day.events)?[...day.events]:[]};
+    const existing=new Set(copy.events.map(e=>`${e.title}|${e.source||''}`));
+    for(const item of supplementalDailyNews[copy.date] || []){
+      if(copy.events.length>=min) break;
+      const key=`${item.title}|${item.source||''}`;
+      if(!existing.has(key)){
+        copy.events.push({...item,icon:item.icon || 'newspaper'});
+        existing.add(key);
+      }
+    }
+    return copy;
+  });
+}
+
 // ── KEY MOMENTS (YouTube thumbnails) ──
 const moments=[
   {title:"BJP Wins Bengal — Historic Victory",desc:"BJP crosses 200+ seats, ending 15 years of TMC rule in West Bengal.",date:"May 4, 2026",badge:"RESULT DAY",thumb:"https://i.ytimg.com/vi/RHuQIN8Eb5c/hqdefault.jpg",yt:"https://www.youtube.com/watch?v=RHuQIN8Eb5c"},
@@ -113,7 +169,7 @@ const moments=[
 
 const cloneData=v=>JSON.parse(JSON.stringify(v));
 function defaultSiteData(){
-  return cloneData({manifesto,dailyLog,moments,backlog});
+  return cloneData({manifesto,dailyLog:ensureMinimumNewsCards(dailyLog),moments,backlog});
 }
 function normalizeSiteData(raw){
   const base=defaultSiteData();
@@ -121,6 +177,7 @@ function normalizeSiteData(raw){
   ['manifesto','dailyLog','moments','backlog'].forEach(key=>{
     if(Array.isArray(raw[key])) base[key]=raw[key];
   });
+  base.dailyLog=ensureMinimumNewsCards(base.dailyLog);
   return base;
 }
 function syncArray(target, source){
@@ -179,8 +236,26 @@ function stCls(s){return s==='Completed'?'completed':s==='In Progress'?'progress
 function stBadge(s){return s==='Completed'?'badge-completed':s==='In Progress'?'badge-progress':'badge-pending'}
 const catEmoji={Finance:'💰',Women:'👩','Law & Order':'⚖️',Healthcare:'🏥',Security:'🛡️',Employment:'💼',Infrastructure:'🏗️',Industry:'🏭',Youth:'🎓',Governance:'🏛️'};
 function youtubeThumb(url){
-  const m=String(url||'').match(/(?:v=|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+  const m=String(url||'').match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([A-Za-z0-9_-]{11})/);
   return m ? `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg` : '';
+}
+function mediaProvider(url,type=''){
+  const link=String(url||'').toLowerCase();
+  if(type) return type;
+  if(link.includes('youtube.com') || link.includes('youtu.be')) return 'youtube';
+  if(link.includes('x.com') || link.includes('twitter.com')) return 'x';
+  if(link.includes('facebook.com') || link.includes('fb.watch')) return 'facebook';
+  return 'article';
+}
+function mediaLabel(provider){
+  return provider==='youtube' ? 'YouTube' : provider==='x' ? 'X' : provider==='facebook' ? 'Facebook' : 'Article';
+}
+function eventMedia(e,source){
+  const media=e.media || {};
+  const url=media.url || e.video || e.yt || source || '';
+  const provider=mediaProvider(url, media.type || e.sourceType || '');
+  const thumb=media.thumb || e.thumb || (provider==='youtube' ? youtubeThumb(url) : '');
+  return {url,provider,thumb,label:media.label || e.sourceName || mediaLabel(provider)};
 }
 function sourceIcon(link,label='Open source'){
   return `
@@ -310,7 +385,7 @@ function actionMeta(day, e){
   const text=`${e.title} ${e.desc} ${day.label}`;
   return {
     dept: e.category || actionDept(text),
-    status: actionStatus(text),
+    status: e.status || actionStatus(text),
     type: actionType(text),
     important: actionImportance(text),
     bucket: actionBucket(e.time),
@@ -514,9 +589,38 @@ function renderTimelineVertical(){
     filters.innerHTML=filterData.map((f,i)=>`<button class="timeline-filter${i===0?' active':''}" data-filter="${f.key}">${f.label}</button>`).join('');
   }
 
+  const renderEventCard=({e,dept,status,type,important,source})=>{
+    const media=eventMedia(e,source);
+    const canOpen=media.url || source;
+    return `
+      <div class="v-ev ${type} ${important?'is-major':''}" data-event-status="${status}">
+        <div class="v-ev-top">
+          <div class="v-ev-time">${e.time}</div>
+          <div class="v-ev-meta">
+            <span class="v-chip ${type}">${type}</span>
+            <span class="v-chip ${status==='Done'?'done':status==='In Progress'?'progress':'pending'}">${status}</span>
+          </div>
+        </div>
+        ${media.thumb?`
+          <button type="button" class="v-ev-media v-ev-media-link" onclick="event.stopPropagation();window.open('${canOpen}','_blank','noopener,noreferrer')" aria-label="Open ${media.label}">
+            <img src="${media.thumb}" alt="${e.title}" loading="lazy" onerror="this.closest('.v-ev-media').remove()">
+            <span class="v-media-play">${media.provider==='article'?'↗':'▶'}</span>
+            <span class="v-media-label">${media.label}</span>
+          </button>`:''}
+        <div class="v-ev-title">${e.title}</div>
+        <div class="v-ev-desc">${e.desc}</div>
+        <div class="v-ev-footer">
+          <span class="v-dept">${dept}${e.sourceName ? ` · ${e.sourceName}` : ''}</span>
+          ${source?sourceIcon(source,'Open source for action'):''}
+        </div>
+        ${important ? '<div class="v-pin">High impact</div>' : ''}
+      </div>
+    `;
+  };
+
   const dayCards=ordered.map((d,i)=>{
     const dayEvents=d.events.map((e,ei)=>({e,...actionMeta(d,e),index:ei}));
-    const groups=['morning','afternoon','evening'].map(bucket=>({
+    const groups=['all-day','morning','afternoon','evening'].map(bucket=>({
       bucket,
       events: dayEvents.filter(x=>x.bucket===bucket)
     })).filter(g=>g.events.length);
@@ -541,12 +645,13 @@ function renderTimelineVertical(){
             </div>
             ${daySource ? sourceIcon(daySource,'Open source for the day') : ''}
           </div>
-          <div class="v-day-summary">
-            <div class="v-summary-pill"><span>Actions</span><strong>${d.events.length}</strong></div>
-            <div class="v-summary-pill"><span>Done</span><strong>${statusCounts.done}</strong></div>
-            <div class="v-summary-pill"><span>In progress</span><strong>${statusCounts.progress}</strong></div>
-            <div class="v-summary-pill"><span>Pending</span><strong>${statusCounts.pending}</strong></div>
+          <div class="v-day-summary" role="group" aria-label="Filter this day's actions by status">
+            <button type="button" class="v-summary-pill active" data-status-filter="all"><span>Actions</span><strong>${d.events.length}</strong></button>
+            <button type="button" class="v-summary-pill" data-status-filter="Done"><span>Done</span><strong>${statusCounts.done}</strong></button>
+            <button type="button" class="v-summary-pill" data-status-filter="In Progress"><span>In progress</span><strong>${statusCounts.progress}</strong></button>
+            <button type="button" class="v-summary-pill" data-status-filter="Pending"><span>Pending</span><strong>${statusCounts.pending}</strong></button>
           </div>
+          <div class="v-status-view" aria-live="polite">Showing all ${d.events.length} actions</div>
           ${topEvent ? `<div class="v-day-highlight">
             <span>Lead item</span>
             <strong>${topEvent.e.title}</strong>
@@ -557,30 +662,11 @@ function renderTimelineVertical(){
               <section class="v-event-group">
                 <div class="v-group-label">${bucketLabel(group.bucket)}</div>
                 <div class="v-event-list">
-                  ${group.events.map(({e,dept,status,type,important,source})=>{
-                    const mediaSrc=e.thumb || youtubeThumb(source);
-                    return `
-                    <div class="v-ev ${type} ${important?'is-major':''}">
-                      <div class="v-ev-top">
-                        <div class="v-ev-time">${e.time}</div>
-                        <div class="v-ev-meta">
-                          <span class="v-chip ${type}">${type}</span>
-                          <span class="v-chip ${status==='Done'?'done':status==='In Progress'?'progress':'pending'}">${status}</span>
-                        </div>
-                      </div>
-                      ${mediaSrc?`<div class="v-ev-media"><img src="${mediaSrc}" alt="${e.title}" loading="lazy" onerror="this.remove()"></div>`:''}
-                      <div class="v-ev-title">${e.title}</div>
-                      <div class="v-ev-desc">${e.desc}</div>
-                      <div class="v-ev-footer">
-                        <span class="v-dept">${dept}</span>
-                        ${source?sourceIcon(source,'Open source for action'):''}
-                      </div>
-                      ${important ? '<div class="v-pin">High impact</div>' : ''}
-                    </div>
-                  `}).join('')}
+                  ${group.events.map(renderEventCard).join('')}
                 </div>
               </section>
             `).join('')}
+            <div class="v-empty-status" hidden>No actions in this status for this day.</div>
           </div>
         </div>
       </div>
@@ -588,7 +674,38 @@ function renderTimelineVertical(){
   }).join('');
 
   wrap.innerHTML=dayCards;
+  setupDayStatusFilters();
   applyTimelineFilters();
+}
+
+function setupDayStatusFilters(){
+  $$('.v-card').forEach(card=>{
+    const buttons=card.querySelectorAll('[data-status-filter]');
+    const events=card.querySelectorAll('[data-event-status]');
+    const groups=card.querySelectorAll('.v-event-group');
+    const statusText=card.querySelector('.v-status-view');
+    const empty=card.querySelector('.v-empty-status');
+    buttons.forEach(btn=>{
+      btn.onclick=()=>{
+        const filter=btn.dataset.statusFilter;
+        buttons.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        let shown=0;
+        events.forEach(ev=>{
+          const visible=filter==='all' || ev.dataset.eventStatus===filter;
+          ev.hidden=!visible;
+          if(visible) shown++;
+        });
+        groups.forEach(group=>{
+          group.hidden=!group.querySelector('[data-event-status]:not([hidden])');
+        });
+        if(empty) empty.hidden=shown!==0;
+        if(statusText) statusText.textContent=filter==='all'
+          ? `Showing all ${events.length} actions`
+          : `Showing ${shown} ${filter.toLowerCase()} action${shown===1?'':'s'}`;
+      };
+    });
+  });
 }
 
 function applyTimelineFilters(){
