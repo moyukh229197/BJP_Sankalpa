@@ -758,28 +758,32 @@ function renderTimelineVertical(){
   const renderEventCard=({e,dept,status,type,important,source})=>{
     const media=eventMedia(e,source);
     const canOpen=media.url || source;
+    const hasMedia=Boolean(media.thumb);
     return `
-      <div class="v-ev ${type} ${important?'is-major':''}" data-event-status="${status}">
-        <div class="v-ev-top">
-          <div class="v-ev-time">${e.time}</div>
-          <div class="v-ev-meta">
-            <span class="v-chip ${type}">${type}</span>
-            <span class="v-chip ${status==='Done'?'done':status==='In Progress'?'progress':'pending'}">${status}</span>
-          </div>
-        </div>
-        ${media.thumb?`
+      <div class="v-ev ${type} ${hasMedia?'has-media':''} ${important?'is-major':''}" data-event-status="${status}">
+        ${hasMedia?`
           <button type="button" class="v-ev-media v-ev-media-link" onclick="event.stopPropagation();window.open('${canOpen}','_blank','noopener,noreferrer')" aria-label="Open ${media.label}">
             <img src="${media.thumb}" alt="${e.title}" loading="lazy" onerror="this.closest('.v-ev-media').remove()">
             <span class="v-media-play">${media.provider==='article'?'↗':'▶'}</span>
             <span class="v-media-label">${media.label}</span>
           </button>`:''}
-        <div class="v-ev-title">${e.title}</div>
-        <div class="v-ev-desc">${e.desc}</div>
-        <div class="v-ev-footer">
-          <span class="v-dept">${dept}${e.sourceName ? ` · ${e.sourceName}` : ''}</span>
-          ${source?sourceIcon(source,'Open source for action'):''}
+        <div class="v-ev-content">
+          <div class="v-ev-top">
+            <div class="v-ev-time">${e.time}</div>
+            <div class="v-ev-meta">
+              <span class="v-chip ${type}">${type}</span>
+              <span class="v-chip ${status==='Done'?'done':status==='In Progress'?'progress':'pending'}">${status}</span>
+            </div>
+          </div>
+          <div class="v-ev-rule"></div>
+          <div class="v-ev-title">${e.title}</div>
+          <div class="v-ev-desc">${e.desc}</div>
+          <div class="v-ev-footer">
+            <span class="v-dept">${dept}${e.sourceName ? ` · ${e.sourceName}` : ''}</span>
+            ${source?sourceIcon(source,'Open source for action'):''}
+          </div>
+          ${important ? '<div class="v-pin">High impact</div>' : ''}
         </div>
-        ${important ? '<div class="v-pin">High impact</div>' : ''}
       </div>
     `;
   };
