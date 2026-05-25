@@ -3,7 +3,7 @@ const OATH_DATE = new Date('2026-05-09T00:00:00+05:30');
 const SITE_SYNC_DATE = new Date('2026-05-25T00:00:00+05:30');
 
 const PARTY_RESULTS = [
-  { code: 'BJP', name: 'Bharatiya Janata Party', won: 207, leading: 0, color: '#ff944d', link: 'partywisewinresult-369S25.htm' },
+  { code: 'BJP', name: 'Bharatiya Janata Party', won: 208, leading: 0, color: '#ff944d', link: 'partywisewinresult-369S25.htm' },
   { code: 'AITC', name: 'All India Trinamool Congress', won: 80, leading: 0, color: '#aebedf', link: 'partywisewinresult-140S25.htm' },
   { code: 'INC', name: 'Indian National Congress', won: 2, leading: 0, color: '#19AAED', link: 'partywisewinresult-742S25.htm' },
   { code: 'AJUP', name: 'Aam Janata Unnayan party', won: 2, leading: 0, color: '#244ffa', link: 'partywisewinresult-3735S25.htm' },
