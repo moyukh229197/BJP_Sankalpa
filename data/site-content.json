@@ -1384,6 +1384,37 @@
           "source": "https://www.hindustantimes.com/india-news/falta-election-eci-results-live-updates-falta-repoll-bengal-bjp-debangshu-tmc-jahangir-pushpa-khan-latest-vote-counting-101779592279292.html"
         }
       ]
+    },
+    {
+      "date": "2026-05-25",
+      "dayNumber": 16,
+      "label": "Day 16",
+      "events": [
+        {
+          "time": "All Day",
+          "title": "TMC-BJP row intensifies after Falta re-poll result; Abhishek Banerjee points out",
+          "desc": "Panda won with over 1 lakh votes. The TMC candidate had backed out of the contest before the polls.",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.hindustantimes.com/india-news/tmc-bjp-row-intensifies-after-falta-re-poll-abhishek-banerjee-points-out-inconsistencies-suvendu-adhikari-responds-101779675807176.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Tamil Nadu: BJP demands stern action against perpetrators of sexual assault case",
+          "desc": "In Tamil Nadu, ministers demand swift action against those responsible for the sexual assault and murder of a 10-year-old girl in Coimbatore.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/tamil-nadu-bjp-demands-stern-action-against-perpetrators-of-sexual-assault-case-in-coimbatore-101779648811262.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Congress-DMK rift widens as leaders trade charges",
+          "desc": "Congress lawmaker Manickam Tagore alleged that the BJP acted as a mediator between the AIADMK and DMK to stop TVK chief C Joseph Vijay from becoming the chief minister following TVK’s sweeping victory in the Tamil Nadu assembly elections.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/congressdmk-rift-widens-as-leaders-trade-charges-101779648690870.html"
+        }
+      ]
     }
   ],
   "moments": [
