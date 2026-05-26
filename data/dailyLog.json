@@ -1569,5 +1569,20 @@
         "source": "https://www.hindustantimes.com/india-news/pm-modi-completes-12-years-in-office-bjp-union-ministers-hail-his-leadership-101779810721183.html"
       }
     ]
+  },
+  {
+    "date": "2026-05-27",
+    "dayNumber": 18,
+    "label": "Day 18",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Case Filed Against Mamata Banerjee Over 2025 \"Ganda Dharma\" Remark",
+        "desc": "The complaint alleges that Mamata Banerjee's comments hurt the sentiments of followers of Sanatan Dharma and promoted communal disharmony.",
+        "category": "Finance",
+        "icon": "scale",
+        "source": "https://www.ndtv.com/india-news/case-filed-against-mamata-banerjee-over-2025-ganda-dharma-remark-11552119#publisher=newsstand"
+      }
+    ]
   }
 ]
