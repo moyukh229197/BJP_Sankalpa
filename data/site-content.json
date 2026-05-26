@@ -17,7 +17,7 @@
       "cat": "Women",
       "dl": "2026-08-09",
       "status": "In Progress",
-      "prog": 63,
+      "prog": 66,
       "pri": "high"
     },
     {
@@ -1600,6 +1600,110 @@
           "category": "Governance",
           "icon": "landmark",
           "source": "https://www.hindustantimes.com/india-news/bjp-brass-cracks-whip-tells-odisha-unit-to-get-active-ahead-of-panchayat-polls-101779776837565.html"
+        },
+        {
+          "time": "All Day",
+          "title": "No liquor shops within 1 km of temples, education institutes; ‘maach-bhaat’ in 4",
+          "desc": "West Bengal Chief Minsiter Suvendu Adhikari says Annapurna Bhandar scheme benefits of ₹3,000 will be available for women of the State from May 27 and “no Bangladeshi coming from outside will get these benefits”",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.thehindu.com/news/national/no-liquor-shops-within-1-km-of-temples-education-institutes-maach-bhaat-in-400-canteensfor-5-says-suvendu/article71025063.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Trinamool MP, six MLAs join Suvendu’s meeting, say ‘it’s for development’",
+          "desc": "Kakoli Ghosh Dastidar recently quit her organisational post after publicly airing disappointment over her treatment in the Trinamool Congress",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.thehindu.com/news/national/trinamool-mp-six-mlas-join-suvendus-meeting-say-its-for-development/article71024849.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Smoke Scare On IndiGo Aircraft In Bengaluru, Passengers Evacuated",
+          "desc": "Smoke Scare On IndiGo Aircraft In Bengaluru, Passengers Evacuated",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.ndtv.com/india-news/smoke-scare-on-indigo-aircraft-in-bengaluru-passengers-evacuated-11550904#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "CBSE OSM Portal Had Critical Vulnerabilities, Ethical Hacker Tells NDTV",
+          "desc": "CBSE Class 12 Evaluation System Issues: Adhikari claimed that by combining these flaws, an attacker could potentially take over examiner accounts, view assigned answer scripts, modify marks, and interfere with the evaluation process.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.ndtv.com/education/cbse-osm-portal-had-critical-vulnerabilities-ethical-hacker-told-ndtv-he-alerted-board-months-earlier-11550090#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "IndiGo Bengaluru-Chennai flight evacuated after smoke detected during taxiing, a",
+          "desc": "In a statement, an IndiGo spokesperson said all passengers and crew members were safe and had been shifted back to the terminal.&nbsp;",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.hindustantimes.com/india-news/indigo-bengaluru-chennai-flight-evacuated-after-smoke-detected-during-taxiing-airliner-responds-101779807133597.html"
+        },
+        {
+          "time": "All Day",
+          "title": "When Modi said ‘email’, a BJP leader asked 'what female': Shivraj Chouhan recall",
+          "desc": "Modi understood back in the 1990s too that technology would be essential to a developed India, the agriculture minister said at launch of his book on the PM.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/when-modi-said-email-a-bjp-leader-asked-what-female-minister-shivraj-chouhan-recounts-at-launch-of-book-apnapan-101779804385806.html"
+        },
+        {
+          "time": "All Day",
+          "title": "TMC leaders attend administrative meeting chaired by West Bengal CM Adhikari",
+          "desc": "In 2026, the Bharatiya Janata Party swept the assembly polls winning 208 seats, while TMC won 80 seat",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/tmc-leaders-attend-administrative-meeting-chaired-by-west-bengal-cm-adhikari-101779804325847.html"
+        },
+        {
+          "time": "All Day",
+          "title": "5 killed in soil collapse during well construction in Madhya Pradesh's Panna",
+          "desc": "BJP MP Vishnu Dutt Sharma termed it a tragic incident and said the administration was extending all possible assistance to the affected families.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/5-killed-in-soil-collapses-during-well-construction-in-madhya-pradeshs-panna-101779797821796.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Fish-rice meals at  ₹5, curbs on liquor shops: Bengal CM Suvendu Adhikari announ",
+          "desc": "CM Suvendu Adhikari stated that the West Bengal government would also set up an AYUSH department, delinking it from the state health department.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/fish-rice-meals-at-rs-5-curbs-on-liquor-shops-bengal-cm-suvendu-adhikari-announces-new-initiatives-101779789850538.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Ritu Jaiswal, ex-RJD Bihar women's wing chief, joins BJP: All about the leader",
+          "desc": "Ritu Jaiswal served as the state president of the RJD women's wing and also worked as the party's national spokesperson between 2021 and 2023.",
+          "category": "Women",
+          "icon": "heart-handshake",
+          "source": "https://www.hindustantimes.com/india-news/ritu-jaiswal-ex-rjd-bihar-women-wing-chief-joins-bjp-all-about-the-leader-101779787540486.html"
+        },
+        {
+          "time": "All Day",
+          "title": "TMC sees mass exodus after over 100 councillors resign; Mamata calls for party u",
+          "desc": "Following TMC's defeat in the West Bengal assembly elections, over 100 councillors have resigned, and the rest are said to be skipping work.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/tmc-sees-mass-exodus-after-over-100-councillors-resign-mamata-calls-for-party-unity-101779788065041.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Character limit on X faces Parliament panel scrutiny, chairman Nishikant Dubey f",
+          "desc": "Comms committee head Nishikant Dubey said panel will call major digital and social media platforms as part of its ongoing examination into net neutrality.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/character-limit-on-x-under-parliament-panel-scrutiny-chairman-nishikant-dubey-from-bjp-cites-right-to-equality-101779788439528.html"
+        },
+        {
+          "time": "All Day",
+          "title": "‘You too can be him’: BJP leader collabs with singer Honey Singh for anti-drugs ",
+          "desc": "Vocal about his years-long struggle with addiction to alcohol and cannabis, Honey Singh's meeting with BJP leader Tarun Chugh comes ahead of assembly polls&nbsp;",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/you-too-can-become-him-bjp-leader-hosts-singer-honey-singh-for-anti-drugs-appeal-to-punjab-youth-101779783998375.html"
         }
       ]
     }
