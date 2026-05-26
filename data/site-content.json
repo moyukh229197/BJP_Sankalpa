@@ -1555,6 +1555,45 @@
           "source": "https://www.ndtv.com/india-news/bhagwant-mann-ndtv-nava-punjab-summit-alliance-with-congress-will-insult-punjab-mandate-bhagwant-mann-to-ndtv-11546089#publisher=newsstand"
         }
       ]
+    },
+    {
+      "date": "2026-05-26",
+      "dayNumber": 17,
+      "label": "Day 17",
+      "events": [
+        {
+          "time": "All Day",
+          "title": "Setback for BJD as MP quits party, resigns from RS",
+          "desc": "BJD lawmaker Debashish Samantaray resigned from the party and Rajya Sabha, citing being belittled, and plans to join BJP, marking a setback for BJD.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/setback-for-bjd-as-mp-quits-party-resigns-from-rs-101779737160306.html"
+        },
+        {
+          "time": "All Day",
+          "title": "TMC struggles to find candidate for Nandigram bypoll",
+          "desc": "Two TMC leaders declined to contest the Nandigram by-election, while CM Suvendu Adhikari assures voters he will continue to serve them.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/tmc-struggles-to-find-candidate-for-nandigram-bypoll-101779736982851.html"
+        },
+        {
+          "time": "All Day",
+          "title": "‘Corruption definitely a key reason for the defeat of TMC’: Kakoli Ghosh Dastida",
+          "desc": "TMC MP Kakoli Ghosh Dastidar resigned as Barasat district president, citing moral responsibility for election losses and criticizing authoritarian leadership.",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.hindustantimes.com/india-news/corruption-definitely-a-key-reason-for-the-defeat-of-tmc-kakoli-ghosh-dastidar-101779736861626.html"
+        },
+        {
+          "time": "All Day",
+          "title": "No traction for cockroach party : Haryana CM",
+          "desc": "Haryana CM Nayab Singh Saini dismissed the Cockroach Janata Party as short-lived, asserting BJP's strong support in Punjab ahead of elections.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/no-traction-for-cockroach-party-haryana-cm-101779736800827.html"
+        }
+      ]
     }
   ],
   "moments": [
