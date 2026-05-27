@@ -17,7 +17,7 @@
       "cat": "Women",
       "dl": "2026-08-09",
       "status": "In Progress",
-      "prog": 66,
+      "prog": 69,
       "pri": "high"
     },
     {
@@ -147,7 +147,7 @@
       "cat": "Governance",
       "dl": "2026-10-31",
       "status": "In Progress",
-      "prog": 14,
+      "prog": 16,
       "pri": "medium"
     }
   ],
@@ -1783,6 +1783,62 @@
           "category": "Governance",
           "icon": "landmark",
           "source": "https://www.hindustantimes.com/india-news/karnataka-tussle-leadership-change-live-updates-dk-shivakumar-siddaramaiah-meet-congress-rajya-sabha-berth-101779849395294.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Rain, thunderstorm to bring relief in Gangetic Bengal till May 30",
+          "desc": "According to the India Meteorological Department, Gangetic West Bengal might record a fall in day temperatures by two to four notches due to thunderstorms, rain and gusty winds till May 30",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.thehindu.com/news/national/west-bengal/rain-thunderstorm-to-bring-relief-in-gangetic-bengal-till-may-30/article71028744.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Annapurna Yojana: How to enrol in West Bengal’s new cash aid scheme for women",
+          "desc": "Under the Annapura Yojana scheme, women will receive ₹3,000 per month. The existing Lakshmir Bhandar scheme will continue until the new programme is fully implemented",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-to-launch-annapurna-yojana-offer-3000-monthly-aid-to-women/article71028322.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "‘BJP will decide who can vote and who cannot’: Petitioner Yogendra Yadav on SC v",
+          "desc": "On Wednesday, the apex court ruled that the SIR exercise supported the constitutional requirement of free and fair elections.",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.hindustantimes.com/india-news/bjp-will-decide-who-can-vote-and-who-cannot-petitioner-yogendra-yadav-on-sc-verdict-upholding-sir-by-ec-101779877462036.html"
+        },
+        {
+          "time": "All Day",
+          "title": "‘Position no longer holds meaning’: TMC's Lok Sabha MP Kakoli Ghosh Dastidar res",
+          "desc": "Kakoli Dastidar had recently stayed away from important party events and raised concerns over the party’s internal functioning.",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.hindustantimes.com/india-news/position-no-longer-holds-meaning-tmcs-lok-sabha-mp-kakoli-ghosh-dastidar-resigns-from-all-party-101779875259709.html"
+        },
+        {
+          "time": "All Day",
+          "title": "‘Public will thrash BJP’: Akhilesh Yadav takes jibe at Yogi govt over power cut ",
+          "desc": "Akhilesh Yadav questioned the UP government's functioning and mocked the alleged lack of coordination between CM Yogi and Energy Minister AK Sharma.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/janata-bjp-ko-acche-se-sukha-degi-akhilesh-yadav-takes-jibe-at-yogi-over-power-cut-complaints-heatwave-uttar-pradesh-101779871571388.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Congress attacks BJP-led govt over ‘collapsed’ exam system, seeks Pradhan’s remo",
+          "desc": "Congress leader Kanhaiya Kumar alleged that papers have been leaked over 80 times across examinations under the current government",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/congress-attacks-bjp-led-govt-over-collapsed-exam-system-seeks-pradhan-s-removal-101779873588493.html"
+        },
+        {
+          "time": "All Day",
+          "title": "'Siddaramaiah compromised': His predecessor's big claim amid CM change buzz in K",
+          "desc": "Basavaraj Bommai was the chief minister of Karnataka before Siddaramaiah, when the BJP was in power in the southern state.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/siddaramaiah-compromised-his-predecessor-basavaraj-bommai-bjp-cm-change-buzz-karnataka-dk-shivakumar-congress-101779864859852.html"
         }
       ]
     }
