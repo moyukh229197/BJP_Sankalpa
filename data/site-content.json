@@ -26,8 +26,8 @@
       "desc": "Draft and pass Uniform Civil Code legislation in WB State Assembly.",
       "cat": "Law & Order",
       "dl": "2026-11-09",
-      "status": "Pending",
-      "prog": 0,
+      "status": "In Progress",
+      "prog": 2,
       "pri": "medium"
     },
     {
@@ -1928,6 +1928,37 @@
           "category": "Law & Order",
           "icon": "shield-alert",
           "source": "https://www.hindustantimes.com/india-news/cbi-nabs-10-people-in-sandeshkhali-killings-of-bjp-workers-after-2019-bengal-polls-101779883732487.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Trinamool MLA arrested, several leaders quit party post",
+          "desc": "The Trinamool leadership is  facing another challenge that despite being the principle Opposition party in the State with 80 MLAs, no room has been allocated Leader of Opposition Sovandeb Chattopadhyay in the premises of State Assembly",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/news/national/west-bengal/trinamool-mla-arrested-several-leaders-quit-party-post/article71030200.ece"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "dayNumber": 19,
+      "label": "Day 19",
+      "events": [
+        {
+          "time": "All Day",
+          "title": "Probe incidents of accused being paraded in underwear: APDR writes to West Benga",
+          "desc": "Association of Protection of Democratic Rights (APDR), a well known civil rights organisation in a letter to WBHRC has highlighted two instances at Golabari police station on May 24 and at Sankrail police station on May 25, where two accused were par",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.thehindu.com/news/national/west-bengal/probe-incidents-of-accused-being-paraded-in-underwear-apdr-writes-to-west-bengal-human-rights-commission/article71028010.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Pinarayi Vijayan's Daughter's Premises Raided In Alleged Corporate Fraud Case",
+          "desc": "The searches were carried out across Kottayam, Ernakulam, Kannur, Thiruvananthapuram and Bengaluru at premises linked to CMRL Managing Director SN Sasidharan Kartha, Saran S. Kartha and Veena.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.ndtv.com/india-news/pinarayi-vijayans-daughters-premises-raided-in-alleged-corporate-fraud-case-11556937#publisher=newsstand"
         }
       ]
     }
