@@ -434,13 +434,21 @@ function sourceIcon(link,label='Open source'){
 function promiseKeywords(p){
   const text=`${p.title || ''} ${p.desc || ''}`.toLowerCase();
   const words=text.match(/[a-z0-9]+/g) || [];
-  const keywords=words.filter(w=>w.length>3 && !['with','from','state','scheme','rollout','month','women'].includes(w));
+  const blocked=['with','from','state','scheme','rollout','month','women','implement','implemented','pending','complete','statewide','eligible','monthly','financial','assistance','transparent','criminal','commission'];
+  const keywords=words.filter(w=>w.length>3 && !blocked.includes(w));
+  if(/7th|pay commission|da arrears/.test(text)) keywords.push('pay','da','arrears','salary','pension');
   if(/\bbns\b/.test(text)) keywords.push('bns','nyaya','sanhita');
   if(/\bayushman\b/.test(text)) keywords.push('ayushman','pm-jay');
   if(/\bbsf\b/.test(text)) keywords.push('bsf','border','fencing');
   if(/\bcbi\b/.test(text)) keywords.push('cbi','probe');
   if(/\bsit\b/.test(text)) keywords.push('sit','ssc');
+  if(/\bucc\b|uniform civil code/.test(text)) keywords.push('ucc','civil','code');
   return [...new Set(keywords)];
+}
+
+function keywordInText(text,keyword){
+  const k=String(keyword||'').toLowerCase();
+  return new RegExp(`(^|[^a-z0-9])${k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}([^a-z0-9]|$)`).test(text);
 }
 
 function inferPromiseCompletionDate(p){
@@ -451,7 +459,7 @@ function inferPromiseCompletionDate(p){
   for(const day of days){
     const match=(day.events || []).find(e=>{
       const text=`${e.title || ''} ${e.desc || ''} ${e.category || ''}`.toLowerCase();
-      const hits=keywords.filter(k=>text.includes(k)).length;
+      const hits=keywords.filter(k=>keywordInText(text,k)).length;
       const completed=/approved|adopted|implemented|notified|completed|takes over|greenlit|initiated/.test(text);
       return completed && hits >= Math.min(2, keywords.length || 2);
     });
@@ -470,6 +478,100 @@ function promiseTimeBadge(p){
     return '✅ Completed';
   }
   return `⏰ ${daysLeft(p.dl)}d left`;
+}
+
+function promiseEvidence(p){
+  const keywords=promiseKeywords(p);
+  const minHits=Math.min(3, keywords.length || 3);
+  const matches=[];
+  for(const day of dailyLog){
+    for(const event of (day.events || [])){
+      const text=`${event.title || ''} ${event.desc || ''} ${event.category || ''}`.toLowerCase();
+      const hits=keywords.filter(k=>keywordInText(text,k)).length;
+      if(hits >= minHits){
+        matches.push({...event,date:day.date,hits});
+      }
+    }
+  }
+  return matches
+    .sort((a,b)=>new Date(b.date)-new Date(a.date) || b.hits-a.hits)
+    .slice(0,3);
+}
+
+function promiseHealth(p,evidence=[]){
+  const left=daysLeft(p.dl);
+  if(p.status==='Completed' || p.prog >= 100) return {label:'Delivered',cls:'done'};
+  if(p.prog >= 65) return {label:'Fast Moving',cls:'fast'};
+  if(left <= 0) return {label:'Delayed',cls:'risk'};
+  if(evidence.length && p.prog >= 25) return {label:'On Track',cls:'track'};
+  if(!evidence.length && p.prog <= 10) return {label:'Needs Evidence',cls:'need'};
+  return {label:'Watching',cls:'watch'};
+}
+
+function promiseProof(evidence=[]){
+  const hasSource=evidence.some(e=>e.source || e.yt || e.video || e.link);
+  const hasOfficial=evidence.some(e=>/cabinet|notified|notification|order|approved|governor|assembly/i.test(`${e.title || ''} ${e.desc || ''}`));
+  if(hasOfficial && hasSource) return {label:'Official + News',cls:'strong'};
+  if(hasSource) return {label:'News Proof',cls:'medium'};
+  if(evidence.length) return {label:'Action Mentioned',cls:'light'};
+  return {label:'Awaiting Proof',cls:'empty'};
+}
+
+function promiseStageSteps(p,evidence=[]){
+  const approved=evidence.some(e=>/approved|clears?|greenlights?|notified|order|cabinet/i.test(`${e.title || ''} ${e.desc || ''}`));
+  const started=evidence.length || p.prog > 0;
+  const completed=p.status==='Completed' || p.prog >= 100;
+  const steps=[
+    {label:'Claimed',done:true},
+    {label:'Approved',done:approved || p.prog >= 35 || completed},
+    {label:'Started',done:started || completed},
+    {label:'Completed',done:completed}
+  ];
+  return steps.map(s=>`<span class="promise-step${s.done?' done':''}">${s.label}</span>`).join('');
+}
+
+function promiseImpact(p){
+  const byCat={
+    Finance:'State employees, pensioners and household budgets',
+    Women:'Women beneficiaries, buses, DBT and family income',
+    'Law & Order':'Police, courts, corruption probes and citizen safety',
+    Healthcare:'Hospitals, families and insurance access',
+    Security:'Border districts, BSF coordination and infiltration control',
+    Employment:'Job seekers, recruitment boards and departments',
+    Infrastructure:'Flood zones, roads, bridges and district delivery',
+    Industry:'Investors, artisans, land banks and local jobs',
+    Youth:'Students, job seekers and first-time earners',
+    Governance:'Departments, public records and administrative reform'
+  };
+  return byCat[p.cat] || 'Citizens, districts and delivery departments';
+}
+
+function promiseReality(p,evidence=[]){
+  const completed=p.status==='Completed' || p.prog >= 100;
+  const implemented=completed || p.prog >= 60;
+  const visible=completed || evidence.some(e=>/launched|started|transferred|rollout|implemented|notified|active|begins?/i.test(`${e.title || ''} ${e.desc || ''}`));
+  return [
+    {label:'Claimed',done:true},
+    {label:'Implemented',done:implemented},
+    {label:'Visible',done:visible}
+  ].map(x=>`<span class="reality-chip${x.done?' done':''}">${x.label}</span>`).join('');
+}
+
+function renderPromiseEvidence(evidence=[]){
+  if(!evidence.length) return `<div class="promise-evidence empty">No matching source trail yet. Waiting for cabinet orders, official updates, or credible news reports.</div>`;
+  return `<div class="promise-evidence">${evidence.slice(0,2).map(e=>{
+    const source=e.source || e.yt || e.video || e.link || '';
+    const media=eventMedia(e,source);
+    return `
+      <div class="promise-evidence-item">
+        ${media.thumb ? `<img src="${media.thumb}" alt="" loading="lazy" onerror="this.remove()">` : `<div class="evidence-fallback">${mediaLabel(media.provider).slice(0,1)}</div>`}
+        <div>
+          <div class="evidence-title">${e.title}</div>
+          <div class="evidence-meta">${fmtDate(e.date)} · ${mediaLabel(media.provider)}</div>
+        </div>
+        ${source ? sourceIcon(source,'Open evidence') : ''}
+      </div>`;
+  }).join('')}</div>`;
 }
 
 function refreshSite(){
@@ -690,23 +792,87 @@ function renderPromises(filter='all'){
   const g=$('promisesGrid');
   if(!g) return;
   const list=filter==='all'?manifesto:manifesto.filter(p=>p.cat===filter);
-  g.innerHTML=list.map(p=>`
-    <div class="promise-card reveal">
-      <div class="promise-header">
-        <div class="promise-icon">${catEmoji[p.cat]||'📌'}</div>
-        <div class="promise-title">${p.title}</div>
-        ${p.source ? sourceIcon(p.source,'Open source') : ''}
+  g.innerHTML=list.map(p=>{
+    const evidence=promiseEvidence(p);
+    const health=promiseHealth(p,evidence);
+    const proof=promiseProof(evidence);
+    return `
+    <div class="promise-card reveal health-${health.cls}" role="button" tabindex="0" aria-expanded="false">
+      <div class="promise-flipper">
+        <div class="promise-face promise-front">
+          <div class="promise-header">
+            <div class="promise-icon">${catEmoji[p.cat]||'📌'}</div>
+            <div class="promise-title-wrap">
+              <div class="promise-kicker">${p.cat} · ${p.pri || 'standard'} priority</div>
+              <div class="promise-title">${p.title}</div>
+            </div>
+            <div class="promise-expand-mark" aria-hidden="true">↻</div>
+            ${p.source ? sourceIcon(p.source,'Open source') : ''}
+          </div>
+          <div class="promise-desc">${p.desc}</div>
+          <div class="promise-meta">
+            <span class="badge ${stBadge(p.status)}">${p.status}</span>
+            <span class="badge badge-health">${health.label}</span>
+            <span class="badge badge-dl">${promiseTimeBadge(p)}</span>
+          </div>
+          <div class="pbar-wrap"><div class="pbar-fill ${stCls(p.status)}" style="width:${p.prog}%"></div></div>
+          <div class="pbar-label"><span>Progress</span><span>${p.prog}%</span></div>
+        </div>
+        <div class="promise-face promise-back" aria-hidden="true">
+          <div class="promise-back-head">
+            <div>
+              <div class="promise-kicker">${p.cat} · casefile</div>
+              <div class="promise-title">${p.title}</div>
+            </div>
+            <div class="promise-expand-mark close" aria-hidden="true">×</div>
+          </div>
+          <div class="promise-meta back-meta">
+            <span class="badge ${stBadge(p.status)}">${p.status}</span>
+            <span class="badge badge-health">${health.label}</span>
+            <span class="badge proof-${proof.cls}">${proof.label}</span>
+            <span class="badge badge-dl">${promiseTimeBadge(p)}</span>
+          </div>
+          <div class="promise-details">
+            <div class="promise-journey">${promiseStageSteps(p,evidence)}</div>
+            <div class="promise-insight-grid">
+              <div class="promise-insight">
+                <span>Impact</span>
+                <strong>${promiseImpact(p)}</strong>
+              </div>
+              <div class="promise-insight">
+                <span>Reality check</span>
+                <div class="reality-row">${promiseReality(p,evidence)}</div>
+              </div>
+            </div>
+            ${renderPromiseEvidence(evidence)}
+          </div>
+        </div>
       </div>
-      <div class="promise-desc">${p.desc}</div>
-      <div class="promise-meta">
-        <span class="badge ${stBadge(p.status)}">${p.status}</span>
-        <span class="badge badge-cat">${p.cat}</span>
-        <span class="badge badge-dl">${promiseTimeBadge(p)}</span>
-      </div>
-      <div class="pbar-wrap"><div class="pbar-fill ${stCls(p.status)}" style="width:${p.prog}%"></div></div>
-      <div class="pbar-label"><span>Progress</span><span>${p.prog}%</span></div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
+  bindPromiseCards();
   initReveal();
+}
+
+function bindPromiseCards(){
+  $$('.promise-card').forEach(card=>{
+    const toggle=()=>{
+      const open=!card.classList.contains('is-expanded');
+      $$('.promise-card.is-expanded').forEach(other=>{
+        if(other!==card){
+          other.classList.remove('is-expanded');
+          other.setAttribute('aria-expanded','false');
+          other.querySelector('.promise-back')?.setAttribute('aria-hidden','true');
+        }
+      });
+      card.classList.toggle('is-expanded',open);
+      card.setAttribute('aria-expanded',String(open));
+      card.querySelector('.promise-back')?.setAttribute('aria-hidden',String(!open));
+      if(open) card.scrollIntoView({behavior:'smooth',block:'center'});
+    };
+    card.onclick=e=>{if(e.target.closest('.source-link')) return; toggle();};
+    card.onkeydown=e=>{if(e.key==='Enter' || e.key===' '){e.preventDefault(); toggle();}};
+  });
 }
 
 function renderFilters(){

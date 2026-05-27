@@ -93,8 +93,9 @@ function dayNumber(dateStr){
 function promiseKeywords(promise){
   const text = `${promise.title || ''} ${promise.desc || ''}`.toLowerCase();
   const words = text.match(/[a-z0-9]+/g) || [];
-  const blocked = new Set(['with', 'from', 'state', 'scheme', 'rollout', 'month', 'women']);
+  const blocked = new Set(['with', 'from', 'state', 'scheme', 'rollout', 'month', 'women', 'implement', 'implemented', 'pending', 'complete', 'statewide', 'eligible', 'monthly', 'financial', 'assistance', 'transparent', 'criminal', 'commission']);
   const keywords = words.filter(w => w.length > 3 && !blocked.has(w));
+  if(/7th|pay commission|da arrears/.test(text)) keywords.push('pay', 'da', 'arrears', 'salary', 'pension');
   if(/\bbns\b/.test(text)) keywords.push('bns', 'bnss', 'bsa', 'nyaya', 'sanhita');
   if(/\bayushman\b/.test(text)) keywords.push('ayushman', 'pm-jay');
   if(/\bbsf\b/.test(text)) keywords.push('bsf', 'border', 'fencing');
@@ -104,9 +105,14 @@ function promiseKeywords(promise){
   return [...new Set(keywords)];
 }
 
+function keywordInText(text, keyword){
+  const k = String(keyword || '').toLowerCase();
+  return new RegExp(`(^|[^a-z0-9])${k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}([^a-z0-9]|$)`).test(text);
+}
+
 function eventKeywordHits(event, keywords){
   const text = `${event.title || ''} ${event.desc || ''} ${event.category || ''}`.toLowerCase();
-  return keywords.filter(kw => text.includes(kw)).length;
+  return keywords.filter(kw => keywordInText(text, kw)).length;
 }
 
 function isCompletionEvent(event){
@@ -494,7 +500,7 @@ function updateManifestoProgress(manifesto, events){
   let updated = 0;
   for(const promise of manifesto){
     const keywords = promiseKeywords(promise);
-    const matches = keywords.filter(kw => text.includes(kw)).length;
+    const matches = keywords.filter(kw => keywordInText(text, kw)).length;
     const minMatches = Math.min(2, keywords.length || 2);
     if(matches >= minMatches){
       const bump = Math.min(5, matches);
