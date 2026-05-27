@@ -7,7 +7,7 @@
     "dev": "python3 -m http.server 8080",
     "update": "node auto-update.js",
     "update-moments": "node update-moments.js",
-    "watch": "node -e \"import('./auto-update.js').then(m => { m.default?.(); setInterval(() => import('./auto-update.js').then(m => m.default?.()), 6*60*60*1000); })\""
+    "watch": "node -e \"import('./auto-update.js').then(m => { m.default?.(); setInterval(() => import('./auto-update.js').then(m => m.default?.()), 3*60*60*1000); })\""
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",

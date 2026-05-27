@@ -16,7 +16,7 @@ const manifesto=[
   {id:8,title:"Ghatal Master Plan",desc:"Execute the Ghatal Master Plan for permanent flood control.",cat:"Infrastructure",dl:"2026-12-31",status:"Pending",prog:0,pri:"medium"},
   {id:9,title:"Singur Industrial Park",desc:"Restore Singur land as a modern industrial park.",cat:"Industry",dl:"2026-11-09",status:"Pending",prog:0,pri:"medium"},
   {id:10,title:"Youth Grant — ₹2,000/month",desc:"Monthly ₹2,000 stipend for unemployed educated youth.",cat:"Youth",dl:"2026-07-25",status:"Pending",prog:0,pri:"high"},
-  {id:11,title:"BNS Criminal Code",desc:"Implement BNS, BNSS, BSA criminal codes statewide.",cat:"Law & Order",dl:"2026-06-25",status:"Completed",prog:100,pri:"high"},
+  {id:11,title:"BNS Criminal Code",desc:"Implement BNS, BNSS, BSA criminal codes statewide.",cat:"Law & Order",dl:"2026-06-25",status:"Completed",prog:100,pri:"high",completedAt:"2026-05-11"},
   {id:12,title:"White Paper Audit",desc:"Publish White Paper on 15 years of TMC misgovernance.",cat:"Governance",dl:"2026-06-10",status:"In Progress",prog:35,pri:"high"},
   {id:13,title:"SIT for SSC Scam",desc:"Constitute SIT to probe SSC/TET recruitment scam.",cat:"Law & Order",dl:"2026-06-25",status:"In Progress",prog:25,pri:"high"},
   {id:14,title:"PM Vishwakarma Yojana",desc:"Implement PM Vishwakarma for artisans with credit & skill training.",cat:"Industry",dl:"2026-07-10",status:"In Progress",prog:30,pri:"medium"},
@@ -377,6 +377,7 @@ const $$=s=>document.querySelectorAll(s);
 function dayNum(){return Math.max(0,Math.floor((Date.now()-OATH_D)/(864e5)))}
 function daysLeft(dl){return Math.max(0,Math.ceil((new Date(dl+'T23:59:59+05:30')-Date.now())/864e5))}
 function fmtDate(d){return new Date(d+'T00:00:00+05:30').toLocaleDateString('en-IN',{weekday:'short',month:'short',day:'numeric'})}
+function daysFromOath(dateStr){return Math.max(0,Math.floor((new Date(dateStr+'T00:00:00+05:30')-OATH_D)/864e5))}
 function stCls(s){return s==='Completed'?'completed':s==='In Progress'?'progress':'pending'}
 function stBadge(s){return s==='Completed'?'badge-completed':s==='In Progress'?'badge-progress':'badge-pending'}
 const catEmoji={Finance:'💰',Women:'👩','Law & Order':'⚖️',Healthcare:'🏥',Security:'🛡️',Employment:'💼',Infrastructure:'🏗️',Industry:'🏭',Youth:'🎓',Governance:'🏛️'};
@@ -428,6 +429,47 @@ function sourceIcon(link,label='Open source'){
     <button type="button" class="source-link" aria-label="${label}" title="${label}" onclick="event.stopPropagation();window.open('${link}','_blank','noopener,noreferrer')">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
     </button>`;
+}
+
+function promiseKeywords(p){
+  const text=`${p.title || ''} ${p.desc || ''}`.toLowerCase();
+  const words=text.match(/[a-z0-9]+/g) || [];
+  const keywords=words.filter(w=>w.length>3 && !['with','from','state','scheme','rollout','month','women'].includes(w));
+  if(/\bbns\b/.test(text)) keywords.push('bns','nyaya','sanhita');
+  if(/\bayushman\b/.test(text)) keywords.push('ayushman','pm-jay');
+  if(/\bbsf\b/.test(text)) keywords.push('bsf','border','fencing');
+  if(/\bcbi\b/.test(text)) keywords.push('cbi','probe');
+  if(/\bsit\b/.test(text)) keywords.push('sit','ssc');
+  return [...new Set(keywords)];
+}
+
+function inferPromiseCompletionDate(p){
+  if(p.completedAt || p.completedDate) return p.completedAt || p.completedDate;
+  if(p.status!=='Completed' && p.prog < 100) return '';
+  const keywords=promiseKeywords(p);
+  const days=[...dailyLog].sort((a,b)=>new Date(a.date)-new Date(b.date));
+  for(const day of days){
+    const match=(day.events || []).find(e=>{
+      const text=`${e.title || ''} ${e.desc || ''} ${e.category || ''}`.toLowerCase();
+      const hits=keywords.filter(k=>text.includes(k)).length;
+      const completed=/approved|adopted|implemented|notified|completed|takes over|greenlit|initiated/.test(text);
+      return completed && hits >= Math.min(2, keywords.length || 2);
+    });
+    if(match) return day.date;
+  }
+  return '';
+}
+
+function promiseTimeBadge(p){
+  if(p.status==='Completed' || p.prog >= 100){
+    const completedDate=inferPromiseCompletionDate(p);
+    if(completedDate){
+      const took=daysFromOath(completedDate);
+      return `✅ Completed in ${took}d`;
+    }
+    return '✅ Completed';
+  }
+  return `⏰ ${daysLeft(p.dl)}d left`;
 }
 
 function refreshSite(){
@@ -659,7 +701,7 @@ function renderPromises(filter='all'){
       <div class="promise-meta">
         <span class="badge ${stBadge(p.status)}">${p.status}</span>
         <span class="badge badge-cat">${p.cat}</span>
-        <span class="badge badge-dl">⏰ ${daysLeft(p.dl)}d left</span>
+        <span class="badge badge-dl">${promiseTimeBadge(p)}</span>
       </div>
       <div class="pbar-wrap"><div class="pbar-fill ${stCls(p.status)}" style="width:${p.prog}%"></div></div>
       <div class="pbar-label"><span>Progress</span><span>${p.prog}%</span></div>

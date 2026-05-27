@@ -90,6 +90,30 @@ function dayNumber(dateStr){
   return Math.max(0, Math.floor((d - OATH_DATE) / 864e5));
 }
 
+function promiseKeywords(promise){
+  const text = `${promise.title || ''} ${promise.desc || ''}`.toLowerCase();
+  const words = text.match(/[a-z0-9]+/g) || [];
+  const blocked = new Set(['with', 'from', 'state', 'scheme', 'rollout', 'month', 'women']);
+  const keywords = words.filter(w => w.length > 3 && !blocked.has(w));
+  if(/\bbns\b/.test(text)) keywords.push('bns', 'bnss', 'bsa', 'nyaya', 'sanhita');
+  if(/\bayushman\b/.test(text)) keywords.push('ayushman', 'pm-jay');
+  if(/\bbsf\b/.test(text)) keywords.push('bsf', 'border', 'fencing');
+  if(/\bcbi\b/.test(text)) keywords.push('cbi', 'probe');
+  if(/\bsit\b/.test(text)) keywords.push('sit', 'ssc');
+  if(/\bucc\b/.test(text)) keywords.push('ucc', 'civil', 'code');
+  return [...new Set(keywords)];
+}
+
+function eventKeywordHits(event, keywords){
+  const text = `${event.title || ''} ${event.desc || ''} ${event.category || ''}`.toLowerCase();
+  return keywords.filter(kw => text.includes(kw)).length;
+}
+
+function isCompletionEvent(event){
+  const text = `${event.title || ''} ${event.desc || ''}`.toLowerCase();
+  return /approved|adopted|implemented|notified|completed|clears?|greenlights?|takes over|transferred|launched|rollout|came into effect/.test(text);
+}
+
 function categorize(text){
   const t = text.toLowerCase();
   for(const [pattern, cat] of Object.entries(CATEGORY_MAP)){
@@ -469,14 +493,19 @@ function updateManifestoProgress(manifesto, events){
   const text = events.map(e => `${e.title} ${e.desc}`).join(' ').toLowerCase();
   let updated = 0;
   for(const promise of manifesto){
-    const keywords = promise.title.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+    const keywords = promiseKeywords(promise);
     const matches = keywords.filter(kw => text.includes(kw)).length;
-    if(matches >= 2){
+    const minMatches = Math.min(2, keywords.length || 2);
+    if(matches >= minMatches){
       const bump = Math.min(5, matches);
       if(promise.prog < 100){
         promise.prog = Math.min(100, promise.prog + bump);
         if(promise.prog > 0 && promise.status === 'Pending') promise.status = 'In Progress';
-        if(promise.prog >= 100) promise.status = 'Completed';
+        if(promise.prog >= 100){
+          promise.status = 'Completed';
+          const completedEvent = events.find(e => isCompletionEvent(e) && eventKeywordHits(e, keywords) >= minMatches);
+          if(completedEvent?.date && !promise.completedAt) promise.completedAt = completedEvent.date;
+        }
         updated++;
       }
     }
