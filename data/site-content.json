@@ -7,7 +7,7 @@
       "cat": "Finance",
       "dl": "2026-06-23",
       "status": "In Progress",
-      "prog": 50,
+      "prog": 52,
       "pri": "high"
     },
     {
@@ -17,7 +17,7 @@
       "cat": "Women",
       "dl": "2026-08-09",
       "status": "In Progress",
-      "prog": 69,
+      "prog": 72,
       "pri": "high"
     },
     {
@@ -37,7 +37,7 @@
       "cat": "Healthcare",
       "dl": "2026-06-10",
       "status": "In Progress",
-      "prog": 42,
+      "prog": 47,
       "pri": "high"
     },
     {
@@ -47,7 +47,7 @@
       "cat": "Security",
       "dl": "2026-06-25",
       "status": "In Progress",
-      "prog": 37,
+      "prog": 39,
       "pri": "high"
     },
     {
@@ -67,7 +67,7 @@
       "cat": "Law & Order",
       "dl": "2026-08-09",
       "status": "In Progress",
-      "prog": 20,
+      "prog": 23,
       "pri": "high"
     },
     {
@@ -1840,6 +1840,94 @@
           "category": "Governance",
           "icon": "landmark",
           "source": "https://www.hindustantimes.com/india-news/siddaramaiah-compromised-his-predecessor-basavaraj-bommai-bjp-cm-change-buzz-karnataka-dk-shivakumar-congress-101779864859852.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Renowned Bengali film director Anik Dutta found dead in Kolkata",
+          "desc": "Left-leaning filmmaker was known for his famous works like Bhooter Bhabishyat and Aparajito; He had been a vocal critic of former Chief Minister Mamata Banerjee.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/entertainment/renowned-bengali-film-director-anik-dutta-found-dead-in-kolkata/article71029352.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "30 lakh beneficiaries of TMC government’s direct cash transfer scheme for women ",
+          "desc": "West Bengal CM Adhikari said the CAA applicants and those who have appealed to an SIR-linked tribunal after adjudication for entry on the voter list would, however, be eligible for the 'Annapurna Bhandar' scheme",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/news/national/west-bengal/30-lakh-beneficiaries-of-tmc-governments-direct-cash-transfer-scheme-for-women-ineligible-suvendu/article71029740.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Hundreds gather near West Bengal’s Hakimpur border as BJP Govt begins crackdown ",
+          "desc": "The Hakimpur checkpost is an international border crossing situated in the North 24 Parganas district",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.thehindu.com/news/national/west-bengal/hundreds-gather-near-west-bengals-hakimpur-border-as-bjp-govt-begins-crackdown-on-illegal-bangladeshis/article71029396.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Supreme Court verdict on Bihar SIR not fully applicable to Bengal case: TMC's Ka",
+          "desc": "If the Election Commission has deleted any name on the ground of citizenship, then they should refer the matter to the appropriate authority under the Citizenship Act, says",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/news/national/west-bengal/supreme-court-verdict-on-bihar-sir-not-fully-applicable-to-bengal-case-tmcs-kalyan-banerjee/article71029495.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "BJP Calls Congress \"Anti-Hindu\" Over Digvijaya Singh's \"Communalism\" Remark",
+          "desc": "The BJP's remarks came after Digvijaya Singh - at an event held on Jawaharlal Nehru's death anniversary - said \"majoritarian communalism is far more dangerous than minority communalism\"",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.ndtv.com/india-news/bjp-calls-congress-anti-hindu-over-digvijaya-singhs-communalism-remark-11556482#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "On Camera, Cops Parade Criminals On Bengal Streets In Their Underwear",
+          "desc": "Over the last days, the Bengal police have been observed parading criminals in a semi-nude state through the streets of North, South, and Central Howrah.",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.ndtv.com/india-news/on-camera-cops-parade-criminals-on-bengal-streets-in-their-underwear-11556406#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "Navy Foils Piracy Attempt In Indian Ocean, Saves Merchant Ship",
+          "desc": "INS Kolkata -- Indian Navy's guided missile destroyer -- has thwarted a piracy attempt in the western Indian Ocean with a timely intervention that ensured safety of a merchant vessel, officials said on Wednesday.",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.ndtv.com/india-news/navy-foils-piracy-attempt-in-indian-ocean-saves-merchant-ship-11556291#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "Exclusive: Ex-Aide's Big Charge Against Mamata Banerjee, Nephew Abhishek",
+          "desc": "\"Mamata Banerjee overlooked all corruption. And both Mamata and Abhishek Banerjee are responsible for such result,\" Partha Chatterjee told NDTV",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.ndtv.com/india-news/mamata-banerjee-overlooked-corruption-longtime-aide-partha-chatterjee-turns-critic-11555740#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "Ayushman Bharat, Education Policy Discussed At Delhi Workshop For Lawmakers",
+          "desc": "Healthcare reforms, implementation of the National Education Policy (NEP) 2020 and the growing role of digital communication in politics dominated discussions at a workshop attended by nearly 80 MPs and MLAs in the national capital on Monday.",
+          "category": "Healthcare",
+          "icon": "heart-pulse",
+          "source": "https://www.ndtv.com/india-news/ayushman-bharat-education-policy-discussed-at-delhi-workshop-for-lawmakers-11556129#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "Tamil Nadu BJP Leader Annamalai Urges Rollback Of CBSE Class 9 Third Language Ru",
+          "desc": "CBSE Third language For Class 9:  Annamalai argued that introducing an additional language at the Class 9 level would increase academic pressure and could negatively impact learning outcomes.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.ndtv.com/education/stick-to-previous-commitment-tamil-nadu-bjp-leader-annamalai-urges-education-ministry-to-roll-back-cbse-class-9-third-language-rule-11555855#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "CBI nabs 10 people in Sandeshkhali killings of BJP workers after 2019 Bengal pol",
+          "desc": "Mob of around 200 people attacked houses of three BJP workers on June 8, 2019 over an altercation regarding the installation of Trinamool Congress (TMC) flags in the Sandeshkhali area",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.hindustantimes.com/india-news/cbi-nabs-10-people-in-sandeshkhali-killings-of-bjp-workers-after-2019-bengal-polls-101779883732487.html"
         }
       ]
     }
