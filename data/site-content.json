@@ -2113,6 +2113,21 @@
           "source": "https://www.hindustantimes.com/india-news/bengal-infiltration-trend-reversed-after-bjp-govt-formed-amit-shah-in-gujarat-101779983906499.html"
         }
       ]
+    },
+    {
+      "date": "2026-05-29",
+      "dayNumber": 20,
+      "label": "Day 20",
+      "events": [
+        {
+          "time": "All Day",
+          "title": "BJP's Social Engineering In Punjab: Jat Sikh Face, Hindu Connect, Dalit Outreach",
+          "desc": "The BJP's move is being seen as part of a larger political gamble aimed at breaking the perception of the party as primarily a \"Hindu party\" in Punjab.",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.ndtv.com/india-news/bjps-social-engineering-in-punjab-jat-sikh-face-hindu-connect-dalit-outreach-11561471#publisher=newsstand"
+        }
+      ]
     }
   ],
   "moments": [
