@@ -148,7 +148,7 @@
       "cat": "Governance",
       "dl": "2026-10-31",
       "status": "In Progress",
-      "prog": 16,
+      "prog": 18,
       "pri": "medium"
     }
   ],
@@ -2158,6 +2158,46 @@
           "category": "Governance",
           "icon": "landmark",
           "source": "https://www.hindustantimes.com/india-news/a-page-from-arch-rival-s-playbook-in-cong-s-peaceful-change-of-guard-101780028141195.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Census in Bengal to be held from August 1 to February end next year: CM",
+          "desc": "The Chief Minister attended a meeting at the State Secretariat Nabanna in connection with the first phase of the 'Census of India, 2027'",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/news/national/census-in-bengal-to-be-held-from-august-1-to-february-end-next-year-cm/article71036958.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Kolkata Police to upgrade riot-control gear, forms panel to assess equipment qua",
+          "desc": "\"Kolkata Police should be equipped with gear comparable to that used by Delhi Police, CRPF, and other central armed police forces,\" a senior official quoted the Chief Minister as saying during the meeting",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/news/national/west-bengal/kolkata-police-to-upgrade-riot-control-gear-forms-panel-to-assess-equipment-quality/article71036539.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "How Ex-Congress Leader Emerged As BJP's Top Choice For Its Punjab Unit",
+          "desc": "Within the BJP, there had been growing support for appointing a Sikh face to lead the state unit.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.ndtv.com/india-news/how-ex-congress-leader-kewal-singh-dhillon-emerged-bjps-top-choice-for-its-punjab-unit-11564239#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "No Relief For Bengal Actor In Case Linked To 2021 Post-Poll Violence",
+          "desc": "Hearing the matter, Justice Ajay Kumar Mukherjee directed that no coercive action be taken against the actor for the next four weeks.",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.ndtv.com/india-news/parambrata-chatterjee-no-relief-for-bengal-actor-in-case-linked-to-2021-post-poll-violence-11564102#publisher=newsstand"
+        },
+        {
+          "time": "All Day",
+          "title": "BJP To Launch Massive Gujarat Campaign To Mark PM Modi's 12-Year Term",
+          "desc": "Party workers and leaders will go directly to the public to present a transparent account and detailed information on the various historic achievements and developmental works executed by the central government over the past decade.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.ndtv.com/india-news/bjp-to-launch-massive-gujarat-campaign-to-mark-pm-modis-12-year-term-11564093#publisher=newsstand"
         }
       ]
     }
