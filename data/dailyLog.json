@@ -2094,5 +2094,20 @@
         "source": "https://www.hindustantimes.com/india-news/punjab-civic-body-poll-results-live-updates-nagar-panchayat-municipal-corporation-mohali-zirakpur-aap-congress-bjp-sad-101780018353983.html"
       }
     ]
+  },
+  {
+    "date": "2026-05-30",
+    "dayNumber": 21,
+    "label": "Day 21",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "\"Want Tatas To Come Back To Singur\": Bengal BJP Chief",
+        "desc": "The remarks come at a time when the newly installed BJP government is preparing a fresh land policy that it believes will form the backbone of a renewed industrialisation drive in a state that was once India's manufacturing powerhouse but has steadil",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/want-tatas-to-come-back-to-singur-bengal-bjp-chief-11566392#publisher=newsstand"
+      }
+    ]
   }
 ]
