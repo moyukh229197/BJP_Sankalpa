@@ -2293,5 +2293,28 @@
         "source": "https://www.hindustantimes.com/india-news/what-is-happening-now-tmcs-derek-obrien-to-amit-shah-after-abhishek-banerjee-roughed-up-in-bengal-101780161271808.html"
       }
     ]
+  },
+  {
+    "date": "2026-05-31",
+    "dayNumber": 22,
+    "label": "Day 22",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "Bengal CID Serves Summons To Abhishek Banerjee In 'Fake Signature' Probe",
+        "desc": "The notice, described by CID sources as a summons directing him to appear for questioning at the agency's Bhabani Bhavan headquarters at noon on Monday.",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.ndtv.com/india-news/bengal-cid-serves-summons-to-abhishek-banerjee-in-fake-signature-probe-11569998#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "After attack on Abhishek, Mamata Banerjee claims hospitals were told not to admi",
+        "desc": "Mamata Banerjee alleged that a hospital administrator told her he was receiving threat calls from the police.",
+        "category": "Healthcare",
+        "icon": "heart-pulse",
+        "source": "https://www.hindustantimes.com/india-news/after-attack-on-abhishek-mamata-banerjee-claims-hospitals-were-told-not-to-admit-him-pressure-exerted-on-doctors-101780169146736.html"
+      }
+    ]
   }
 ]
