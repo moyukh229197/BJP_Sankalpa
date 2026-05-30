@@ -2211,6 +2211,22 @@
         "category": "Finance",
         "icon": "scale",
         "source": "https://www.hindustantimes.com/india-news/punjab-civic-body-election-results-full-list-of-winners-across-1-977-wards-101780125599830.html"
+      },
+      {
+        "time": "All Day",
+        "title": "TMC general secretary Abhishek Banerjee attacked in Bengal’s Sonarpur",
+        "desc": "Police and central security forces reached the venue and escorted the Trinamool Congress general secretary, who was holed up inside the house of a local Trinamool worker; locals including BJP supporters had gathered outside the house in large numbers",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.thehindu.com/news/national/west-bengal/tmc-abhishek-banerjee-manhandled-eggs-stones-thrown-bengal-post-poll-violence-visit/article71041375.ece"
+      },
+      {
+        "time": "All Day",
+        "title": "Abhishek Banerjee assaulted allegedly by BJP workers: Eggs, stones, shoes hurled",
+        "desc": "TMC's Abhishek Banerjee assaulted as he visits post-poll violence",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.hindustantimes.com/india-news/tmcs-abhishek-banerjee-assaulted-as-he-visits-post-poll-violence-victims-kin-in-south-24-parganas-101780144081345.html"
       }
     ]
   }
