@@ -37,7 +37,7 @@
       "cat": "Healthcare",
       "dl": "2026-06-10",
       "status": "In Progress",
-      "prog": 47,
+      "prog": 49,
       "pri": "high"
     },
     {
@@ -2325,6 +2325,46 @@
           "category": "Finance",
           "icon": "scale",
           "source": "https://www.hindustantimes.com/india-news/modi-also-supervised-neet-leak-rahul-gandhi-jabs-pm-after-govt-submissions-to-supreme-court-bjp-reacts-101780113039956.html"
+        },
+        {
+          "time": "All Day",
+          "title": "West Bengal set to implement National Health Mission, says CM Suvendu Adhikari",
+          "desc": "West Bengal Chief Minister Suvendu Adhikari said the Centre has sanctioned ₹2,103 crore for the scheme, out of which we have already received ₹527 crore",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.thehindu.com/news/national/west-bengal/west-bengal-set-to-implement-national-health-mission-says-cm-suvendu-adhikari/article71040634.ece"
+        },
+        {
+          "time": "All Day",
+          "title": "Fresh trouble for TMC's Abhishek Banerjee, summoned by CID in forged signature p",
+          "desc": "TMC general secretary and party supremo Mamata Banerjee's nephew Abhishek Banerjee has been summoned by the CID on June 1.&nbsp;",
+          "category": "Law & Order",
+          "icon": "shield-alert",
+          "source": "https://www.hindustantimes.com/india-news/tmcs-abhishek-banerjee-summoned-by-cid-in-forged-signature-probe-101780133963250.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Bengal CM rolls out HPV vaccination drive for girls under 15: All you need to kn",
+          "desc": "The HPV vaccination campaign in Bengal aims to target approximately 7.65 lakh beneficiaries aged 14 years.&nbsp;",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/bengal-chief-minister-suvendu-adhikari-rolls-out-hpv-cervical-cancer-vaccination-drive-for-girls-under-15-101780130740275.html"
+        },
+        {
+          "time": "All Day",
+          "title": "‘Cancer’ not allowed to spread: Tripura CM warns against anti-party activities",
+          "desc": "Tripura chief minister Manik Saha warned against anti-party activities in BJP, saying no “cancer” of indiscipline will be allowed in the organisation.",
+          "category": "Governance",
+          "icon": "landmark",
+          "source": "https://www.hindustantimes.com/india-news/cancer-not-allowed-to-spread-tripura-cm-warns-against-anti-party-activities-101780129096349.html"
+        },
+        {
+          "time": "All Day",
+          "title": "Punjab civic body election results: Full list of AAP, Congress, BJP winners acro",
+          "desc": "Of the eight municipal corporations in the state, AAP secured Moga, Barnala, Bathinda and Batala, while Congress remained dominant in Kapurthala.",
+          "category": "Finance",
+          "icon": "scale",
+          "source": "https://www.hindustantimes.com/india-news/punjab-civic-body-election-results-full-list-of-winners-across-1-977-wards-101780125599830.html"
         }
       ]
     }
