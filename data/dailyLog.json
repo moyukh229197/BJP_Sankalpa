@@ -2546,6 +2546,61 @@
         "category": "Law & Order",
         "icon": "shield-alert",
         "source": "https://www.hindustantimes.com/india-news/exed-officer-satyabrata-kumar-who-probed-nirav-modi-vijay-mallya-cases-takes-voluntary-retirement-from-irs-101780241697240.html"
+      },
+      {
+        "time": "All Day",
+        "title": "35 Ministers To Take Oath In West Bengal Cabinet Expansion Tomorrow",
+        "desc": "Suvendu Adhikari said Governor RN Ravi will administer the oath at 11 AM at the Lok Bhavan.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/35-ministers-to-take-oath-in-west-bengal-cabinet-expansion-tomorrow-11572751#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "Police Case Against Ex-Bengal Sports Minister Over Messi Event Mess",
+        "desc": "The FIR alleges that Biswas, ahead of the Argentine footballer's event in Kolkata, had demanded a large number of tickets for his own distributions.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/police-case-against-ex-bengal-sports-minister-over-messi-event-mess-11572726#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "'Companions In Happiness, Sorrow': Madhya Pradesh MLA Praises Chambal Dacoit",
+        "desc": "Dreaded dacoit Rambabu Gadariya, who was killed by the police in an encounter, was publicly remembered, garlanded and hailed as a \"friend through happiness and sorrow\" by the sitting BJP MLA, Pritam Lodhi.",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.ndtv.com/india-news/madhya-pradesh-mla-pritam-lodhi-praises-chambal-dacoit-rambabu-gadariya-calls-him-companions-in-happiness-sorrow-11572544#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "Villagers Vandalise Trinamool MP's Party Office In Bengal's South 24 Parganas",
+        "desc": "A police officer said the situation was brought under control, and the assembled people were dispersed.",
+        "category": "Law & Order",
+        "icon": "shield-alert",
+        "source": "https://www.ndtv.com/india-news/villagers-vandalise-trinamool-mps-party-office-in-bengals-south-24-parganas-11572562#publisher=newsstand"
+      }
+    ]
+  },
+  {
+    "date": "2026-06-01",
+    "dayNumber": 23,
+    "label": "Day 23",
+    "events": [
+      {
+        "time": "All Day",
+        "title": "BJP Leader Annamalai To Launch \"New Movement\" In Tamil Nadu: Sources",
+        "desc": "BJP Leader Annamalai To Launch \"New Movement\" In Tamil Nadu: Sources",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.ndtv.com/india-news/bjp-leader-annamalai-to-launch-new-movement-in-tamil-nadu-sources-11572857#publisher=newsstand"
+      },
+      {
+        "time": "All Day",
+        "title": "'Injustice done to RCB fans': DK Shivakumar slams IPL final venue, says Bengalur",
+        "desc": "As celebrations broke out across Karnataka, Shivakumar said RCB fans in Bengaluru had missed out on witnessing the title triumph in their home city.",
+        "category": "Governance",
+        "icon": "landmark",
+        "source": "https://www.hindustantimes.com/india-news/injustice-done-to-rcb-fans-dk-shivakumar-slams-ipl-final-venue-says-bengaluru-was-sidelined-101780252182984.html"
       }
     ]
   }
